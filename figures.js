@@ -28,6 +28,14 @@ window.FIGURES = (() => {
   const R = n => Math.round(n * 10) / 10;
   const seg = (pts, c, w) => P('M' + pts.map(p => R(p[0]) + ',' + R(p[1])).join(' L'), c, R(w || 15));
   const fhead = (x, y, c, r) => '<circle cx="' + R(x) + '" cy="' + R(y) + '" r="' + R(r || 13) + '" fill="' + c + '" stroke="none"/>';
+  // 三角の鼻＝顔の向き（体の前後左右）を示す。ang: 0=右向き 90=正面(下) 180=左向き -90=仰向け(上)。省略時=後ろ向き（鼻なし）
+  const nose = (x, y, r, ang, c) => {
+    const a = ang * D, dx = Math.cos(a), dy = Math.sin(a), px = -dy, py = dx;
+    const ax = x + 1.42 * r * dx, ay = y + 1.42 * r * dy;
+    const b1x = x + 0.66 * r * dx + 0.42 * r * px, b1y = y + 0.66 * r * dy + 0.42 * r * py;
+    const b2x = x + 0.66 * r * dx - 0.42 * r * px, b2y = y + 0.66 * r * dy - 0.42 * r * py;
+    return '<path d="M' + R(ax) + ',' + R(ay) + ' L' + R(b1x) + ',' + R(b1y) + ' L' + R(b2x) + ',' + R(b2y) + ' Z" fill="' + c + '" stroke="none"/>';
+  };
   const dot = (x, y, c, r) => '<circle cx="' + R(x) + '" cy="' + R(y) + '" r="' + (r || 7) + '" fill="' + (c || NGC) + '"/>';
   const frect = (x, y, w, h, c, rx) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="' + (rx === undefined ? 8 : rx) + '" fill="' + c + '" stroke="none"/>';
   const orect = (x, y, w, h, c, rx) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="' + (rx === undefined ? 8 : rx) + '" fill="none" stroke="' + (c || INK) + '" stroke-width="' + SW + '"/>';
@@ -82,12 +90,13 @@ window.FIGURES = (() => {
       const s = seg([sh, e, w], m.far ? cf : c, (m.far ? 0.4 : 0.44) * H);
       if (m.far) far += s; else near += s;
     });
-    const body = seg([hip, sh], c, 0.95 * H) + seg([sh, pt(sh, hAng, 0.55 * H)], c, 0.42 * H) + fhead(headC[0], headC[1], c, 0.52 * H);
+    const headStr = fhead(headC[0], headC[1], c, 0.52 * H) + (o.face === undefined ? '' : nose(headC[0], headC[1], 0.52 * H, o.face, c));
+    const body = seg([hip, sh], c, 0.95 * H) + seg([sh, pt(sh, hAng, 0.55 * H)], c, 0.42 * H) + headStr;
     return far + body + near;
   }
   // 小さく寝ている人（省略形・頭1:体6.7の比率を維持）
   const lie = (xHead, y, c, H) =>
-    fhead(xHead, y, c, 0.5 * H) +
+    fhead(xHead, y, c, 0.5 * H) + nose(xHead, y, 0.5 * H, -90, c) +
     seg([[xHead + 0.65 * H, y + 2], [xHead + 2.8 * H, y + 3]], c, 0.85 * H) +
     seg([[xHead + 2.8 * H, y + 3], [xHead + 6.3 * H, y + 4]], c, 0.6 * H);
 
@@ -102,7 +111,7 @@ window.FIGURES = (() => {
       arms: [{ a1: 118, a2: 100, far: true }, { a1: 62, a2: 80 }] }) +
     ground(240, 25, 185) +
     ngMark(230, 38) +
-    person({ H: 24, hip: [306, 152], torso: -168, head: -145, c: HLP, cf: HLPF,
+    person({ H: 24, hip: [306, 152], torso: -168, head: -145, face: 180, c: HLP, cf: HLPF,
       legs: [{ a1: 87, a2: 88, foot: 176, far: true }, { a1: 92, a2: 90, foot: 184 }],
       arms: [{ a1: 105, a2: 92 }] }) +
     pain(292, 138) +
@@ -116,14 +125,14 @@ window.FIGURES = (() => {
     bedSide(15, 150, 130) +
     lie(36, 140, INK, 17) +
     // 足ごとベッドに寄せる（つま先はベッドの下・ひざ曲げ・体は利用者の真上）
-    person({ H: 20, hip: [158, 148], torso: -108, c: HLP, cf: HLPF,
+    person({ H: 20, hip: [158, 148], torso: -108, face: 180, c: HLP, cf: HLPF,
       legs: [{ a1: 95, a2: 88, foot: 184, far: true }, { a1: 78, a2: 98, foot: 186 }],
       arms: [{ a1: 144, a2: 130 }] }) +
     ground(218, 15, 195) +
     ngMark(228, 34) +
     bedSide(215, 150, 130) +
     lie(236, 140, INK, 17) +
-    person({ H: 20, hip: [374, 150], torso: -110, c: HLP, cf: HLPF,
+    person({ H: 20, hip: [374, 150], torso: -110, face: 180, c: HLP, cf: HLPF,
       legs: [{ a1: 86, a2: 88, far: true }, { a1: 92, a2: 90, foot: 184 }],
       arms: [{ a1: 150, a2: 170 }] }) +
     pain(384, 138) +
@@ -138,7 +147,7 @@ window.FIGURES = (() => {
     // 胴・首・頭（あおむけ）
     seg([[230, 152], [142, 152]], INK, 38) +
     seg([[142, 152], [120, 152]], INK, 17) +
-    fhead(98, 150, INK, 20.8) +
+    fhead(98, 150, INK, 20.8) + nose(98, 150, 20.8, -90, INK) +
     // 組んだ腕（胸の上）
     seg([[206, 144], [170, 124]], INKF, 15) +
     seg([[164, 144], [202, 126]], INK, 17) +
@@ -191,7 +200,7 @@ window.FIGURES = (() => {
     // あおむけ（頭r19・胴84px・脚129px＝7頭身）
     seg([[218, 158], [134, 158]], INK, 36) +
     seg([[134, 158], [112, 158]], INK, 16) +
-    fhead(92, 156, INK, 19.8) +
+    fhead(92, 156, INK, 19.8) + nose(92, 156, 19.8, -90, INK) +
     seg([[134, 160], [180, 164], [222, 164]], INK, 16) +
     seg([[218, 158], [283, 159], [347, 160]], INK, 25) +
     dot(92, 180) + dot(150, 180) + dot(196, 181) + dot(240, 181) + dot(345, 178)
@@ -201,7 +210,7 @@ window.FIGURES = (() => {
   F.sit_edge = () => svg(
     frect(40, 148, 180, 22, SFT) +
     P('M56,170 L56,198 M204,170 L204,198', FRM, 7) +
-    person({ H: 26, hip: [192, 141], torso: -85, head: -80, c: INK, cf: INKF,
+    person({ H: 26, hip: [192, 141], torso: -85, head: -80, face: 0, c: INK, cf: INKF,
       legs: [{ a1: 12, a2: 88, far: true }, { a1: 6, a2: 84, foot: 2 }],
       arms: [{ a1: 98, a2: 82 }] }) +
     ground(198) +
@@ -213,7 +222,7 @@ window.FIGURES = (() => {
   F.stand_bow = () => svg(
     frect(40, 150, 110, 20, SFT) +
     P('M56,170 L56,218 M134,170 L134,218', FRM, 7) +
-    person({ H: 26, hip: [140, 140], torso: -25, head: -12, c: INK, cf: INKF,
+    person({ H: 26, hip: [140, 140], torso: -25, head: -12, face: 10, c: INK, cf: INKF,
       legs: [{ a1: 46, a2: 88, far: true }, { a1: 38, a2: 82, foot: 2 }],
       arms: [{ a1: 112, a2: 96 }] }) +
     carrow(248, 68, 284, 82, 294, 114) +
@@ -228,7 +237,7 @@ window.FIGURES = (() => {
     // 左: ひじを支点に、上体を起こす
     frect(12, 154, 180, 20, SFT) +
     P('M26,174 L26,206 M178,174 L178,206', FRM, 7) +
-    person({ H: 20, hip: [126, 146], torso: -152, head: -140, c: INK, cf: INKF,
+    person({ H: 20, hip: [126, 146], torso: -152, head: -140, face: 180, c: INK, cf: INKF,
       legs: [{ a1: 10, a2: 14 }],
       arms: [{ a1: 100, a2: 175 }] }) +
     fulcrum(83, 155) +
@@ -236,7 +245,7 @@ window.FIGURES = (() => {
     // 右: おしりを支点に、足の重みで上体が起きる
     frect(210, 150, 110, 20, SFT) +
     P('M224,170 L224,206 M308,170 L308,206', FRM, 7) +
-    person({ H: 20, hip: [312, 144], torso: -135, head: -125, c: INK, cf: INKF,
+    person({ H: 20, hip: [312, 144], torso: -135, head: -125, face: 180, c: INK, cf: INKF,
       legs: [{ a1: 61, a2: 84, far: true }, { a1: 55, a2: 80 }],
       arms: [{ a1: 95, a2: 70 }] }) +
     fulcrum(313, 152) +
@@ -296,7 +305,7 @@ window.FIGURES = (() => {
   F.kneel_assist = () => svg(
     frect(20, 230, 185, 14, SFT, 6) +
     lie(46, 222, INK, 15) +
-    person({ H: 24, hip: [262, 198], torso: -132, head: -118, c: HLP, cf: HLPF,
+    person({ H: 24, hip: [262, 198], torso: -132, head: -118, face: 180, c: HLP, cf: HLPF,
       legs: [{ a1: 100, a2: 0, far: true }, { a1: 175, a2: 92, foot: 184 }],
       arms: [{ a1: 135, a2: 105 }] }) +
     ground(246, 15, 385)
@@ -325,7 +334,7 @@ window.FIGURES = (() => {
     // いす
     P('M66,158 L120,158', FRM, 6) + P('M72,158 L64,102', FRM, 6) +
     P('M70,158 L70,200 M116,158 L116,200', FRM, 6) +
-    person({ H: 22, hip: [98, 150], torso: -78, head: -64, c: INK, cf: INKF,
+    person({ H: 22, hip: [98, 150], torso: -78, head: -64, face: 15, c: INK, cf: INKF,
       legs: [{ a1: 12, a2: 90, far: true }, { a1: 6, a2: 85, foot: 0 }],
       arms: [{ a1: 28, a2: 12 }] }) +
     // テーブルと器
@@ -336,7 +345,7 @@ window.FIGURES = (() => {
     // いす（背にもたれて上向き）
     P('M290,158 L350,158', FRM, 6) + P('M296,158 L276,98', FRM, 6) +
     P('M294,158 L294,200 M346,158 L346,200', FRM, 6) +
-    person({ H: 22, hip: [298, 150], torso: -112, head: -135, c: INK, cf: INKF,
+    person({ H: 22, hip: [298, 150], torso: -112, head: -135, face: -75, c: INK, cf: INKF,
       legs: [{ a1: 8, a2: 78, far: true }, { a1: 14, a2: 70, foot: 5 }],
       arms: [{ a1: 100, a2: 80 }] }) +
     arrow(270, 70, 284, 50, NGC, 5) +
@@ -348,7 +357,7 @@ window.FIGURES = (() => {
     P('M40,190 L360,190', FRM, 7) +
     P('M62,190 L62,225 M338,190 L338,225', FRM, 7) +
     P('M200,190 L110,120', FRM, 7) +
-    person({ H: 36, hip: [206, 174], torso: -142, c: INK, cf: INKF,
+    person({ H: 36, hip: [206, 174], torso: -142, face: -25, c: INK, cf: INKF,
       legs: [{ a1: 4, a2: -8, far: true }, { a1: 8, a2: -4, foot: 6 }],
       arms: [{ a1: 60, a2: 30 }] }) +
     P('M240,190 A40,40 0 0 0 172,162', ACC, 6) +
@@ -395,10 +404,10 @@ window.FIGURES = (() => {
 
   /* --- 窒息: 背部叩打法 --- */
   F.choking_back = () => svg(
-    person({ H: 24, hip: [296, 152], torso: -165, head: -138, c: INK, cf: INKF,
+    person({ H: 24, hip: [296, 152], torso: -165, head: -138, face: 180, c: INK, cf: INKF,
       legs: [{ a1: 86, a2: 88, far: true }, { a1: 94, a2: 92, foot: 184 }],
       arms: [{ a1: 95, a2: 88 }] }) +
-    person({ H: 24, hip: [352, 150], torso: -95, c: HLP, cf: HLPF,
+    person({ H: 24, hip: [352, 150], torso: -95, face: 180, c: HLP, cf: HLPF,
       legs: [{ a1: 84, a2: 86, far: true }, { a1: 96, a2: 90, foot: 184 }],
       arms: [{ a1: 130, a2: 165, far: true }, { a1: 158, a2: 150 }] }) +
     bang(278, 122) +
@@ -487,7 +496,7 @@ window.FIGURES = (() => {
     frect(96, 156, 195, 10, ACC, 5) +
     seg([[218, 148], [136, 148]], INK, 34) +
     seg([[136, 148], [116, 148]], INK, 15) +
-    fhead(96, 146, INK, 18) +
+    fhead(96, 146, INK, 18) + nose(96, 146, 18, -90, INK) +
     seg([[218, 148], [282, 150], [344, 152]], INK, 22) +
     arrow(140, 100, 262, 100, OKC, 8)
   );
@@ -496,7 +505,7 @@ window.FIGURES = (() => {
   F.stand_prep = () => svg(
     P('M56,162 L140,162', FRM, 6) + P('M62,162 L54,98', FRM, 6) +
     P('M64,162 L64,198 M134,162 L134,198', FRM, 6) +
-    person({ H: 22, hip: [100, 150], torso: -85, head: -78, c: INK, cf: INKF,
+    person({ H: 22, hip: [100, 150], torso: -85, head: -78, face: 0, c: INK, cf: INKF,
       legs: [{ a1: 10, a2: 92, far: true }, { a1: 4, a2: 86, foot: 2 }],
       arms: [{ a1: 100, a2: 82 }] }) +
     arrow(70, 136, 110, 136, OKC, 6) + numBadge(54, 124, '1') +
@@ -507,10 +516,10 @@ window.FIGURES = (() => {
   /* --- 立ち上がりの介助: 腰を支えて、いっしょに立つ --- */
   F.stand_assist = () => svg(
     frect(20, 150, 80, 18, SFT) + P('M32,168 L32,208 M92,168 L92,208', FRM, 6) +
-    person({ H: 22, hip: [112, 142], torso: -28, head: -14, c: INK, cf: INKF,
+    person({ H: 22, hip: [112, 142], torso: -28, head: -14, face: 10, c: INK, cf: INKF,
       legs: [{ a1: 44, a2: 86, far: true }, { a1: 36, a2: 80, foot: 2 }],
       arms: [{ a1: 105, a2: 92 }] }) +
-    person({ H: 22, hip: [198, 133], torso: -96, head: -104, c: HLP, cf: HLPF,
+    person({ H: 22, hip: [198, 133], torso: -96, head: -104, face: 180, c: HLP, cf: HLPF,
       legs: [{ a1: 70, a2: 96, far: true }, { a1: 96, a2: 88, foot: 184 }],
       arms: [{ a1: 135, a2: 152 }] }) +
     ground(210, 15, 330)
@@ -536,7 +545,7 @@ window.FIGURES = (() => {
     '<circle cx="140" cy="210" r="10" fill="none" stroke="' + FRM + '" stroke-width="6"/>' +
     P('M48,150 L128,150', FRM, 6) + P('M54,150 L44,92', FRM, 6) + P('M128,150 L138,208', FRM, 5) +
     P('M100,184 L134,186', FRM, 7) +
-    person({ H: 20, hip: [72, 140], torso: -85, head: -80, c: INK, cf: INKF,
+    person({ H: 20, hip: [72, 140], torso: -85, head: -80, face: 0, c: INK, cf: INKF,
       legs: [{ a1: 14, a2: 94, far: true }, { a1: 6, a2: 88, foot: 4 }],
       arms: [{ a1: 96, a2: 78 }] }) +
     ngMark(228, 34) +
@@ -544,7 +553,7 @@ window.FIGURES = (() => {
     '<circle cx="340" cy="210" r="10" fill="none" stroke="' + FRM + '" stroke-width="6"/>' +
     P('M248,150 L328,150', FRM, 6) + P('M254,150 L244,92', FRM, 6) + P('M328,150 L338,208', FRM, 5) +
     P('M300,184 L334,186', FRM, 7) +
-    person({ H: 20, hip: [308, 144], torso: -118, head: -128, c: INK, cf: INKF,
+    person({ H: 20, hip: [308, 144], torso: -118, head: -128, face: 0, c: INK, cf: INKF,
       legs: [{ a1: 8, a2: 70, far: true }, { a1: 14, a2: 62, foot: 8 }],
       arms: [{ a1: 104, a2: 86 }] }) +
     arrow(316, 158, 336, 174, NGC, 6)
@@ -562,7 +571,7 @@ window.FIGURES = (() => {
     '</g>' +
     arrow(240, 168, 240, 138, OKC, 6) + numBadge(260, 138, '2') +
     arrow(80, 200, 90, 220, OKC, 6) + numBadge(62, 196, '1') +
-    person({ H: 18, hip: [78, 155], torso: -92, head: -96, c: HLP, cf: HLPF,
+    person({ H: 18, hip: [78, 155], torso: -92, head: -96, face: 0, c: HLP, cf: HLPF,
       legs: [{ a1: 70, a2: 100, far: true }, { a1: 96, a2: 90 }],
       arms: [{ a1: -15, a2: -5 }] })
   );
