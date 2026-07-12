@@ -1,0 +1,19 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "おうち介護サポート・そよぎ",
+    "iconUrl": "https://ouchi-kaigo-web.vercel.app/icons/icon-512.png",
+    "homeUrl": "https://ouchi-kaigo-web.vercel.app/",
+    "imageUrl": "https://ouchi-kaigo-web.vercel.app/icons/farcaster-embed.png",
+    "buttonTitle": "🍃 ひらく / Open",
+    "splashImageUrl": "https://ouchi-kaigo-web.vercel.app/icons/icon-512.png",
+    "splashBackgroundColor": "#4a9d7f",
+    "primaryCategory": "health-fitness",
+    "tags": ["care", "caregiving", "welfare", "family", "soyogi"]
+  }
+}

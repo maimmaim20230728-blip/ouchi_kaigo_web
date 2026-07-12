@@ -6,6 +6,8 @@
 <title>おうち介護サポート・そよぎ</title>
 <meta name="description" content="家庭で介護をするご家族のための、介護技術と知識のガイド。無料・オフライン・広告なし。">
 <meta name="theme-color" content="#4a9d7f">
+<!-- Farcaster Mini App 埋め込みメタ（3:2画像＋起動ボタン） -->
+<meta name="fc:miniapp" content='{"version":"1","imageUrl":"https://ouchi-kaigo-web.vercel.app/icons/farcaster-embed.png","button":{"title":"🍃 ひらく / Open","action":{"type":"launch_miniapp","name":"おうち介護サポート・そよぎ","url":"https://ouchi-kaigo-web.vercel.app/","splashImageUrl":"https://ouchi-kaigo-web.vercel.app/icons/icon-512.png","splashBackgroundColor":"#4a9d7f"}}}'>
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -134,5 +136,12 @@
 <script src="figures.js"></script>
 <script src="data/guide.ja.js"></script>
 <script src="app.js"></script>
+<!-- Farcaster Mini App SDK: ホスト内なら起動準備完了を通知。通常のWeb/PWA・オフラインでは無害（失敗は握りつぶす）。 -->
+<script type="module">
+  try {
+    const { sdk } = await import("https://esm.sh/@farcaster/miniapp-sdk");
+    await sdk.actions.ready();
+  } catch (e) { /* Farcaster外／オフラインでは何もしない */ }
+</script>
 </body>
 </html>
