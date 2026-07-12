@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+Thumbs.db
+shots/
+# 内部ドキュメント（署名鍵パスワードを含むため公開しない）
+HANDOFF.md

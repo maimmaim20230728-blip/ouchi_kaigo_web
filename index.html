@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>おうち介護サポート・そよぎ</title>
+<meta name="description" content="家庭で介護をするご家族のための、介護技術と知識のガイド。無料・オフライン・広告なし。">
+<meta name="theme-color" content="#4a9d7f">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="fs0">
+<header id="hdr">
+  <button id="btnBack" class="hdr-btn" hidden>← もどる</button>
+  <h1 id="hdrTitle">おうち介護サポート</h1>
+</header>
+<main id="main">
+  <section id="scrTech" class="screen">
+    <p id="techLead" class="lead"></p>
+    <div id="techGrid" class="grid"></div>
+  </section>
+  <section id="scrDanger" class="screen" hidden>
+    <p id="dangerLead" class="lead"></p>
+    <div id="dangerList" class="cardlist"></div>
+  </section>
+  <section id="scrSelf" class="screen" hidden>
+    <p id="selfLead" class="lead"></p>
+    <div id="selfList" class="cardlist"></div>
+  </section>
+  <section id="scrSettings" class="screen" hidden>
+    <div class="setblock">
+      <h3 id="setFsTitle"></h3>
+      <div class="btnrow" id="fsRow">
+        <button class="fsbtn" id="fsBtn0"></button>
+        <button class="fsbtn" id="fsBtn1"></button>
+        <button class="fsbtn" id="fsBtn2"></button>
+      </div>
+    </div>
+    <div class="setblock">
+      <h3 id="setThemeTitle"></h3>
+      <div class="btnrow">
+        <button class="fsbtn" id="themeBtnG"></button>
+        <button class="fsbtn" id="themeBtnB"></button>
+      </div>
+    </div>
+    <div class="setblock">
+      <h3 id="setBgmTitle"></h3>
+      <div class="btnrow">
+        <button class="fsbtn" id="musicBtnA"></button>
+        <button class="fsbtn" id="musicBtnB"></button>
+        <button class="fsbtn" id="musicBtnOff"></button>
+      </div>
+    </div>
+    <div class="setblock">
+      <h3 id="setSoundTitle"></h3>
+      <button id="soundBtn" class="togglebtn"></button>
+    </div>
+    <div class="setblock">
+      <h3 id="setLangTitle"></h3>
+      <div class="langgrid" id="langGrid"></div>
+    </div>
+    <div class="setblock">
+      <h3 id="aboutTitle"></h3>
+      <p id="aboutText" class="mutetext"></p>
+      <p><a id="creditLink" href="https://soyogi.hp.peraichi.com/top" target="_blank" rel="noopener"></a></p>
+      <p id="verLine" class="mutetext"></p>
+    </div>
+  </section>
+  <section id="scrCat" class="screen" hidden>
+    <div class="cat-head">
+      <span class="em" id="catEmoji"></span>
+      <div><h2 id="catTitle"></h2><p id="catSub"></p></div>
+    </div>
+    <div id="procList" class="cardlist"></div>
+  </section>
+  <section id="scrProc" class="screen" hidden>
+    <h2 id="procTitle" class="proc-title"></h2>
+    <p id="stepCount"></p>
+    <div id="stepFig" class="figbox"></div>
+    <p id="stepText"></p>
+    <div id="stepCaution" class="caution" hidden><span class="mark" aria-hidden="true">⚠️</span><p id="stepCautionText"></p></div>
+    <div id="stepAdapt" class="adapt" hidden><span class="mark" aria-hidden="true">🖐️</span><div><b id="stepAdaptTitle"></b><p id="stepAdaptText"></p></div></div>
+    <button id="stepLink" class="linkbtn" hidden></button>
+    <div id="stepSummary" hidden>
+      <div class="sumblock" id="sumPointsBlock" hidden><h3 id="sumPointsTitle"></h3><ul id="sumPointsList"></ul></div>
+      <div class="sumblock ng" id="sumNgBlock" hidden><h3 id="sumNgTitle"></h3><ul id="sumNgList"></ul></div>
+      <div class="sumblock reassure"><h3 id="sumReassureTitle"></h3><p id="sumReassureText"></p></div>
+    </div>
+    <div class="stepnav">
+      <button id="btnPrev"></button>
+      <button id="btnNext"></button>
+    </div>
+  </section>
+  <section id="scrCard" class="screen" hidden>
+    <div class="cat-head">
+      <span class="em" id="cardEmoji"></span>
+      <div><h2 id="cardTitle"></h2><p id="cardSub"></p></div>
+    </div>
+    <div id="cardFig" class="figbox" hidden></div>
+    <div id="cardBody"></div>
+  </section>
+  <section id="scrCpr" class="screen" hidden>
+    <div class="cat-head">
+      <span class="em" aria-hidden="true">❤️</span>
+      <div><h2 id="cprTitle"></h2><p id="cprIntro"></p></div>
+    </div>
+    <div class="sec call"><h3 id="cprFirstTitle"></h3><p id="cprFirst"></p></div>
+    <div class="sec"><h3 id="cprStepsTitle"></h3><ol id="cprSteps"></ol></div>
+    <div class="metrobox">
+      <div id="metroCircle"><span id="metroCount">0</span></div>
+      <button id="metroBtn" class="btn-primary metro"></button>
+      <p id="metroHint" class="mutetext"></p>
+    </div>
+    <p id="cprNote" class="mutetext"></p>
+  </section>
+</main>
+<nav id="tabbar">
+  <button id="navTech" class="tab active"><span class="tab-emoji">🤲</span><span id="navTechLabel"></span></button>
+  <button id="navDanger" class="tab"><span class="tab-emoji">🚨</span><span id="navDangerLabel"></span></button>
+  <button id="navSelf" class="tab"><span class="tab-emoji">🌱</span><span id="navSelfLabel"></span></button>
+  <button id="navSettings" class="tab"><span class="tab-emoji">⚙️</span><span id="navSettingsLabel"></span></button>
+</nav>
+<div id="noticeOverlay" class="overlay" hidden>
+  <div class="notice">
+    <h2 id="noticeTitle"></h2>
+    <p id="noticeText"></p>
+    <button id="noticeOk" class="btn-primary"></button>
+  </div>
+</div><script src="i18n.js"></script>
+<script src="audio.js"></script>
+<script src="tap.js"></script>
+<script src="figures.js"></script>
+<script src="data/guide.ja.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
