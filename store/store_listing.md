@@ -13,7 +13,7 @@ appId：com.soyogi.ouchikaigo ／ 提供：介護と支援の相談どころ そ
 
 ### 簡単な説明（80文字以内）
 
-家族のための無料の介護ガイド。移乗・食事・おむつ交換などを図解で。現場の知恵と確かなエビデンスで開発。オフライン・広告なし。
+家族のための介護ガイド。移乗・食事・おむつ交換などを図解で。現場の知恵と確かなエビデンスで開発。オフライン・12言語対応。
 
 ### 詳しい説明（4000文字以内）
 
@@ -55,7 +55,7 @@ Soyogi Home Care Guide
 
 ### Short description (80 characters max)
 
-A free home caregiving guide for families. Techniques, safety, and self-care.
+A home caregiving guide for families. Techniques, safety, and self-care.
 
 ### Full description (4000 characters max)
 
