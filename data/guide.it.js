@@ -668,7 +668,7 @@ window.OUCHI_CONTENT.it = {
         { h: 'Il servizio di consulenza «Soyogi» che ha fatto questa app', body: [
           'Soyogi, un servizio di consulenza per assistenza e sostegno. È il servizio privato senza scopo di lucro che crea questa applicazione.',
           'Quando è difficile andare agli sportelli pubblici, o hai tempo solo di sera, puoi confidarti in modo anonimo online (in un metaverso). Questa consulenza è un servizio in lingua giapponese (1000 yen ogni 30 minuti; prenotare è più agevole).'
-        ], link: { href: 'https://soyogi.hp.peraichi.com/top', label: '🍃 Vedi il sito di Soyogi' }}
+        ], link: { href: 'https://soudansoyogi.com/', label: '🍃 Vedi il sito di Soyogi' }}
       ]
     },
     {

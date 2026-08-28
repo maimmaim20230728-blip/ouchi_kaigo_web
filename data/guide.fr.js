@@ -668,7 +668,7 @@ window.OUCHI_CONTENT.fr = {
         { h: 'Le service de conseil « Soyogi » qui a fait cette app', body: [
           'Soyogi, un service de conseil en soin et accompagnement. C\'est le service privé à but non lucratif qui réalise cette application.',
           'Quand il est difficile d\'aller aux guichets publics, ou que vous n\'avez de temps que le soir, vous pouvez vous confier anonymement en ligne (dans un métavers). Ce conseil est un service en langue japonaise (1000 yens par 30 minutes ; une réservation est plus fluide).'
-        ], link: { href: 'https://soyogi.hp.peraichi.com/top', label: '🍃 Voir le site de Soyogi' }}
+        ], link: { href: 'https://soudansoyogi.com/', label: '🍃 Voir le site de Soyogi' }}
       ]
     },
     {

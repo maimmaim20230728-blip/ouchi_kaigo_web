@@ -668,7 +668,7 @@ window.OUCHI_CONTENT.nl = {
         { h: 'De adviesdienst „Soyogi" die deze app maakte', body: [
           'Soyogi, een adviesdienst voor zorg en ondersteuning. Het is de particuliere, non-profit dienst die deze app maakt.',
           'Als het moeilijk is naar openbare loketten te gaan, of u alleen \'s avonds tijd hebt, kunt u anoniem online overleggen (in een metaverse). Dit advies is een Japanstalige dienst (1000 yen per 30 minuten; reserveren verloopt vlotter).'
-        ], link: { href: 'https://soyogi.hp.peraichi.com/top', label: '🍃 Bekijk de website van Soyogi' }}
+        ], link: { href: 'https://soudansoyogi.com/', label: '🍃 Bekijk de website van Soyogi' }}
       ]
     },
     {

@@ -668,7 +668,7 @@ window.OUCHI_CONTENT.pt = {
         { h: 'O serviço de orientação «Soyogi» que fez este app', body: [
           'Soyogi, um serviço de orientação em cuidado e apoio. É o serviço privado sem fins lucrativos que cria este aplicativo.',
           'Quando é difícil ir aos postos públicos, ou você só tem tempo à noite, pode consultar de forma anônima online (num metaverso). Esta orientação é um serviço em língua japonesa (1000 ienes a cada 30 minutos; agendar é mais tranquilo).'
-        ], link: { href: 'https://soyogi.hp.peraichi.com/top', label: '🍃 Ver o site da Soyogi' }}
+        ], link: { href: 'https://soudansoyogi.com/', label: '🍃 Ver o site da Soyogi' }}
       ]
     },
     {

@@ -668,7 +668,7 @@ window.OUCHI_CONTENT.de = {
         { h: 'Die Beratungsstelle „Soyogi", die diese App gemacht hat', body: [
           'Soyogi, eine Beratungsstelle für Pflege und Unterstützung. Es ist der private, gemeinnützige Dienst, der diese App macht.',
           'Wenn es schwer ist, zu öffentlichen Stellen zu gehen, oder Sie nur nachts Zeit haben, können Sie sich anonym online (in einem Metaversum) beraten lassen. Diese Beratung ist ein japanischsprachiger Dienst (1000 Yen pro 30 Minuten; eine Buchung geht reibungsloser).'
-        ], link: { href: 'https://soyogi.hp.peraichi.com/top', label: '🍃 Die Soyogi-Website besuchen' }}
+        ], link: { href: 'https://soudansoyogi.com/', label: '🍃 Die Soyogi-Website besuchen' }}
       ]
     },
     {

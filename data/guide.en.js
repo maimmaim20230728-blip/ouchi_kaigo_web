@@ -675,7 +675,7 @@ window.OUCHI_CONTENT.en = {
         { h: 'The counseling service "Soyogi" that made this app', body: [
           'Soyogi, a care and support counseling service. It is the nonprofit, private service that makes this app.',
           'When it is hard to go to public counters, or you only have time at night, you can consult anonymously online (in a metaverse). This consultation is a Japanese-language service (1,000 yen per 30 minutes; booking is smoother).'
-        ], link: { href: 'https://soyogi.hp.peraichi.com/top', label: '🍃 Visit the Soyogi website' }}
+        ], link: { href: 'https://soudansoyogi.com/', label: '🍃 Visit the Soyogi website' }}
       ]
     },
     {

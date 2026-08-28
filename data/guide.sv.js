@@ -668,7 +668,7 @@ window.OUCHI_CONTENT.sv = {
         { h: 'Rådgivningstjänsten ”Soyogi” som gjorde appen', body: [
           'Soyogi, en rådgivningstjänst för vård och stöd. Det är den privata, ideella tjänst som skapar den här appen.',
           'När det är svårt att gå till offentliga kontor, eller du bara har tid på kvällen, kan du rådgöra anonymt online (i ett metaversum). Denna rådgivning är en japanskspråkig tjänst (1000 yen per 30 minuter; att boka går smidigare).'
-        ], link: { href: 'https://soyogi.hp.peraichi.com/top', label: '🍃 Se Soyogis webbplats' }}
+        ], link: { href: 'https://soudansoyogi.com/', label: '🍃 Se Soyogis webbplats' }}
       ]
     },
     {

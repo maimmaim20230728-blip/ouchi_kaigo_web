@@ -670,7 +670,7 @@ window.OUCHI_CONTENT.zh = {
         { h: '开发这个应用的咨询处「Soyogi」', body: [
           '照护与支援的咨询处「Soyogi」。是开发这个应用的、民间非营利的咨询窗口。',
           '有难以去公家窗口的隐情时、只有夜里能抽出时间时。可以在网络上（元宇宙）不透露姓名地咨询。这项咨询是日语服务（每 30 分钟 1000 日元・预约后更顺畅）。'
-        ], link: { href: 'https://soyogi.hp.peraichi.com/top', label: '🍃 查看 Soyogi 的主页' }}
+        ], link: { href: 'https://soudansoyogi.com/', label: '🍃 查看 Soyogi 的主页' }}
       ]
     },
     {
