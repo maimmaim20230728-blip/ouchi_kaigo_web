@@ -1,6 +1,6 @@
 'use strict';
 /* オフライン用キャッシュ */
-const CACHE = 'ouchikaigo-v53';
+const CACHE = 'ouchikaigo-v54';
 const ASSETS = [
   './',
   './index.html',

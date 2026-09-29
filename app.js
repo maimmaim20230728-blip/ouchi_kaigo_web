@@ -464,6 +464,44 @@
     document.title = T.appName;
   }
 
+  /* ---------- Android の戻るボタン(Play版だけ・2026-09-30) ----------
+     @capacitor/app が無いと、戻るを押すとアプリごと後ろに下がっていた(Android 11 以前は閉じる)。
+     押したときの順: ①初回のおしらせ(免責)は「わかりました」でしか閉じないので、閉じずに④と同じ
+                    ②手順の2つめ以降(まとめのページも)→ 1つ前の段(「← まえへ」と同じ)
+                    ③カテゴリ・手順・カード・心肺蘇生のページ → ヘッダーの「← もどる」と同じ
+                      ぎじゅつ以外のタブ → ぎじゅつ(ホーム)
+                    ④ぎじゅつ → アプリを後ろに下げる(minimizeApp。中身はそのまま)
+     🔴 プラグインはネイティブが注入する Capacitor.Plugins.App を使う(registerPlugin は WebView に無い)。
+     Web版(ブラウザ)は何も変えない(戻るはブラウザのまま) */
+  function isNativeApp(){
+    try{ const c = window.Capacitor; return !!(c && typeof c.isNativePlatform === 'function' && c.isNativePlatform()); }catch(_){ return false; }
+  }
+  function nativePlugin(name, fn){
+    try{
+      const c = window.Capacitor;
+      if(typeof c.isPluginAvailable === 'function' && !c.isPluginAvailable(name)) return null;
+      const p = c.Plugins && c.Plugins[name];
+      return (p && typeof p[fn] === 'function') ? p : null;
+    }catch(_){ return null; }
+  }
+  function minimizeApp(){
+    const ap = nativePlugin('App', 'minimizeApp');
+    try{ if(ap){ const p = ap.minimizeApp(); if(p && p.catch) p.catch(() => {}); } }catch(_){}
+  }
+  function onBackButton(){
+    if(!$('noticeOverlay').hidden){ minimizeApp(); return; }
+    if(sub && sub.kind === 'proc' && sub.i > 0){ stepPrev(); return; }
+    if(sub){ back(); return; }
+    if(tab !== 'tech'){ goTab('tech'); return; }
+    minimizeApp();
+  }
+  function watchBack(){
+    if(!isNativeApp()) return;
+    const ap = nativePlugin('App', 'addListener');
+    if(!ap) return;
+    try{ ap.addListener('backButton', () => { onBackButton(); }); }catch(_){}
+  }
+
   /* ---------- 起動 ---------- */
   applyLangAttrs();
   fillStatic();
@@ -501,6 +539,7 @@
   }
 
   render();
+  watchBack();   // Android の戻るボタン(Play版だけ)
 
   // 保存された言語がまだ読めていなければ、ここで読み込んで切り替える
   if(prefs.lang !== LANG) setLang(prefs.lang);
