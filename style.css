@@ -119,4 +119,27 @@ main{padding:16px 14px calc(96px + env(safe-area-inset-bottom));max-width:640px;
 .btn-primary{width:100%;padding:16px;border:none;border-radius:16px;background:var(--brand);color:#fff;font-family:inherit;font-size:1em;font-weight:bold;cursor:pointer}
 
 .pressing{transform:scale(.97);filter:brightness(.96)}
+
+/* はじめての つかいかた(app.js openGuide・2026-09-30)。1ページ目は初回のおしらせ「はじめにお読みください」。
+   ヘッダーと下のタブより上に全画面。文は文字の大きさ3段階に合わせて大きくなる(em)。
+   ボタンは下に固定した帯(地の色つき=長いページでも本文が透けない)。本文の下の余白は帯より高くする */
+.guide-ov{position:fixed;inset:0;z-index:50;background:var(--bg);color:var(--ink);overflow-y:auto;overscroll-behavior:contain;
+  padding:calc(18px + env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) calc(140px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
+.guide-box{max-width:560px;margin:0 auto}
+.guide-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.guide-title{font-weight:bold;color:var(--brand-dark);font-size:.9em}
+.guide-step{color:var(--muted);font-weight:bold;font-size:.9em;white-space:nowrap;unicode-bidi:isolate}
+.guide-lang{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:12px 0 0;font-size:.85em}
+.guide-lang select{min-height:48px;font-size:1em;font-family:inherit;border:2px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);padding:4px 10px;max-width:100%}
+.guide-h{font-size:1.15em;line-height:1.45;margin:16px 0 10px;color:var(--brand-dark);overflow-wrap:anywhere}
+.guide-h[tabindex="-1"]:focus{outline:none}
+.guide-p{font-size:.95em;line-height:1.85;white-space:pre-line;overflow-wrap:anywhere}
+.guide-dots{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:22px}
+.guide-dot{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.guide-dot.on{background:var(--brand)}
+.guide-row{position:fixed;left:0;right:0;bottom:0;z-index:1;display:flex;gap:12px;background:var(--bg);border-top:2px solid var(--line);
+  padding:10px max(14px,env(safe-area-inset-right)) calc(14px + env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left))}
+.guide-row button{flex:1 1 0;min-width:0;min-height:60px;padding:12px 8px;border-radius:16px;border:none;font-family:inherit;font-size:1em;font-weight:bold;cursor:pointer}
+.guide-prev{background:var(--line);color:var(--ink)}
+.guide-next{background:var(--brand);color:#fff}
 [hidden]{display:none!important}

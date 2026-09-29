@@ -45,10 +45,30 @@ window.OUCHI_I18N = {
     about: 'このアプリについて',
     aboutText: 'このアプリは、家庭で介護をするご家族のための、一般的な介護の知識とコツを紹介するものです。体の状態やご病気は一人ひとり違います。かかりつけの医師や看護師、リハビリや介護の専門職から個別の指導があるときは、必ずそちらを優先してください。むずかしいと感じたら、ひとりで抱え込まず、専門職に相談してください。',
     credit: '介護と支援の相談どころ「そよぎ」',
-    ver: 'バージョン 1.5',
+    ver: 'バージョン 1.6',
     noticeTitle: 'はじめにお読みください',
     noticeText: 'このアプリは、家庭で介護をするご家族のための、一般的な介護の知識とコツを紹介するものです。体の状態やご病気は一人ひとり違います。かかりつけの医師や看護師、リハビリや介護の専門職から個別の指導があるときは、必ずそちらを優先してください。緊急のときは、ためらわずに救急車（119番）を呼んでください。',
-    noticeOk: 'わかりました'
+    noticeOk: 'わかりました',
+    /* はじめての つかいかた(app.js openGuide・2026-09-30)。1ページ目は noticeTitle / noticeText。{キー} は画面の文字に置きかわる */
+    guideTitle: 'つかいかた',
+    guideStart: 'はじめる',
+    guideAgain: 'つかいかたを もう一度 見る',
+    guideHeads: [
+      '画面の下の 4つのボタン',
+      '{tabTech}: 1ステップずつ',
+      '{tabDanger}: いつもと違うとき',
+      '{tabSelf}: 介護する人のために',
+      '見やすさ・音・ことば',
+      'この端末の中だけ'
+    ],
+    guideBodies: [
+      '画面の下のボタンで、4つの画面を切りかえます。\n「{tabTech}」: 介助のやり方を、図と短い文で。\n「{tabDanger}」: いつもと違うと感じたときのサインと、動き方。\n「{tabSelf}」: 介護する人自身を守るための知恵。\n「{tabSettings}」: 文字の大きさ・画面の色・音・ことば。\n前の画面には、上の「{back}」でもどれます。',
+      '「{tabTech}」で知りたいことと手順を選ぶと、図と文で1ステップずつ進みます。「{next}」「{prev}」で進んだり戻ったりします。\n最後の「{toSummary}」で、だいじなポイントをまとめて見られます。\n⚠️ は注意、🖐️ は「{adaptTitle}」の補足です。📖 のボタンで、関係するくわしい手順を開けます。',
+      '「{tabDanger}」には、「{danger.0}」などのカードがあります。カードの中は「{when}」「{act}」「{call}」などに分かれています。\n「{cpr.open}」のボタンで開くページでは、「{cpr.metroStart}」を押すと、胸骨圧迫のリズムが音で鳴ります。',
+      '「{tabSelf}」には、「{self.0}」「{self.1}」などのカードがあります。\n介護する人自身を守ることも、大切な介護の技術です。むずかしいと感じたら、専門職や介護サービスに頼ってください。',
+      '「{tabSettings}」で、次のことを変えられます。\n「{setFs}」: {fsNames.0}・{fsNames.1}・{fsNames.2}\n「{setTheme}」: {themeGreen}・{themeBlue}\n「{setBgm}」: {musicA}・{musicB}・{musicOff}\n「{setSound}」: {on}・{off}\n「{setLang}」: 12のことば',
+      'このアプリには、登録やログインはありません。入力する欄もなく、見た内容がどこかに送られることはありません。この端末に残るのは、「{tabSettings}」で選んだことと、この案内を読んだかどうかだけです。\nこの案内は、「{tabSettings}」の「{guideAgain}」で、いつでも見られます。'
+    ]
   },
 
   en: {
@@ -95,10 +115,30 @@ window.OUCHI_I18N = {
     about: 'About this app',
     aboutText: 'This app introduces general care knowledge and tips for families caring for a loved one at home. Everyone\'s body and illness are different. When a doctor, nurse, or rehabilitation or care professional gives you personal guidance, always follow that first. If it feels too hard, do not carry it alone; please turn to a professional.',
     credit: 'Soyogi, a care and support counseling service',
-    ver: 'Version 1.5',
+    ver: 'Version 1.6',
     noticeTitle: 'Please read this first',
     noticeText: 'This app introduces general care knowledge and tips for families caring for a loved one at home. Everyone\'s body and illness are different. When a doctor, nurse, or rehabilitation or care professional gives you personal guidance, always follow that first. In an emergency, do not hesitate to call your local emergency number.',
-    noticeOk: 'OK'
+    noticeOk: 'OK',
+    /* はじめての つかいかた(app.js openGuide・2026-09-30)。1ページ目は noticeTitle / noticeText。{キー} は画面の文字に置きかわる */
+    guideTitle: 'How to use',
+    guideStart: 'Start',
+    guideAgain: 'Show how to use again',
+    guideHeads: [
+      'The 4 buttons at the bottom',
+      '{tabTech}: one step at a time',
+      '{tabDanger}: when something is different',
+      '{tabSelf}: for the person giving care',
+      'Easier reading, sound and language',
+      'Stays on this device'
+    ],
+    guideBodies: [
+      'The buttons at the bottom switch between 4 screens.\n"{tabTech}": how to help, with pictures and short text.\n"{tabDanger}": warning signs when something feels different, and what to do.\n"{tabSelf}": ways to protect yourself as the person giving care.\n"{tabSettings}": text size, screen color, sound and language.\nTo go back to the previous screen, tap "{back}" at the top.',
+      'In "{tabTech}", choose a topic and then a procedure to go through it one step at a time, with a picture and text. Use "{next}" and "{prev}" to move forward and back.\nAt the end, "{toSummary}" shows the key points together.\n⚠️ marks a caution, and 🖐️ adds "{adaptTitle}". A 📖 button opens a related, more detailed procedure.',
+      '"{tabDanger}" has cards such as "{danger.0}". Each card is divided into parts such as "{when}", "{act}" and "{call}".\nThe "{cpr.open}" button opens a page where "{cpr.metroStart}" plays the rhythm for chest compressions.',
+      '"{tabSelf}" has cards such as "{self.0}" and "{self.1}".\nProtecting yourself is an important care skill too. If it feels too hard, please turn to professionals or care services.',
+      'In "{tabSettings}", these can be changed:\n"{setFs}": {fsNames.0}, {fsNames.1}, {fsNames.2}\n"{setTheme}": {themeGreen}, {themeBlue}\n"{setBgm}": {musicA}, {musicB}, {musicOff}\n"{setSound}": {on}, {off}\n"{setLang}": 12 languages',
+      'There is no sign-up or login, and nothing to type in. What you view is not sent anywhere. Only the choices made in "{tabSettings}" and whether this guide has been read are kept on this device.\nThis guide can be seen again at any time with "{guideAgain}" in "{tabSettings}".'
+    ]
   },
 
   de: {
@@ -145,10 +185,30 @@ window.OUCHI_I18N = {
     about: 'Über diese App',
     aboutText: 'Diese App vermittelt allgemeines Pflegewissen und Tipps für Familien, die einen Angehörigen zu Hause pflegen. Jeder Körper und jede Krankheit ist anders. Wenn eine Ärztin, ein Pfleger oder eine Reha- oder Pflegefachkraft Ihnen eine persönliche Anleitung gibt, befolgen Sie immer zuerst diese. Wenn es zu schwer wird, tragen Sie es nicht allein; wenden Sie sich bitte an eine Fachkraft.',
     credit: 'Soyogi, eine Beratungsstelle für Pflege und Unterstützung',
-    ver: 'Version 1.5',
+    ver: 'Version 1.6',
     noticeTitle: 'Bitte zuerst lesen',
     noticeText: 'Diese App vermittelt allgemeines Pflegewissen und Tipps für Familien, die einen Angehörigen zu Hause pflegen. Jeder Körper und jede Krankheit ist anders. Wenn eine Ärztin, ein Pfleger oder eine Reha- oder Pflegefachkraft Ihnen eine persönliche Anleitung gibt, befolgen Sie immer zuerst diese. Wählen Sie im Notfall ohne Zögern die örtliche Notrufnummer.',
-    noticeOk: 'OK'
+    noticeOk: 'OK',
+    /* はじめての つかいかた(app.js openGuide・2026-09-30)。1ページ目は noticeTitle / noticeText。{キー} は画面の文字に置きかわる */
+    guideTitle: 'Anleitung',
+    guideStart: 'Starten',
+    guideAgain: 'Anleitung noch einmal ansehen',
+    guideHeads: [
+      'Die 4 Tasten unten',
+      '{tabTech}: Schritt für Schritt',
+      '{tabDanger}: wenn etwas anders ist',
+      '{tabSelf}: für die pflegende Person',
+      'Lesbarkeit, Ton und Sprache',
+      'Bleibt auf diesem Gerät'
+    ],
+    guideBodies: [
+      'Mit den Tasten unten wechseln Sie zwischen 4 Bildschirmen.\n„{tabTech}“: wie man hilft, mit Bildern und kurzen Texten.\n„{tabDanger}“: Warnzeichen, wenn etwas anders ist, und was zu tun ist.\n„{tabSelf}“: wie Sie sich als pflegende Person selbst schützen.\n„{tabSettings}“: Textgröße, Bildschirmfarbe, Ton und Sprache.\nZum vorherigen Bildschirm kommen Sie oben mit „{back}“.',
+      'Wählen Sie unter „{tabTech}“ ein Thema und dann eine Anleitung. Sie geht Schritt für Schritt vor, mit Bild und Text. Mit „{next}“ und „{prev}“ gehen Sie vor und zurück.\nAm Ende zeigt „{toSummary}“ die wichtigsten Punkte zusammen.\n⚠️ ist ein Hinweis zur Vorsicht, 🖐️ ergänzt „{adaptTitle}“. Eine 📖-Taste öffnet eine passende, genauere Anleitung.',
+      'Unter „{tabDanger}“ gibt es Karten wie „{danger.0}“. Jede Karte ist unterteilt, etwa in „{when}“, „{act}“ und „{call}“.\nDie Taste „{cpr.open}“ öffnet eine Seite, auf der „{cpr.metroStart}“ den Rhythmus für die Herzdruckmassage abspielt.',
+      'Unter „{tabSelf}“ gibt es Karten wie „{self.0}“ und „{self.1}“.\nSich selbst zu schützen ist auch eine wichtige Pflegetechnik. Wenn es zu schwer wird, wenden Sie sich bitte an Fachkräfte oder Pflegedienste.',
+      'Unter „{tabSettings}“ lässt sich Folgendes ändern:\n„{setFs}“: {fsNames.0}, {fsNames.1}, {fsNames.2}\n„{setTheme}“: {themeGreen}, {themeBlue}\n„{setBgm}“: {musicA}, {musicB}, {musicOff}\n„{setSound}“: {on}, {off}\n„{setLang}“: 12 Sprachen',
+      'Es gibt keine Anmeldung und nichts einzutippen. Was Sie ansehen, wird nirgendwohin gesendet. Auf diesem Gerät bleibt nur, was Sie unter „{tabSettings}“ wählen, und ob diese Anleitung gelesen wurde.\nDiese Anleitung können Sie jederzeit unter „{tabSettings}“ mit „{guideAgain}“ wieder ansehen.'
+    ]
   },
 
   fr: {
@@ -195,10 +255,30 @@ window.OUCHI_I18N = {
     about: 'À propos de cette app',
     aboutText: 'Cette application présente des connaissances et des astuces de soin générales pour les familles qui s\'occupent d\'un proche à domicile. Chaque corps et chaque maladie est différent. Quand un médecin, un infirmier ou un professionnel de la rééducation ou du soin vous donne des conseils personnels, suivez-les toujours en priorité. Si cela devient trop difficile, ne le portez pas seul ; adressez-vous à un professionnel.',
     credit: 'Soyogi, un service de conseil en soin et accompagnement',
-    ver: 'Version 1.5',
+    ver: 'Version 1.6',
     noticeTitle: 'À lire d\'abord',
     noticeText: 'Cette application présente des connaissances et des astuces de soin générales pour les familles qui s\'occupent d\'un proche à domicile. Chaque corps et chaque maladie est différent. Quand un médecin, un infirmier ou un professionnel de la rééducation ou du soin vous donne des conseils personnels, suivez-les toujours en priorité. En cas d\'urgence, appelez sans hésiter le numéro des secours de votre pays.',
-    noticeOk: 'OK'
+    noticeOk: 'OK',
+    /* はじめての つかいかた(app.js openGuide・2026-09-30)。1ページ目は noticeTitle / noticeText。{キー} は画面の文字に置きかわる */
+    guideTitle: 'Mode d’emploi',
+    guideStart: 'Commencer',
+    guideAgain: 'Revoir le mode d’emploi',
+    guideHeads: [
+      'Les 4 boutons du bas',
+      '{tabTech} : étape par étape',
+      '{tabDanger} : quand quelque chose change',
+      '{tabSelf} : pour la personne qui aide',
+      'Lisibilité, son et langue',
+      'Reste sur cet appareil'
+    ],
+    guideBodies: [
+      'Les boutons du bas permettent de passer d’un écran à l’autre, parmi 4 écrans.\n« {tabTech} » : comment aider, avec des images et des textes courts.\n« {tabDanger} » : les signes d’alerte quand quelque chose change, et quoi faire.\n« {tabSelf} » : comment vous protéger en tant que personne qui aide.\n« {tabSettings} » : taille du texte, couleur de l’écran, son et langue.\nPour revenir à l’écran précédent, touchez « {back} » en haut.',
+      'Dans « {tabTech} », choisissez un thème puis une fiche : elle avance étape par étape, avec une image et un texte. Utilisez « {next} » et « {prev} » pour avancer et revenir.\nÀ la fin, « {toSummary} » montre les points importants ensemble.\n⚠️ signale une précaution, et 🖐️ ajoute « {adaptTitle} ». Un bouton 📖 ouvre une fiche liée plus détaillée.',
+      '« {tabDanger} » contient des cartes comme « {danger.0} ». Chaque carte est divisée en parties comme « {when} », « {act} » et « {call} ».\nLe bouton « {cpr.open} » ouvre une page où « {cpr.metroStart} » fait entendre le rythme des compressions thoraciques.',
+      '« {tabSelf} » contient des cartes comme « {self.0} » et « {self.1} ».\nSe protéger soi-même est aussi un geste de soin important. Si cela devient trop difficile, faites appel à des professionnels ou à des services d’aide.',
+      'Dans « {tabSettings} », vous pouvez changer :\n« {setFs} » : {fsNames.0}, {fsNames.1}, {fsNames.2}\n« {setTheme} » : {themeGreen}, {themeBlue}\n« {setBgm} » : {musicA}, {musicB}, {musicOff}\n« {setSound} » : {on}, {off}\n« {setLang} » : 12 langues',
+      'Il n’y a ni inscription ni connexion, et rien à saisir. Ce que vous consultez n’est envoyé nulle part. Seuls les choix faits dans « {tabSettings} » et le fait d’avoir lu ce mode d’emploi restent sur cet appareil.\nCe mode d’emploi peut être revu à tout moment avec « {guideAgain} » dans « {tabSettings} ».'
+    ]
   },
 
   es: {
@@ -245,10 +325,30 @@ window.OUCHI_I18N = {
     about: 'Acerca de esta app',
     aboutText: 'Esta aplicación presenta conocimientos y consejos generales de cuidado para las familias que cuidan a un ser querido en casa. Cada cuerpo y cada enfermedad es diferente. Cuando un médico, un enfermero o un profesional de la rehabilitación o el cuidado le dé indicaciones personales, siga siempre esas primero. Si se hace demasiado difícil, no lo cargue solo; acuda a un profesional.',
     credit: 'Soyogi, un servicio de orientación en cuidado y apoyo',
-    ver: 'Versión 1.5',
+    ver: 'Versión 1.6',
     noticeTitle: 'Lea esto primero',
     noticeText: 'Esta aplicación presenta conocimientos y consejos generales de cuidado para las familias que cuidan a un ser querido en casa. Cada cuerpo y cada enfermedad es diferente. Cuando un médico, un enfermero o un profesional de la rehabilitación o el cuidado le dé indicaciones personales, siga siempre esas primero. En una emergencia, llame sin dudar al número de emergencias de su zona.',
-    noticeOk: 'De acuerdo'
+    noticeOk: 'De acuerdo',
+    /* はじめての つかいかた(app.js openGuide・2026-09-30)。1ページ目は noticeTitle / noticeText。{キー} は画面の文字に置きかわる */
+    guideTitle: 'Cómo se usa',
+    guideStart: 'Empezar',
+    guideAgain: 'Ver de nuevo cómo se usa',
+    guideHeads: [
+      'Los 4 botones de abajo',
+      '{tabTech}: paso a paso',
+      '{tabDanger}: cuando algo cambia',
+      '{tabSelf}: para quien cuida',
+      'Lectura, sonido e idioma',
+      'Se queda en este dispositivo'
+    ],
+    guideBodies: [
+      'Con los botones de abajo se cambia entre 4 pantallas.\n«{tabTech}»: cómo ayudar, con dibujos y textos cortos.\n«{tabDanger}»: señales de alerta cuando algo cambia, y qué hacer.\n«{tabSelf}»: cómo protegerse como persona que cuida.\n«{tabSettings}»: tamaño del texto, color de la pantalla, sonido e idioma.\nPara volver a la pantalla anterior, toque «{back}» arriba.',
+      'En «{tabTech}», elija un tema y luego un procedimiento: avanza paso a paso, con dibujo y texto. Use «{next}» y «{prev}» para avanzar y retroceder.\nAl final, «{toSummary}» muestra juntos los puntos importantes.\n⚠️ marca una precaución y 🖐️ añade «{adaptTitle}». Un botón 📖 abre un procedimiento relacionado más detallado.',
+      '«{tabDanger}» tiene tarjetas como «{danger.0}». Cada tarjeta se divide en partes como «{when}», «{act}» y «{call}».\nEl botón «{cpr.open}» abre una página donde «{cpr.metroStart}» hace sonar el ritmo de las compresiones torácicas.',
+      '«{tabSelf}» tiene tarjetas como «{self.0}» y «{self.1}».\nProtegerse a uno mismo también es una técnica de cuidado importante. Si se hace demasiado difícil, recurra a profesionales o a servicios de cuidados.',
+      'En «{tabSettings}» se puede cambiar:\n«{setFs}»: {fsNames.0}, {fsNames.1}, {fsNames.2}\n«{setTheme}»: {themeGreen}, {themeBlue}\n«{setBgm}»: {musicA}, {musicB}, {musicOff}\n«{setSound}»: {on}, {off}\n«{setLang}»: 12 idiomas',
+      'No hay registro ni inicio de sesión, ni nada que escribir. Lo que se consulta no se envía a ningún sitio. En este dispositivo solo quedan las opciones elegidas en «{tabSettings}» y si ya se leyó esta guía.\nEsta guía se puede ver de nuevo en cualquier momento con «{guideAgain}» en «{tabSettings}».'
+    ]
   },
 
   it: {
@@ -295,10 +395,30 @@ window.OUCHI_I18N = {
     about: 'Informazioni su questa app',
     aboutText: 'Questa app presenta conoscenze e consigli generali di assistenza per le famiglie che si prendono cura di una persona cara a casa. Ogni corpo e ogni malattia è diverso. Quando un medico, un infermiere o un professionista della riabilitazione o dell\'assistenza ti dà indicazioni personali, seguile sempre per prime. Se diventa troppo difficile, non portarlo da solo; rivolgiti a un professionista.',
     credit: 'Soyogi, un servizio di consulenza per assistenza e sostegno',
-    ver: 'Versione 1.5',
+    ver: 'Versione 1.6',
     noticeTitle: 'Da leggere prima',
     noticeText: 'Questa app presenta conoscenze e consigli generali di assistenza per le famiglie che si prendono cura di una persona cara a casa. Ogni corpo e ogni malattia è diverso. Quando un medico, un infermiere o un professionista della riabilitazione o dell\'assistenza ti dà indicazioni personali, seguile sempre per prime. In caso di emergenza, chiama senza esitare il numero di emergenza della tua zona.',
-    noticeOk: 'OK'
+    noticeOk: 'OK',
+    /* はじめての つかいかた(app.js openGuide・2026-09-30)。1ページ目は noticeTitle / noticeText。{キー} は画面の文字に置きかわる */
+    guideTitle: 'Come si usa',
+    guideStart: 'Inizia',
+    guideAgain: 'Rivedi come si usa',
+    guideHeads: [
+      'I 4 pulsanti in basso',
+      '{tabTech}: un passo alla volta',
+      '{tabDanger}: quando qualcosa cambia',
+      '{tabSelf}: per chi assiste',
+      'Lettura, suono e lingua',
+      'Resta su questo dispositivo'
+    ],
+    guideBodies: [
+      'Con i pulsanti in basso passi tra 4 schermate.\n«{tabTech}»: come aiutare, con disegni e testi brevi.\n«{tabDanger}»: segnali di allarme quando qualcosa cambia, e cosa fare.\n«{tabSelf}»: come proteggere te stesso mentre assisti.\n«{tabSettings}»: dimensione del testo, colore dello schermo, suono e lingua.\nPer tornare alla schermata precedente, tocca «{back}» in alto.',
+      'In «{tabTech}» scegli un argomento e poi una procedura: procede un passo alla volta, con disegno e testo. Usa «{next}» e «{prev}» per andare avanti e indietro.\nAlla fine, «{toSummary}» mostra insieme i punti importanti.\n⚠️ indica un’attenzione e 🖐️ aggiunge «{adaptTitle}». Un pulsante 📖 apre una procedura collegata più dettagliata.',
+      '«{tabDanger}» ha schede come «{danger.0}». Ogni scheda è divisa in parti come «{when}», «{act}» e «{call}».\nIl pulsante «{cpr.open}» apre una pagina dove «{cpr.metroStart}» fa sentire il ritmo delle compressioni toraciche.',
+      '«{tabSelf}» ha schede come «{self.0}» e «{self.1}».\nProteggere te stesso è anche una tecnica di assistenza importante. Se diventa troppo difficile, rivolgiti a professionisti o a servizi di assistenza.',
+      'In «{tabSettings}» puoi cambiare:\n«{setFs}»: {fsNames.0}, {fsNames.1}, {fsNames.2}\n«{setTheme}»: {themeGreen}, {themeBlue}\n«{setBgm}»: {musicA}, {musicB}, {musicOff}\n«{setSound}»: {on}, {off}\n«{setLang}»: 12 lingue',
+      'Non ci sono registrazione né accesso, e niente da scrivere. Ciò che guardi non viene inviato da nessuna parte. Su questo dispositivo restano solo le scelte fatte in «{tabSettings}» e se questa guida è già stata letta.\nPuoi rivedere questa guida in qualsiasi momento con «{guideAgain}» in «{tabSettings}».'
+    ]
   },
 
   pt: {
@@ -345,10 +465,30 @@ window.OUCHI_I18N = {
     about: 'Sobre este app',
     aboutText: 'Este aplicativo apresenta conhecimentos e dicas gerais de cuidado para as famílias que cuidam de um ente querido em casa. Cada corpo e cada doença é diferente. Quando um médico, um enfermeiro ou um profissional de reabilitação ou de cuidado lhe der orientações pessoais, siga sempre essas primeiro. Se ficar difícil demais, não carregue sozinho; procure um profissional.',
     credit: 'Soyogi, um serviço de orientação em cuidado e apoio',
-    ver: 'Versão 1.5',
+    ver: 'Versão 1.6',
     noticeTitle: 'Leia isto primeiro',
     noticeText: 'Este aplicativo apresenta conhecimentos e dicas gerais de cuidado para as famílias que cuidam de um ente querido em casa. Cada corpo e cada doença é diferente. Quando um médico, um enfermeiro ou um profissional de reabilitação ou de cuidado lhe der orientações pessoais, siga sempre essas primeiro. Em uma emergência, ligue sem hesitar para o número de emergência da sua região.',
-    noticeOk: 'OK'
+    noticeOk: 'OK',
+    /* はじめての つかいかた(app.js openGuide・2026-09-30)。1ページ目は noticeTitle / noticeText。{キー} は画面の文字に置きかわる */
+    guideTitle: 'Como usar',
+    guideStart: 'Começar',
+    guideAgain: 'Ver de novo como usar',
+    guideHeads: [
+      'Os 4 botões de baixo',
+      '{tabTech}: um passo de cada vez',
+      '{tabDanger}: quando algo muda',
+      '{tabSelf}: para quem cuida',
+      'Leitura, som e idioma',
+      'Fica neste aparelho'
+    ],
+    guideBodies: [
+      'Com os botões de baixo você troca entre 4 telas.\n«{tabTech}»: como ajudar, com desenhos e textos curtos.\n«{tabDanger}»: sinais de alerta quando algo muda, e o que fazer.\n«{tabSelf}»: como se proteger como pessoa que cuida.\n«{tabSettings}»: tamanho do texto, cor da tela, som e idioma.\nPara voltar à tela anterior, toque em «{back}» no alto.',
+      'Em «{tabTech}», escolha um tema e depois um procedimento: ele avança um passo de cada vez, com desenho e texto. Use «{next}» e «{prev}» para avançar e voltar.\nNo fim, «{toSummary}» mostra juntos os pontos importantes.\n⚠️ marca um cuidado e 🖐️ acrescenta «{adaptTitle}». Um botão 📖 abre um procedimento relacionado mais detalhado.',
+      '«{tabDanger}» tem cartões como «{danger.0}». Cada cartão é dividido em partes como «{when}», «{act}» e «{call}».\nO botão «{cpr.open}» abre uma página onde «{cpr.metroStart}» toca o ritmo das compressões torácicas.',
+      '«{tabSelf}» tem cartões como «{self.0}» e «{self.1}».\nProteger a si mesmo também é uma técnica de cuidado importante. Se ficar difícil demais, procure profissionais ou serviços de cuidado.',
+      'Em «{tabSettings}» dá para mudar:\n«{setFs}»: {fsNames.0}, {fsNames.1}, {fsNames.2}\n«{setTheme}»: {themeGreen}, {themeBlue}\n«{setBgm}»: {musicA}, {musicB}, {musicOff}\n«{setSound}»: {on}, {off}\n«{setLang}»: 12 idiomas',
+      'Não há cadastro nem login, e nada para digitar. O que você vê não é enviado para lugar nenhum. Neste aparelho ficam só as escolhas feitas em «{tabSettings}» e se este guia já foi lido.\nEste guia pode ser visto de novo a qualquer momento com «{guideAgain}» em «{tabSettings}».'
+    ]
   },
 
   nl: {
@@ -395,10 +535,30 @@ window.OUCHI_I18N = {
     about: 'Over deze app',
     aboutText: 'Deze app biedt algemene zorgkennis en tips voor families die thuis voor een dierbare zorgen. Elk lichaam en elke ziekte is anders. Wanneer een arts, verpleegkundige of revalidatie- of zorgprofessional u persoonlijke aanwijzingen geeft, volg die dan altijd eerst. Als het te zwaar wordt, draag het niet alleen; wend u tot een professional.',
     credit: 'Soyogi, een adviesdienst voor zorg en ondersteuning',
-    ver: 'Versie 1.5',
+    ver: 'Versie 1.6',
     noticeTitle: 'Lees dit eerst',
     noticeText: 'Deze app biedt algemene zorgkennis en tips voor families die thuis voor een dierbare zorgen. Elk lichaam en elke ziekte is anders. Wanneer een arts, verpleegkundige of revalidatie- of zorgprofessional u persoonlijke aanwijzingen geeft, volg die dan altijd eerst. Bel bij nood zonder aarzelen het noodnummer van uw regio.',
-    noticeOk: 'OK'
+    noticeOk: 'OK',
+    /* はじめての つかいかた(app.js openGuide・2026-09-30)。1ページ目は noticeTitle / noticeText。{キー} は画面の文字に置きかわる */
+    guideTitle: 'Uitleg',
+    guideStart: 'Beginnen',
+    guideAgain: 'Uitleg opnieuw bekijken',
+    guideHeads: [
+      'De 4 knoppen onderaan',
+      '{tabTech}: stap voor stap',
+      '{tabDanger}: als er iets anders is',
+      '{tabSelf}: voor wie zorgt',
+      'Leesbaarheid, geluid en taal',
+      'Blijft op dit apparaat'
+    ],
+    guideBodies: [
+      'Met de knoppen onderaan wisselt u tussen 4 schermen.\n„{tabTech}”: hoe u helpt, met tekeningen en korte teksten.\n„{tabDanger}”: waarschuwingstekens als er iets anders is, en wat u doet.\n„{tabSelf}”: hoe u uzelf beschermt als u zorgt.\n„{tabSettings}”: tekstgrootte, schermkleur, geluid en taal.\nNaar het vorige scherm gaat u bovenaan met „{back}”.',
+      'Kies in „{tabTech}” een onderwerp en daarna een handeling: die gaat stap voor stap, met tekening en tekst. Met „{next}” en „{prev}” gaat u verder en terug.\nAan het eind toont „{toSummary}” de belangrijkste punten bij elkaar.\n⚠️ is een waarschuwing en 🖐️ voegt „{adaptTitle}” toe. Een 📖-knop opent een verwante, uitgebreidere handeling.',
+      '„{tabDanger}” heeft kaarten zoals „{danger.0}”. Elke kaart is verdeeld in delen zoals „{when}”, „{act}” en „{call}”.\nDe knop „{cpr.open}” opent een pagina waar „{cpr.metroStart}” het ritme voor borstcompressies laat horen.',
+      '„{tabSelf}” heeft kaarten zoals „{self.0}” en „{self.1}”.\nUzelf beschermen is ook een belangrijke zorgtechniek. Als het te zwaar wordt, schakel dan professionals of zorgdiensten in.',
+      'In „{tabSettings}” kunt u dit wijzigen:\n„{setFs}”: {fsNames.0}, {fsNames.1}, {fsNames.2}\n„{setTheme}”: {themeGreen}, {themeBlue}\n„{setBgm}”: {musicA}, {musicB}, {musicOff}\n„{setSound}”: {on}, {off}\n„{setLang}”: 12 talen',
+      'Er is geen registratie of inloggen, en niets om in te typen. Wat u bekijkt, wordt nergens naartoe gestuurd. Op dit apparaat blijven alleen de keuzes die u in „{tabSettings}” maakt, en of deze uitleg al gelezen is.\nDeze uitleg kunt u altijd opnieuw bekijken met „{guideAgain}” in „{tabSettings}”.'
+    ]
   },
 
   sv: {
@@ -445,10 +605,30 @@ window.OUCHI_I18N = {
     about: 'Om appen',
     aboutText: 'Den här appen ger allmän vårdkunskap och tips för familjer som vårdar en närstående hemma. Varje kropp och varje sjukdom är olika. När en läkare, sjuksköterska eller rehabiliterings- eller vårdpersonal ger dig personliga råd, följ alltid dem först. Om det blir för svårt, bär det inte ensam; vänd dig till en yrkesperson.',
     credit: 'Soyogi, en rådgivningstjänst för vård och stöd',
-    ver: 'Version 1.5',
+    ver: 'Version 1.6',
     noticeTitle: 'Läs detta först',
     noticeText: 'Den här appen ger allmän vårdkunskap och tips för familjer som vårdar en närstående hemma. Varje kropp och varje sjukdom är olika. När en läkare, sjuksköterska eller rehabiliterings- eller vårdpersonal ger dig personliga råd, följ alltid dem först. Vid nödläge, ring utan att tveka det lokala nödnumret.',
-    noticeOk: 'OK'
+    noticeOk: 'OK',
+    /* はじめての つかいかた(app.js openGuide・2026-09-30)。1ページ目は noticeTitle / noticeText。{キー} は画面の文字に置きかわる */
+    guideTitle: 'Instruktion',
+    guideStart: 'Börja',
+    guideAgain: 'Visa instruktionen igen',
+    guideHeads: [
+      'De 4 knapparna längst ner',
+      '{tabTech}: ett steg i taget',
+      '{tabDanger}: när något är annorlunda',
+      '{tabSelf}: för den som vårdar',
+      'Läsbarhet, ljud och språk',
+      'Stannar på den här enheten'
+    ],
+    guideBodies: [
+      'Med knapparna längst ner byter du mellan 4 skärmar.\n”{tabTech}”: hur du hjälper, med bilder och korta texter.\n”{tabDanger}”: varningstecken när något känns annorlunda, och vad du gör.\n”{tabSelf}”: hur du skyddar dig själv när du vårdar.\n”{tabSettings}”: textstorlek, skärmfärg, ljud och språk.\nTill föregående skärm kommer du med ”{back}” högst upp.',
+      'Välj ett ämne och sedan ett moment under ”{tabTech}”: det går ett steg i taget, med bild och text. Med ”{next}” och ”{prev}” går du framåt och bakåt.\nPå slutet visar ”{toSummary}” de viktigaste punkterna samlat.\n⚠️ betyder en varning och 🖐️ lägger till ”{adaptTitle}”. En 📖-knapp öppnar ett relaterat, mer detaljerat moment.',
+      '”{tabDanger}” har kort som ”{danger.0}”. Varje kort är uppdelat i delar som ”{when}”, ”{act}” och ”{call}”.\nKnappen ”{cpr.open}” öppnar en sida där ”{cpr.metroStart}” spelar rytmen för bröstkompressioner.',
+      '”{tabSelf}” har kort som ”{self.0}” och ”{self.1}”.\nAtt skydda sig själv är också en viktig vårdteknik. Om det blir för svårt, vänd dig till yrkespersoner eller vårdtjänster.',
+      'Under ”{tabSettings}” kan du ändra:\n”{setFs}”: {fsNames.0}, {fsNames.1}, {fsNames.2}\n”{setTheme}”: {themeGreen}, {themeBlue}\n”{setBgm}”: {musicA}, {musicB}, {musicOff}\n”{setSound}”: {on}, {off}\n”{setLang}”: 12 språk',
+      'Det finns ingen registrering eller inloggning, och inget att skriva in. Det du tittar på skickas ingenstans. På den här enheten sparas bara det du väljer under ”{tabSettings}” och om den här instruktionen har lästs.\nDen här instruktionen kan du när som helst visa igen med ”{guideAgain}” under ”{tabSettings}”.'
+    ]
   },
 
   ko: {
@@ -495,10 +675,30 @@ window.OUCHI_I18N = {
     about: '이 앱에 대하여',
     aboutText: '이 앱은 집에서 돌봄을 하는 가족을 위해 일반적인 돌봄 지식과 요령을 소개합니다. 몸 상태와 병은 사람마다 다릅니다. 주치의나 간호사, 재활·돌봄 전문가로부터 개별 지도가 있을 때는 반드시 그쪽을 우선하세요. 어렵다고 느껴지면 혼자 떠안지 말고 전문가에게 상담하세요.',
     credit: '돌봄과 지원 상담소 「소요기」',
-    ver: '버전 1.5',
+    ver: '버전 1.6',
     noticeTitle: '먼저 읽어 주세요',
     noticeText: '이 앱은 집에서 돌봄을 하는 가족을 위해 일반적인 돌봄 지식과 요령을 소개합니다. 몸 상태와 병은 사람마다 다릅니다. 주치의나 간호사, 재활·돌봄 전문가로부터 개별 지도가 있을 때는 반드시 그쪽을 우선하세요. 긴급할 때는 망설이지 말고 지역 응급번호로 전화하세요.',
-    noticeOk: '알겠습니다'
+    noticeOk: '알겠습니다',
+    /* はじめての つかいかた(app.js openGuide・2026-09-30)。1ページ目は noticeTitle / noticeText。{キー} は画面の文字に置きかわる */
+    guideTitle: '사용법',
+    guideStart: '시작하기',
+    guideAgain: '사용법 다시 보기',
+    guideHeads: [
+      '아래의 버튼 4개',
+      '{tabTech}: 한 단계씩',
+      '{tabDanger}: 평소와 다를 때',
+      '{tabSelf}: 돌보는 사람을 위해',
+      '보기 편하게·소리·언어',
+      '이 기기 안에만'
+    ],
+    guideBodies: [
+      '화면 아래의 버튼으로 4개의 화면을 바꿉니다.\n「{tabTech}」: 돕는 방법을 그림과 짧은 글로.\n「{tabDanger}」: 평소와 다르다고 느낄 때의 신호와 대처법.\n「{tabSelf}」: 돌보는 사람 자신을 지키는 지혜.\n「{tabSettings}」: 글자 크기, 화면 색, 소리, 언어.\n이전 화면으로는 위의 「{back}」으로 돌아갑니다.',
+      '「{tabTech}」에서 알고 싶은 주제와 순서를 고르면, 그림과 글로 한 단계씩 진행됩니다. 「{next}」「{prev}」로 앞뒤로 움직입니다.\n마지막의 「{toSummary}」에서 중요한 점을 모아 볼 수 있습니다.\n⚠️는 주의, 🖐️는 「{adaptTitle}」의 보충입니다. 📖 버튼으로 관련된 자세한 순서를 열 수 있습니다.',
+      '「{tabDanger}」에는 「{danger.0}」 같은 카드가 있습니다. 카드 안은 「{when}」「{act}」「{call}」 등으로 나뉘어 있습니다.\n「{cpr.open}」 버튼으로 여는 페이지에서 「{cpr.metroStart}」를 누르면 가슴 압박의 리듬이 소리로 울립니다.',
+      '「{tabSelf}」에는 「{self.0}」「{self.1}」 같은 카드가 있습니다.\n돌보는 사람 자신을 지키는 것도 중요한 돌봄 기술입니다. 어렵다고 느껴지면 전문가나 돌봄 서비스에 기대 주세요.',
+      '「{tabSettings}」에서 다음을 바꿀 수 있습니다.\n「{setFs}」: {fsNames.0}·{fsNames.1}·{fsNames.2}\n「{setTheme}」: {themeGreen}·{themeBlue}\n「{setBgm}」: {musicA}·{musicB}·{musicOff}\n「{setSound}」: {on}·{off}\n「{setLang}」: 12개 언어',
+      '이 앱에는 가입이나 로그인이 없고, 입력하는 칸도 없습니다. 본 내용이 어딘가로 보내지는 일은 없습니다. 이 기기에 남는 것은 「{tabSettings}」에서 고른 것과, 이 안내를 읽었는지 여부뿐입니다.\n이 안내는 「{tabSettings}」의 「{guideAgain}」으로 언제든지 볼 수 있습니다.'
+    ]
   },
 
   zh: {
@@ -545,10 +745,30 @@ window.OUCHI_I18N = {
     about: '关于本应用',
     aboutText: '本应用为在家照护家人的家属介绍一般性的照护知识和窍门。每个人的身体状况和疾病各不相同。当主治医生、护士、康复或照护专业人员给出个别指导时,请务必优先遵从。如果觉得难,不要独自承担,请向专业人员咨询。',
     credit: '照护与支援咨询处「Soyogi」',
-    ver: '版本 1.5',
+    ver: '版本 1.6',
     noticeTitle: '请先阅读',
     noticeText: '本应用为在家照护家人的家属介绍一般性的照护知识和窍门。每个人的身体状况和疾病各不相同。当主治医生、护士、康复或照护专业人员给出个别指导时,请务必优先遵从。紧急时,请毫不犹豫地拨打当地急救电话。',
-    noticeOk: '知道了'
+    noticeOk: '知道了',
+    /* はじめての つかいかた(app.js openGuide・2026-09-30)。1ページ目は noticeTitle / noticeText。{キー} は画面の文字に置きかわる */
+    guideTitle: '使用方法',
+    guideStart: '开始',
+    guideAgain: '再看一次使用方法',
+    guideHeads: [
+      '下方的 4 个按钮',
+      '{tabTech}：一步一步来',
+      '{tabDanger}：和平时不一样时',
+      '{tabSelf}：为了照护的人',
+      '易读、声音与语言',
+      '只留在这台设备上'
+    ],
+    guideBodies: [
+      '用画面下方的按钮切换 4 个画面。\n「{tabTech}」：用图和短文介绍协助的方法。\n「{tabDanger}」：感觉和平时不一样时的信号，以及怎么做。\n「{tabSelf}」：照护者保护自己的智慧。\n「{tabSettings}」：文字大小、屏幕颜色、声音和语言。\n要回到上一个画面，请点上方的「{back}」。',
+      '在「{tabTech}」里选择想了解的内容和步骤，就会用图和文字一步一步进行。用「{next}」「{prev}」前进或后退。\n最后的「{toSummary}」会把重要要点汇总显示。\n⚠️ 是注意事项，🖐️ 是「{adaptTitle}」的补充。📖 按钮可以打开相关的详细步骤。',
+      '「{tabDanger}」里有「{danger.0}」等卡片。卡片内容分为「{when}」「{act}」「{call}」等部分。\n在用「{cpr.open}」按钮打开的页面里，点「{cpr.metroStart}」就会用声音打出胸外按压的节奏。',
+      '「{tabSelf}」里有「{self.0}」「{self.1}」等卡片。\n保护照护者自己，也是重要的照护技巧。觉得太难时，请依靠专业人员或照护服务。',
+      '在「{tabSettings}」里可以更改以下内容。\n「{setFs}」：{fsNames.0}、{fsNames.1}、{fsNames.2}\n「{setTheme}」：{themeGreen}、{themeBlue}\n「{setBgm}」：{musicA}、{musicB}、{musicOff}\n「{setSound}」：{on}、{off}\n「{setLang}」：12 种语言',
+      '本应用没有注册或登录，也没有需要输入的地方。您看过的内容不会被发送到任何地方。留在这台设备上的，只有在「{tabSettings}」里选择的设置，以及是否已读过这份说明。\n这份说明随时可以在「{tabSettings}」的「{guideAgain}」里再看。'
+    ]
   },
 
   ar: {
@@ -595,9 +815,29 @@ window.OUCHI_I18N = {
     about: 'حول التطبيق',
     aboutText: 'يقدّم هذا التطبيق معارف ونصائح عامة في الرعاية للعائلات التي ترعى أحد أحبّائها في المنزل. حالة الجسد والمرض تختلف من شخص لآخر. عندما يقدّم لك طبيب أو ممرّض أو مختص في التأهيل أو الرعاية إرشادًا خاصًّا، فاتبع ذلك دائمًا أولًا. إذا شعرت أن الأمر صعب، فلا تتحمّله وحدك؛ استعن بمختص.',
     credit: '«سويوغي»، خدمة استشارات الرعاية والدعم',
-    ver: 'الإصدار ١٫٥',
+    ver: 'الإصدار ١٫٦',
     noticeTitle: 'يُرجى قراءة هذا أولًا',
     noticeText: 'يقدّم هذا التطبيق معارف ونصائح عامة في الرعاية للعائلات التي ترعى أحد أحبّائها في المنزل. حالة الجسد والمرض تختلف من شخص لآخر. عندما يقدّم لك طبيب أو ممرّض أو مختص في التأهيل أو الرعاية إرشادًا خاصًّا، فاتبع ذلك دائمًا أولًا. في حالة الطوارئ، لا تتردّد في الاتصال برقم الطوارئ المحلي.',
-    noticeOk: 'حسنًا'
+    noticeOk: 'حسنًا',
+    /* はじめての つかいかた(app.js openGuide・2026-09-30)。1ページ目は noticeTitle / noticeText。{キー} は画面の文字に置きかわる */
+    guideTitle: 'طريقة الاستخدام',
+    guideStart: 'ابدأ',
+    guideAgain: 'عرض طريقة الاستخدام مرة أخرى',
+    guideHeads: [
+      'الأزرار الأربعة في الأسفل',
+      '{tabTech}: خطوة بخطوة',
+      '{tabDanger}: عندما يختلف شيء عن المعتاد',
+      '{tabSelf}: من أجل مقدّم الرعاية',
+      'سهولة القراءة والصوت واللغة',
+      'يبقى على هذا الجهاز'
+    ],
+    guideBodies: [
+      'بالأزرار في أسفل الشاشة تنتقل بين 4 شاشات.\n«{tabTech}»: طرق المساعدة بالرسوم ونصوص قصيرة.\n«{tabDanger}»: علامات التحذير عندما تشعر بأن شيئًا ما مختلف، وماذا تفعل.\n«{tabSelf}»: كيف تحمي نفسك وأنت تقدّم الرعاية.\n«{tabSettings}»: حجم الخط ولون الشاشة والصوت واللغة.\nللعودة إلى الشاشة السابقة، المس «{back}» في الأعلى.',
+      'في «{tabTech}» اختر موضوعًا ثم إجراءً، فيسير خطوة بخطوة بالرسم والنص. استخدم «{next}» و«{prev}» للتقدّم والرجوع.\nفي النهاية يعرض «{toSummary}» أهم النقاط معًا.\n⚠️ تعني تنبيهًا، و🖐️ تضيف «{adaptTitle}». زر 📖 يفتح إجراءً مرتبطًا بتفاصيل أكثر.',
+      'في «{tabDanger}» بطاقات مثل «{danger.0}». كل بطاقة مقسّمة إلى أجزاء مثل «{when}» و«{act}» و«{call}».\nزر «{cpr.open}» يفتح صفحة يُطلق فيها «{cpr.metroStart}» إيقاع ضغطات الصدر بالصوت.',
+      'في «{tabSelf}» بطاقات مثل «{self.0}» و«{self.1}».\nحماية نفسك أيضًا مهارة رعاية مهمة. إذا شعرت أن الأمر صعب، فاستعن بالمختصين أو بخدمات الرعاية.',
+      'في «{tabSettings}» يمكنك تغيير ما يلي:\n«{setFs}»: {fsNames.0}، {fsNames.1}، {fsNames.2}\n«{setTheme}»: {themeGreen}، {themeBlue}\n«{setBgm}»: {musicA}، {musicB}، {musicOff}\n«{setSound}»: {on}، {off}\n«{setLang}»: 12 لغة',
+      'لا يوجد تسجيل ولا دخول، ولا شيء تكتبه. ما تشاهده لا يُرسَل إلى أي مكان. لا يبقى على هذا الجهاز إلا ما تختاره في «{tabSettings}»، وما إذا كنت قد قرأت هذا الدليل.\nيمكنك عرض هذا الدليل مرة أخرى في أي وقت عبر «{guideAgain}» في «{tabSettings}».'
+    ]
   }
 };

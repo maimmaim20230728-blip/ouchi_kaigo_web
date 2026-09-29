@@ -351,7 +351,7 @@
     b.textContent = T.setSound + '：' + (prefs.sound ? T.on : T.off);
   }
   function applyMusic(){
-    if(prefs.music === 'off'){
+    if(prefs.music === 'off' || guideHold){   // guideHold = はじめての つかいかた のあいだは鳴らさない(下の節)
       Sound.setBgmEnabled(false);
     }else{
       Sound.setBgmMode(prefs.music === 'b' ? 'disability' : 'elder');
@@ -411,6 +411,7 @@
       renderLangGrid();
       applySound();
       render();
+      if(guideOv) guideOv._draw();   // はじめての つかいかた も、同じページのまま その言語に
     });
   }
 
@@ -442,9 +443,8 @@
     $('aboutText').textContent = T.aboutText;
     $('creditLink').textContent = T.credit;
     $('verLine').textContent = T.ver;
-    $('noticeTitle').textContent = T.noticeTitle;
-    $('noticeText').textContent = T.noticeText;
-    $('noticeOk').textContent = T.noticeOk;
+    if($('setGuideTitle')) $('setGuideTitle').textContent = T.guideTitle;
+    if($('guideAgainBtn')) $('guideAgainBtn').textContent = T.guideAgain;
     $('sumReassureTitle').textContent = T.reassureTitle;
     $('sumReassureText').textContent = T.reassureText;
     $('stepAdaptTitle').textContent = T.adaptTitle;
@@ -466,7 +466,9 @@
 
   /* ---------- Android の戻るボタン(Play版だけ・2026-09-30) ----------
      @capacitor/app が無いと、戻るを押すとアプリごと後ろに下がっていた(Android 11 以前は閉じる)。
-     押したときの順: ①初回のおしらせ(免責)は「わかりました」でしか閉じないので、閉じずに④と同じ
+     押したときの順: ①はじめての つかいかた(下の節): 2ページ目から=まえのページ / 1ページ目=初回なら④と同じ(閉じない・同意したことにしない)、
+                      せっていの「つかいかたを もう一度 見る」から開いたときは閉じる
+                      (初回のおしらせ「はじめにお読みください」は、2026-09-30 から つかいかた の1ページ目)
                     ②手順の2つめ以降(まとめのページも)→ 1つ前の段(「← まえへ」と同じ)
                     ③カテゴリ・手順・カード・心肺蘇生のページ → ヘッダーの「← もどる」と同じ
                       ぎじゅつ以外のタブ → ぎじゅつ(ホーム)
@@ -489,7 +491,7 @@
     try{ if(ap){ const p = ap.minimizeApp(); if(p && p.catch) p.catch(() => {}); } }catch(_){}
   }
   function onBackButton(){
-    if(!$('noticeOverlay').hidden){ minimizeApp(); return; }
+    if(guideOv){ guideOv._back(); return; }
     if(sub && sub.kind === 'proc' && sub.i > 0){ stepPrev(); return; }
     if(sub){ back(); return; }
     if(tab !== 'tech'){ goTab('tech'); return; }
@@ -502,7 +504,104 @@
     try{ ap.addListener('backButton', () => { onBackButton(); }); }catch(_){}
   }
 
+  /* ---------- はじめての つかいかた(初回の案内・2026-09-30) ----------
+     ヒロさん「ひとつずつ・そよぎ みたいなタイプのアプリは、必ず最初に使い方の丁寧な説明を出してほしい。10代の情報室のように」。
+     ・初回起動で必ず出す(最後まで読むまで、開くたびに出る)。ヘッダーと下のタブより上に全画面
+     ・🔴 1ページ目 = 今までの初回のおしらせ「はじめにお読みください」(i18n の noticeTitle / noticeText を そのまま・1文字も変えない)。
+       おしらせの窓は別に出さない(二重にしない)。最後まで読んで「はじめる」を押すと、今までの「わかりました」と同じく agreed = true
+     ・2ページ目から = i18n の guideHeads / guideBodies。{キー} は画面の文字に置きかえる(guideLabel)=ボタン名が画面と必ず同じ
+     ・1ページ目に ことば(12言語・せっていと同じ選択肢)。選ぶと案内もその言語になる
+     ・1ページずつ「つぎへ →」「← まえへ」で進む。閉じるのは最後のページの「はじめる」だけ(× は置かない)
+     ・戻るボタン(Play版): 2ページ目から=まえのページ / 1ページ目=初回なら後ろに下げる(閉じない)、
+       せっていの「つかいかたを もう一度 見る」から開いたときは閉じる
+     ・読み終えたら localStorage の ouchikaigo.guide.v1 = 'true'
+     ・🔴 BGM: 起動のときに案内を出すあいだは、BGM を始めない(guideHold)。「はじめる」で閉じたら、せっていの「音楽」どおりに始める
+       (今までの「わかりました」のタップで始まっていたのと同じ時)。Play版(Capacitor)は自動再生の制限を外すので、
+       起動で AudioContext を作ると触る前に鳴り出す=案内のあいだは作らない。ボタンのタップ音は今までどおり */
+  const GUIDE_KEY = 'ouchikaigo.guide.v1';
+  let guideOv = null;
+  let guideHold = false;
+  function guideDone(){ try{ return localStorage.getItem(GUIDE_KEY) === 'true'; }catch(_){ return false; } }
+  function guideLabel(k){
+    const p = k.split('.');
+    let v;
+    if(p[0] === 'cpr') v = C.cpr ? C.cpr[p[1]] : null;
+    else if(p[0] === 'danger' || p[0] === 'self') v = (C[p[0]][+p[1]] || {}).title;
+    else { v = T[p[0]]; if(p.length > 1 && Array.isArray(v)) v = v[+p[1]]; }
+    return (typeof v === 'string') ? v : '{' + k + '}';
+  }
+  function guideText(s){ return String(s == null ? '' : s).replace(/\{([A-Za-z]+(?:\.[A-Za-z0-9]+)?)\}/g, (m, k) => guideLabel(k)); }
+  function guidePages(){
+    const heads = T.guideHeads || [], bodies = T.guideBodies || [];
+    return [{ h: T.noticeTitle, p: T.noticeText }].concat(heads.map((h, i) => ({ h: guideText(h), p: guideText(bodies[i]) })));
+  }
+  function openGuide(first){
+    if(guideOv) return;
+    let i = 0;
+    const ov = mk('div', 'guide-ov');
+    ov.setAttribute('role', 'dialog');
+    ov.setAttribute('aria-modal', 'true');
+    const box = mk('div', 'guide-box');
+    const top = mk('div', 'guide-top');
+    const ttl = mk('p', 'guide-title'), step = mk('p', 'guide-step');
+    top.appendChild(ttl); top.appendChild(step);
+    /* ことば(1ページ目だけ): 案内は せっていの ことば も覆うので、ここでも選べるように */
+    const langRow = mk('div', 'guide-lang'), langLbl = mk('label', 'guide-lang-lbl'), langSel = document.createElement('select');
+    langSel.id = 'guideLang';
+    langLbl.setAttribute('for', 'guideLang');
+    LANGS.forEach(l => { const o = document.createElement('option'); o.value = l.code; o.textContent = l.name; langSel.appendChild(o); });
+    langSel.addEventListener('change', () => setLang(langSel.value));
+    langRow.appendChild(langLbl); langRow.appendChild(langSel);
+    const h = mk('h2', 'guide-h'), p = mk('p', 'guide-p'), dots = mk('div', 'guide-dots');
+    dots.setAttribute('aria-hidden', 'true');
+    const row = mk('div', 'guide-row');
+    const prevB = mk('button', 'guide-prev'), nextB = mk('button', 'guide-next');
+    prevB.type = 'button'; nextB.type = 'button';
+    row.appendChild(prevB); row.appendChild(nextB);
+    box.appendChild(top); box.appendChild(langRow); box.appendChild(h); box.appendChild(p); box.appendChild(dots);
+    ov.appendChild(box); ov.appendChild(row);
+    function draw(){
+      const pages = guidePages(), n = pages.length;
+      if(i > n - 1) i = n - 1;
+      ov.setAttribute('aria-label', T.guideTitle);
+      ttl.textContent = T.guideTitle;
+      step.textContent = (i + 1) + ' / ' + n;
+      step.setAttribute('dir', 'ltr');           // 「1 / 7」は右から左の言葉(ar)でも左から
+      langRow.hidden = (i !== 0);
+      langLbl.textContent = T.setLang;
+      langSel.value = LANG;
+      h.textContent = pages[i].h;
+      p.textContent = pages[i].p;
+      clear(dots);
+      for(let k = 0; k < n; k++) dots.appendChild(mk('span', 'guide-dot' + (k === i ? ' on' : '')));
+      prevB.textContent = T.prev;
+      prevB.style.visibility = (i === 0) ? 'hidden' : 'visible';   // 「つぎへ」の位置を変えない
+      nextB.textContent = (i === n - 1) ? T.guideStart : T.next;
+      ov.scrollTop = 0;
+    }
+    function close(){
+      if(ov.parentNode) ov.parentNode.removeChild(ov);
+      guideOv = null;
+      prefs.agreed = true; save();               // 1ページ目の「はじめにお読みください」を読んだ(今までの「わかりました」と同じ)
+      try{ localStorage.setItem(GUIDE_KEY, 'true'); }catch(_){}
+      if(guideHold){ guideHold = false; applyMusic(); }   // BGM はここから(せっていの「音楽」どおり)
+    }
+    ov._draw = draw;
+    ov._back = () => {
+      if(i > 0){ i--; draw(); return; }
+      if(first) minimizeApp(); else close();
+    };
+    Tap.bind(prevB, () => { if(i > 0){ i--; draw(); } });
+    Tap.bind(nextB, () => { if(i < guidePages().length - 1){ i++; draw(); } else close(); });
+    guideOv = ov;
+    document.body.appendChild(ov);
+    draw();
+    h.setAttribute('tabindex', '-1');            // 読み上げに案内の始まりを伝える(枠は出さない=style.css)
+    try{ h.focus({ preventScroll: true }); }catch(_){}
+  }
+
   /* ---------- 起動 ---------- */
+  guideHold = !prefs.agreed || !guideDone();   // はじめての つかいかた を出す=閉じるまで BGM を始めない(applyMusic)
   applyLangAttrs();
   fillStatic();
   renderTech();
@@ -533,13 +632,12 @@
   Tap.bind($('musicBtnB'), () => { prefs.music = 'b'; save(); applyMusic(); });
   Tap.bind($('musicBtnOff'), () => { prefs.music = 'off'; save(); applyMusic(); });
 
-  if(!prefs.agreed){
-    $('noticeOverlay').hidden = false;
-    Tap.bind($('noticeOk'), () => { prefs.agreed = true; save(); $('noticeOverlay').hidden = true; });
-  }
+  if($('guideAgainBtn')) Tap.bind($('guideAgainBtn'), () => openGuide(false));
 
   render();
   watchBack();   // Android の戻るボタン(Play版だけ)
+  // はじめての つかいかた(1ページ目=はじめにお読みください)。読み終えるまで毎回・前からの利用者も更新のあと1回(2026-09-30)
+  if(guideHold) openGuide(true);
 
   // 保存された言語がまだ読めていなければ、ここで読み込んで切り替える
   if(prefs.lang !== LANG) setLang(prefs.lang);
