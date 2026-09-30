@@ -12,6 +12,10 @@
                touch-action:none でブラウザのパン判定を完全に止め、
                押し込み中のブレで pointercancel が来ないようにする
              {silent:true} … 押下音を鳴らさない
+   ・🔴 click も併せて購読する(2026-10-01): TalkBack・スイッチ操作・音声操作・キーボードは
+     pointer イベントを出さず click だけを出す。pointerup でしか発火しないと何も起きない。
+     直前 700ms 以内に pointerup で発火していたら、その click は同じ指のものなので捨てる(2回押しにしない)。
+     click の経路でも、指と同じく 手応え音(Sound.tap = BGM を始めるきっかけ)→ 処理 の順
    ========================================================= */
 const Tap = (() => {
   const MOVE_LIMIT = 36;   // これ以上ずれたら「迷い/スクロール」とみなし発火しない
@@ -37,7 +41,7 @@ const Tap = (() => {
   function bind(el, fn, opts){
     const o = opts || {};
     el.style.touchAction = o.game ? 'none' : 'manipulation';
-    let sx = 0, sy = 0, pid = null;
+    let sx = 0, sy = 0, pid = null, lastFire = 0;
     el.addEventListener('pointerdown', e=>{
       if(!e.isPrimary) return;
       pid = e.pointerId; sx = e.clientX; sy = e.clientY;
@@ -52,11 +56,26 @@ const Tap = (() => {
       pid = null;
       el.classList.remove('pressing');
       if(Math.hypot(e.clientX - sx, e.clientY - sy) <= MOVE_LIMIT){
-        ghost = { x:e.clientX, y:e.clientY, until:Date.now() + 700 };   // このあとの同じ指の click を捨てる(上の 👻)
-        fn(e);
+        const g = ghost = { x:e.clientX, y:e.clientY, until:Date.now() + 700 };   // このあとの同じ指の click を捨てる(上の 👻)
+        lastFire = Date.now();
+        try{ fn(e); }
+        finally{
+          /* ⏱ 同じ指の click は、押した処理(fn)が終わってから届く。処理が重くて 700ms を越えると(遅い端末など)、
+             付けた時刻が切れて click が通り、2回押しになる・切り替わった先の同じ位置のボタンまで押される(2026-10-01 に確かめた)。
+             処理のあとで時刻を付け直す */
+          const now = Date.now();
+          lastFire = now;
+          if(ghost === g) g.until = now + 700;
+        }
       }
     });
     el.addEventListener('pointercancel', ()=>{ pid = null; el.classList.remove('pressing'); });
+    el.addEventListener('click', e=>{
+      if(Date.now() - lastFire < 700) return;   // 直前の pointerup で発火済み(同じ指の click)
+      lastFire = Date.now();
+      if(!o.silent) Sound.tap();          // 指と同じく 手応え音(BGM を始めるきっかけ)→ 処理
+      fn(e);
+    });
     el.addEventListener('contextmenu', e=> e.preventDefault());   // 長押しメニュー抑止
   }
   return { bind };
