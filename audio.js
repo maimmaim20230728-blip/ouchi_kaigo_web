@@ -4,7 +4,11 @@
    ・ねらい: 家族が穏やかに、冷静に、ゆとりをもって介助できる音
      ＝ゆっくり・穏やか・でも暗くない（長調ペンタトニック）
    ・elder(緑・高齢者側)=あたたかい木の音色 / disability(青・障害者側)=澄んだ音色
-   ・ブラウザの自動再生制限があるため、最初のタップで自然に始まる作り */
+   ・ブラウザの自動再生制限があるため、最初のタップで自然に始まる作り
+   ・🔴 Play版(Capacitor)は自動再生の制限を外す(setMediaPlaybackRequiresUserGesture(false))ので、
+     ブラウザの制限に頼ると触る前に鳴り出す(2026-09-30: 2回目以降の起動で起きていた)。
+     起動では setBgmEnabled(v, false) で状態を合わせるだけにし、鳴らし始めるのは最初のタップ(tap の maybeStartBgm)
+   ・🔴 画面に出ていないあいだ(ホームに戻る・画面を消す・タブの切り替え)は BGM を止める(下の pauseForHide) */
 const Sound = (() => {
   let ctx = null;
   let enabled = true;          // タップ音
@@ -157,14 +161,42 @@ const Sound = (() => {
     if(bgmPausedByMetro){ bgmPausedByMetro = false; maybeStartBgm(); }
   }
 
+  /* ---- 画面に出ていないあいだは BGM を止める(2026-09-30) ----
+     Play版(Capacitor)の Android は WebView を止めないので、ホームに戻っても画面を消しても鳴り続けていた。
+     hidden / pagehide / Play版の App の pause(app.js)で AudioContext を suspend する
+     (suspend のあいだは ctx.currentTime も止まるので、戻れば予約の続きから鳴る)。
+     戻ったとき(visible / pageshow / App の resume)は、止める前に BGM が鳴っていて、今も音楽が オン のときだけ resume。
+     BGM が鳴っていないとき・胸骨圧迫のリズムが鳴っているとき(BGM はリズムのあいだ止まっている)は何もしない(リズムの動きは変えない) */
+  let pausedByHide = false;
+  function pauseForHide(){
+    if(!ctx || !playing || metroOn) return;
+    pausedByHide = true;
+    try{ const p = ctx.suspend(); if(p && p.catch) p.catch(() => {}); }catch(_){}
+  }
+  function resumeFromHide(){
+    if(!pausedByHide) return;
+    pausedByHide = false;
+    if(!ctx || !playing || !bgmEnabled) return;
+    try{ const p = ctx.resume(); if(p && p.catch) p.catch(() => {}); }catch(_){}
+  }
+  if(typeof document !== 'undefined' && document.addEventListener){
+    document.addEventListener('visibilitychange', () => { if(document.hidden) pauseForHide(); else resumeFromHide(); });
+  }
+  if(typeof window !== 'undefined' && window.addEventListener){
+    window.addEventListener('pagehide', pauseForHide);
+    window.addEventListener('pageshow', () => { if(!document.hidden) resumeFromHide(); });
+  }
+
   return {
     tap,
     metroStart, metroStop,
+    pauseForHide, resumeFromHide,
     get metroOn(){ return metroOn; },
     get metroBeat(){ return metroBeat; },
     setEnabled(v){ enabled = !!v; },
     get enabled(){ return enabled; },
-    setBgmEnabled(v){ bgmEnabled = !!v; if(bgmEnabled) maybeStartBgm(); else stopBgm(); },
+    /* startNow === false = 状態を合わせるだけで鳴らさない(起動のとき。鳴るのは最初のタップから) */
+    setBgmEnabled(v, startNow){ bgmEnabled = !!v; if(!bgmEnabled) stopBgm(); else if(startNow !== false) maybeStartBgm(); },
     get bgmEnabled(){ return bgmEnabled; },
     get bgmPlaying(){ return playing; },
     setBgmMode(m){

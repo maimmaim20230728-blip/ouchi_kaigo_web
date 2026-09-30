@@ -350,12 +350,14 @@
     b.classList.toggle('on', prefs.sound);
     b.textContent = T.setSound + '：' + (prefs.sound ? T.on : T.off);
   }
-  function applyMusic(){
+  /* startNow === false = 起動のとき: 状態を合わせるだけで鳴らさない(鳴るのは最初のタップから・2026-09-30)。
+     Play版(Capacitor)は自動再生の制限を外すので、ここで鳴らし始めると 2回目以降の起動で触る前に鳴っていた */
+  function applyMusic(startNow){
     if(prefs.music === 'off' || guideHold){   // guideHold = はじめての つかいかた のあいだは鳴らさない(下の節)
       Sound.setBgmEnabled(false);
     }else{
       Sound.setBgmMode(prefs.music === 'b' ? 'disability' : 'elder');
-      Sound.setBgmEnabled(true);
+      Sound.setBgmEnabled(true, startNow);
     }
     $('musicBtnA').classList.toggle('sel', prefs.music === 'a');
     $('musicBtnB').classList.toggle('sel', prefs.music === 'b');
@@ -502,6 +504,12 @@
     const ap = nativePlugin('App', 'addListener');
     if(!ap) return;
     try{ ap.addListener('backButton', () => { onBackButton(); }); }catch(_){}
+    /* 画面に出ていないあいだは BGM を止める(2026-09-30・audio.js の pauseForHide)。
+       Play版は WebView が止まらないので、visibilitychange に加えて App の pause / resume でも */
+    try{
+      ap.addListener('pause', () => { Sound.pauseForHide(); });
+      ap.addListener('resume', () => { Sound.resumeFromHide(); });
+    }catch(_){}
   }
 
   /* ---------- はじめての つかいかた(初回の案内・2026-09-30) ----------
@@ -610,7 +618,7 @@
   renderLangGrid();
   applyFs();
   applySound();
-  applyMusic();
+  applyMusic(false);   // 起動では鳴らさない(最初のタップの Sound.tap から鳴る)
   applyTheme();
 
   Tap.bind($('navTech'), () => goTab('tech'));
