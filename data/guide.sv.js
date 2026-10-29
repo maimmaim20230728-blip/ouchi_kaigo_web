@@ -40,7 +40,7 @@ window.OUCHI_CONTENT.sv = {
           steps: [
             { fig: null, t: 'Detta är grunden för all vård. Inte iögonfallande, men en toppklasses teknik som skyddar dig och personen från skador och infektioner.' },
             { fig: null, t: 'Håll dina egna naglar korta, med rundade hörn. Långa naglar rispar personens hud under vården, och fastnar i lakan eller kläder och skadar dig.', c: 'Huden hos äldre eller försvagade personer är tunn, och även en liten rispa kan leda till infektion.' },
-            { fig: null, t: 'Utrymmet under naglarna samlar smuts och rester. Lämnade långa blir de en grogrund för infektion vid varje måltid, blöjbyte och sårvård. Att hålla naglarna korta är i sig infektionsförebyggande.' },
+            { fig: null, t: 'Utrymmet under naglarna samlar smuts och rester. Lämnade långa blir de en grogrund för infektion vid varje måltid, blöjbyte och sårvård. Att hålla naglarna korta hjälper i sig att undvika infektioner.' },
             { fig: null, t: 'Tvätta händerna med tvål före och efter vården. Mellan fingrarna, runt naglarna, upp till handlederna. Särskilt ”efter ett blöjbyte” och ”innan du rör mat”, varje gång.', c: 'När du inte når en handfat är handsprit praktiskt. Men synlig smuts måste tvättas bort med vatten; spriten tar inte bort den.' },
             { fig: null, t: 'Vid blöjbyten och att röra sår, använd engångshandskar. För att ta av dem, rulla den smutsiga sidan inåt, kasta dem, och tvätta ändå händerna efteråt.' },
             { fig: null, t: 'Ett munskydd är inte ett redskap bara för sjukdagar; det är basutrustning under vården. Alla bär bakterier och virus utan några symtom. Det som inte gör dig, frisk, något kan vara livshotande för en försvagad person.', c: 'Bär ett särskilt vid vård nära ansiktet (mat, munvård, blöjbyten, sårvård). ”Bara när du känner dig dålig” skyddar inte nog.' },
@@ -78,16 +78,16 @@ window.OUCHI_CONTENT.sv = {
         {
           id: 'taii2', title: 'Förebygg trycksår: näring, tid, plats',
           steps: [
-            { fig: 'nutrition_cushion', t: 'I själva verket är den största grunden för trycksårsförebyggande inte lägesändringstekniken utan ”näringen”. En mager, benig person får sår tidigare, under samma förhållanden. Sköt måltider och näringstillstånd för att bevara den köttkudde som dämpar.', c: 'En avtagande aptit är i sig ett varningstecken för trycksår. Prata om näring med en läkare eller en näringsyrkesperson.' },
+            { fig: 'nutrition_cushion', t: 'I själva verket är den största grunden för att undvika trycksår inte lägesändringstekniken utan ”näringen”. En mager, benig person får sår tidigare, under samma förhållanden. Sköt måltider och näringstillstånd för att bevara den köttkudde som dämpar.', c: 'En avtagande aptit är i sig ett varningstecken för trycksår. Prata om näring med en läkare eller en näringsyrkesperson.' },
             { fig: 'pressure_points', t: 'Trycksår bildas lätt där ben sticker ut och trycker mot sängen. Bakhuvudet, axlarna, armbågarna, mitten av sätet och hälarna är typiska.' },
             { fig: null, t: 'Som riktmärke, lämna henne inte mer än 2 till 3 timmar i samma läge. Med en tryckfördelande madrass, eller beroende på tillståndet, ändras rätt intervall.', c: 'Bestäm intervall och metod tillsammans med en yrkesperson som en sjuksköterska eller vårdsamordnare, för tryggheten.' },
             { fig: null, t: 'Hittar du rodnad på säte eller hälar, tryck lätt med ett finger. Rodnad som inte blir vit är början på ett trycksår. Lägg henne så att ingen tyngd vilar på den punkten.', c: 'Gnid eller massera inte det röda området. Det gör det värre.', m: 'Den drabbade sidan har nedsatt känsel, och personen märker inte smärtan. Kontrollera huden på den drabbade sidan särskilt ofta.' },
             { fig: 'heel_float', t: 'För någon vars hälar lätt rodnar, lägg en kudde under vaderna för att lyfta hälarna något.' },
-            { fig: null, t: 'Hur väl en madrass eller kudde ”förebygger trycksår” varierar enormt mellan produkter. Uppträder rodnad vid bruk, passar hjälpmedlet kanske inte. Det är värt att se över det eller pröva ett annat.', c: 'Snabbast för att hitta de passande förebyggande punkterna är att fråga en läkare, sjuksköterska eller hjälpmedelsyrkesperson.' }
+            { fig: null, t: 'Hur väl en madrass eller kudde ”förebygger trycksår” varierar enormt mellan produkter. Uppträder rodnad vid bruk, passar hjälpmedlet kanske inte. Det är värt att se över det eller pröva ett annat.', c: 'Snabbast för att veta vad som hjälper just den här personen att undvika trycksår är att fråga en läkare, sjuksköterska eller hjälpmedelsyrkesperson.' }
           ],
           points: [
             'Även om ett trycksår bildas, klandra inte er själva med ”vår vård var dålig”. Kroppsform, konstitution och sjukdomar skapar från början stora skillnader i hur lätt de bildas.',
-            'Det som betyder något är inte skuld, utan att tidigt prata med en yrkesperson och byta till ett förebyggande som passar personen.'
+            'Det som betyder något är inte skuld, utan att tidigt prata med en yrkesperson och byta till ett sätt som passar personen.'
           ]
         }
       ]
@@ -160,7 +160,7 @@ window.OUCHI_CONTENT.sv = {
             { fig: null, t: 'En sak till: ordna även oordnade kläder. Det finns faktiskt väldigt många vars byxa eller kjol glidit ner, med underkläder eller blöja i synhåll. En rullstol tar henne utanför hemmet. Så skäms personen.', c: 'Personen kan ofta inte ordna det själv och vågar inte säga det. Att märka det och ordna det diskret är vårdarens uppgift. En pinsam upplevelse kan bli en anledning till ”jag vill inte gå ut mer”. Ett prydligt yttre är ett litet extra steg som skyddar personen och dig från andras blickar.' }
           ],
           points: [
-            'Omplacering sker flera gånger om dagen. Tänker du ”hon har glidit ner”, gör det, ofta. Det är i sig trycksårsförebyggande.',
+            'Omplacering sker flera gånger om dagen. Tänker du ”hon har glidit ner”, gör det, ofta. Det hjälper i sig att undvika trycksår.',
             'Hållningen och kläderna. Först när båda är i ordning är omplaceringen ”klar”.'
           ]
         },
@@ -267,7 +267,7 @@ window.OUCHI_CONTENT.sv = {
         {
           id: 'kou1', title: 'Tandborstning och munvård',
           steps: [
-            { fig: null, t: 'Att hålla munnen ren är den bästa förebyggande åtgärden mot lunginflammation (aspirationspneumoni) hos äldre. Gör det till en vana efter måltiderna.' },
+            { fig: null, t: 'Att hålla munnen ren är det bästa sättet att undvika lunginflammation (aspirationspneumoni) hos äldre. Gör det till en vana efter måltiderna.' },
             { fig: null, t: 'Är personen villig, låt henne borsta själv. Det är i sig god rehabilitering. Men hon borstar ofta inte tillräckligt bra, så slutkontrollen är din uppgift.', c: 'Använd ord som inte gör slutkontrollen obehaglig. Något som ”Du har borstat bra. Visa mig bara baksidan till sist” går lättare in, genom att erkänna ansträngningen först.' },
             { fig: null, t: 'Hållningen är densamma som vid ätandet. Lätt framåtlutad, med hakan indragen. Så att vatten och smuts inte rinner ner i halsen under vården.', link: { cat: 'shokuji', proc: 'shoku1' } },
             { fig: null, t: 'Ta ut tandprotesen och rengör den med en protesborste. Använd inte vanlig tandkräm; slipmedlet repar protesen. På natten tar du ut den och lägger den i vatten eller rengöringsmedel.' },
@@ -361,7 +361,7 @@ window.OUCHI_CONTENT.sv = {
             { fig: 'walk_position', t: 'Den som följer står något bakom och vid sidan om personens svaga sida (sidan med förlamning). Läget för att stödja henne genast om hon vacklar.' },
             { fig: null, t: 'Att veta varför man faller ändrar sättet att stödja. De flesta fall börjar med ”foten lyfts mindre än väntat och man snubblar” eller ”sulan landar inte platt och foten vrickas”. Sedan sker fallet för att ett återhämtningssteg inte kommer i tid.', c: 'Med andra ord: kan du bara stödja det vacklande ögonblicket undviker du det värsta fallet. Att vara redo att ”stödja det steget när som helst” är vårdarens främsta uppgift.' },
             { fig: null, t: 'Snarare än att hålla handen låter lätt stöd under armhålan eller vid höften dig fånga henne om hon sjunker ihop. Låt personen hålla en ledstång eller käpp.', m: 'För den som använder en benortos (ett hjälpmedel för gången), sätt inte på den på ditt eget sätt; följ exakt vad en rehabiliteringsyrkesperson visat. Håll käppen i handen på den icke-drabbade sidan.' },
-            { fig: null, t: 'Skynda inte på henne. Den enda meningen ”långsamt är bra” är den bästa fallförebyggningen.' }
+            { fig: null, t: 'Skynda inte på henne. Den enda meningen ”långsamt är bra” hjälper mest för att hon inte ska falla.' }
           ]
         },
         {
@@ -379,7 +379,7 @@ window.OUCHI_CONTENT.sv = {
         {
           id: 'hok3', title: 'Bygg en fallsäker kropp: övningar sittande',
           steps: [
-            { fig: null, t: 'Fallförebyggning är inte bara gångträning. Små övningar sittande, uppbyggda, låter ”kraften att lyfta foten” och ”kraften att landa platt” växa. Tvinga inte; även framför tv:n är bra.' },
+            { fig: null, t: 'Att undvika fall handlar inte bara om gångträning. Små övningar sittande, uppbyggda, låter ”kraften att lyfta foten” och ”kraften att landa platt” växa. Tvinga inte; även framför tv:n är bra.' },
             { fig: null, t: 'Lårlyft. Sittande på en stol, lyft ett lår långsamt och sänk det. Omväxlande. Det håller kraften att lyfta foten och minskar snubblingar.' },
             { fig: null, t: 'Fotledsrullning. Lyft foten lite och rulla foten långsamt, åt båda håll. En smidig fotled tål vacklandet vid landningen.' },
             { fig: null, t: 'Tå- och hällyft. Sittande, håll hälen mot golvet och lyft tårna. Håll sedan tårna och lyft hälen. Kraften att landa sulan platt bärs av dessa muskler i smalben och vad.' },

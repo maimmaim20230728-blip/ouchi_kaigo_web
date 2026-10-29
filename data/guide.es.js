@@ -40,7 +40,7 @@ window.OUCHI_CONTENT.es = {
           steps: [
             { fig: null, t: 'Esta es la base de todo cuidado. No es vistosa, pero es una técnica de primer nivel que los protege a usted y a la persona de lesiones e infecciones.' },
             { fig: null, t: 'Mantenga sus propias uñas cortas, con las esquinas redondeadas. Las uñas largas arañan la piel de la persona durante el cuidado, y se enganchan en sábanas o ropa y lo lastiman a usted.', c: 'La piel de las personas mayores o debilitadas es fina, y hasta un pequeño arañazo puede provocar una infección.' },
-            { fig: null, t: 'El espacio bajo las uñas acumula suciedad y restos. Si están largas, se convierten en foco de infección en cada comida, cambio de pañal y cura de herida. Mantener las uñas cortas es, en sí, prevención de infecciones.' },
+            { fig: null, t: 'El espacio bajo las uñas acumula suciedad y restos. Si están largas, se convierten en foco de infección en cada comida, cambio de pañal y cura de herida. Mantener las uñas cortas ya ayuda a evitar infecciones.' },
             { fig: null, t: 'Lávese las manos con jabón antes y después del cuidado. Entre los dedos, alrededor de las uñas, hasta las muñecas. Sobre todo «después de un cambio de pañal» y «antes de tocar comida», cada vez.', c: 'Cuando no pueda llegar a un lavabo, el gel hidroalcohólico es práctico. Pero la suciedad visible debe lavarse con agua; el gel no la quita.' },
             { fig: null, t: 'Para los cambios de pañal y tocar heridas, use guantes desechables. Al quitarlos, enrolle la parte sucia hacia dentro, tírelos, y después lávese también las manos.' },
             { fig: null, t: 'Una mascarilla no es una herramienta solo para días de enfermedad; es equipo básico durante el cuidado. Todos llevamos gérmenes y virus sin ningún síntoma. Lo que a usted, sano, no le afecta puede ser mortal para una persona debilitada.', c: 'Úsela sobre todo en cuidados con el rostro cercano (comida, higiene bucal, cambios de pañal, curas). «Solo cuando se sienta mal» no protege lo suficiente.' },
@@ -78,16 +78,16 @@ window.OUCHI_CONTENT.es = {
         {
           id: 'taii2', title: 'Prevenir las úlceras: nutrición, tiempo, lugar',
           steps: [
-            { fig: 'nutrition_cushion', t: 'En realidad, la mayor base de la prevención de úlceras no es la técnica de cambio postural sino la «nutrición». Una persona delgada y huesuda desarrolla úlceras antes, en las mismas condiciones. Cuide las comidas y el estado nutricional para conservar el acolchado de carne que amortigua.', c: 'Un apetito que disminuye es en sí una señal de alerta de úlcera. Hable de nutrición con un médico o un profesional de la nutrición.' },
+            { fig: 'nutrition_cushion', t: 'En realidad, la mayor base para evitar las úlceras no es la técnica de cambio postural sino la «nutrición». Una persona delgada y huesuda desarrolla úlceras antes, en las mismas condiciones. Cuide las comidas y el estado nutricional para conservar el acolchado de carne que amortigua.', c: 'Un apetito que disminuye es en sí una señal de alerta de úlcera. Hable de nutrición con un médico o un profesional de la nutrición.' },
             { fig: 'pressure_points', t: 'Las úlceras se forman fácilmente donde los huesos sobresalen y presionan la cama. La nuca, los hombros, los codos, el centro de las nalgas y los talones son típicos.' },
             { fig: null, t: 'Como referencia, no la deje más de 2 a 3 horas en la misma posición. Con un colchón que reparte la presión, o según el estado de la persona, el intervalo adecuado cambia.', c: 'Fije el intervalo y el método junto a un profesional como un enfermero o un coordinador de cuidados, para mayor tranquilidad.' },
             { fig: null, t: 'Si encuentra enrojecimiento en nalgas o talones, presione suavemente con un dedo. Un enrojecimiento que no se vuelve blanco es el comienzo de una úlcera. Coloque a la persona de modo que no recaiga peso en ese punto.', c: 'No frote ni masajee la zona roja. La empeora.', m: 'El lado afectado tiene la sensibilidad disminuida, y la persona no nota el dolor. Revise la piel del lado afectado especialmente a menudo.' },
             { fig: 'heel_float', t: 'Para alguien cuyos talones se enrojecen con facilidad, ponga un cojín bajo las pantorrillas para elevar un poco los talones.' },
-            { fig: null, t: 'La capacidad de un colchón o cojín para «prevenir úlceras» varía enormemente según el producto. Si aparece enrojecimiento con el uso, quizá el material no le convenga. Vale la pena revisarlo o probar otro.', c: 'Lo más rápido para hallar los puntos de prevención adecuados es preguntar a un médico, un enfermero o un profesional de productos de apoyo.' }
+            { fig: null, t: 'La capacidad de un colchón o cojín para «prevenir úlceras» varía enormemente según el producto. Si aparece enrojecimiento con el uso, quizá el material no le convenga. Vale la pena revisarlo o probar otro.', c: 'Lo más rápido para saber qué ayuda a esta persona a evitar las úlceras es preguntar a un médico, un enfermero o un profesional de productos de apoyo.' }
           ],
           points: [
             'Aunque se forme una úlcera, no se culpen con «nuestro cuidado fue malo». La complexión, la constitución y las enfermedades crean desde el inicio grandes diferencias en la facilidad con que aparecen.',
-            'Lo que importa no es la culpa, sino hablar pronto con un profesional y pasar a una prevención adecuada a la persona.'
+            'Lo que importa no es la culpa, sino hablar pronto con un profesional y pasar a una forma de cuidado adecuada a la persona.'
           ]
         }
       ]
@@ -160,7 +160,7 @@ window.OUCHI_CONTENT.es = {
             { fig: null, t: 'Una cosa más: acomode también la ropa desordenada. Hay en realidad muchísimas personas cuyo pantalón o falda se ha bajado, dejando a la vista la ropa interior o el pañal. Una silla de ruedas la lleva fuera de casa. Así, la persona se avergüenza.', c: 'La persona a menudo no puede acomodarlo ella misma ni se atreve a decirlo. Notarlo y acomodarlo con discreción es tarea del cuidador. Una experiencia vergonzosa puede volverse motivo de «ya no quiero salir». Un aspecto cuidado es un pequeño paso extra que protege a la persona y a usted de las miradas ajenas.' }
           ],
           points: [
-            'Reacomodar surge varias veces al día. Cuando piense «se ha deslizado», hágalo, a menudo. Eso es, en sí, prevención de úlceras.',
+            'Reacomodar surge varias veces al día. Cuando piense «se ha deslizado», hágalo, a menudo. Eso ya ayuda a evitar las úlceras.',
             'La postura y la ropa. Solo cuando ambas están en su sitio el reacomodo está «completo».'
           ]
         },
@@ -267,7 +267,7 @@ window.OUCHI_CONTENT.es = {
         {
           id: 'kou1', title: 'Cepillado y cuidado de la boca',
           steps: [
-            { fig: null, t: 'Mantener la boca limpia es la mejor prevención de la neumonía (neumonía por aspiración) en las personas mayores. Conviértalo en un hábito tras las comidas.' },
+            { fig: null, t: 'Mantener la boca limpia es la mejor forma de evitar la neumonía (neumonía por aspiración) en las personas mayores. Conviértalo en un hábito tras las comidas.' },
             { fig: null, t: 'Si la persona está dispuesta, hágala cepillarse ella misma. Eso es en sí buena rehabilitación. Pero a menudo no se cepilla lo bastante bien, así que la revisión final es su tarea.', c: 'Use palabras que no hagan desagradable la revisión final. Algo como «Se ha cepillado bien. Solo enséñeme el fondo al final» entra mejor, reconociendo el esfuerzo primero.' },
             { fig: null, t: 'La postura es la misma que para comer. Un poco inclinada hacia delante, con el mentón recogido. Para que el agua y la suciedad no bajen por la garganta durante el cuidado.', link: { cat: 'shokuji', proc: 'shoku1' } },
             { fig: null, t: 'Quite las prótesis y límpielas con un cepillo para prótesis. No use pasta de dientes normal; el abrasivo raya las prótesis. Por la noche, quítelas y déjelas en agua o en limpiador.' },
@@ -361,7 +361,7 @@ window.OUCHI_CONTENT.es = {
             { fig: 'walk_position', t: 'Quien acompaña se coloca algo detrás y al lado del lado débil de la persona (el lado con parálisis). La posición para sostenerla de inmediato si se tambalea.' },
             { fig: null, t: 'Saber por qué se cae cambia la forma de sostener. La mayoría de las caídas empiezan con «el pie no se levanta tanto como se espera y se tropieza» o «la planta no se posa plana y el tobillo se tuerce». Luego la caída ocurre porque un paso de recuperación no sale a tiempo.', c: 'Dicho de otro modo: si puede sostener ese instante de tambaleo, evita la peor caída. Estar listo para «sostener ese paso en cualquier momento» es la primera misión del cuidador.' },
             { fig: null, t: 'Más que agarrar la mano, sostener con suavidad bajo la axila o en la cadera le permite atraparla si se desploma. Haga que la persona sujete un pasamanos o un bastón.', m: 'Para quien usa una férula de pierna (un dispositivo que ayuda a caminar), no la coloque a su manera; siga exactamente lo que enseñó un profesional de la rehabilitación. Sujete el bastón con la mano del lado no afectado.' },
-            { fig: null, t: 'No la apresure. La sola frase «despacio está bien» es la mejor prevención de caídas.' }
+            { fig: null, t: 'No la apresure. La sola frase «despacio está bien» es lo que más ayuda a evitar caídas.' }
           ]
         },
         {
@@ -379,7 +379,7 @@ window.OUCHI_CONTENT.es = {
         {
           id: 'hok3', title: 'Formar un cuerpo firme: ejercicios sentado',
           steps: [
-            { fig: null, t: 'La prevención de caídas no es solo caminar. Pequeños ejercicios sentado, acumulados, hacen crecer «la fuerza para levantar el pie» y «la fuerza para posarse plano». No fuerce; incluso viendo la tele está bien.' },
+            { fig: null, t: 'Evitar caídas no es solo cuestión de caminar. Pequeños ejercicios sentado, acumulados, hacen crecer «la fuerza para levantar el pie» y «la fuerza para posarse plano». No fuerce; incluso viendo la tele está bien.' },
             { fig: null, t: 'Elevación de muslo. Sentado en una silla, levante despacio un muslo y bájelo. Alternando. Conserva la fuerza para levantar el pie y reduce los tropiezos.' },
             { fig: null, t: 'Giro de tobillo. Levante un poco el pie y gire el tobillo despacio, en ambos sentidos. Un tobillo flexible aguanta el tambaleo al posarse.' },
             { fig: null, t: 'Elevación de puntas y de talones. Sentado, mantenga el talón en el suelo y levante las puntas. Luego mantenga las puntas y levante el talón. La fuerza para posar la planta plana la sostienen estos músculos de la espinilla y la pantorrilla.' },

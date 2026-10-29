@@ -40,7 +40,7 @@ window.OUCHI_CONTENT.fr = {
           steps: [
             { fig: null, t: 'C\'est le socle de tout soin. Sans éclat, mais une technique de premier ordre qui vous protège, vous et la personne, des blessures et des infections.' },
             { fig: null, t: 'Gardez vos propres ongles courts, aux coins arrondis. Les ongles longs griffent la peau de la personne pendant le soin, et s\'accrochent aux draps ou aux vêtements et vous blessent.', c: 'La peau des personnes âgées ou affaiblies est fine, et même une petite griffure peut mener à une infection.' },
-            { fig: null, t: 'L\'espace sous les ongles accumule saleté et déchets. Laissés longs, ils deviennent un nid à infections à chaque repas, change et soin de plaie. Garder les ongles courts est en soi une prévention des infections.' },
+            { fig: null, t: 'L\'espace sous les ongles accumule saleté et déchets. Laissés longs, ils deviennent un nid à infections à chaque repas, change et soin de plaie. Garder les ongles courts aide déjà à éviter les infections.' },
             { fig: null, t: 'Lavez-vous les mains au savon avant et après le soin. Entre les doigts, autour des ongles, jusqu\'aux poignets. Surtout « après un change » et « avant de toucher la nourriture », à chaque fois.', c: 'Quand vous ne pouvez atteindre un lavabo, le gel hydroalcoolique est pratique. Mais la saleté visible doit être lavée à l\'eau ; le gel ne l\'enlève pas.' },
             { fig: null, t: 'Pour les changes et le contact des plaies, portez des gants jetables. Pour les retirer, roulez le côté sale vers l\'intérieur, jetez-les, et lavez-vous ensuite les mains aussi.' },
             { fig: null, t: 'Un masque n\'est pas un outil réservé aux jours de maladie ; c\'est un équipement de base pendant le soin. Chacun porte des microbes et des virus sans aucun symptôme. Ce qui n\'est rien pour vous en bonne santé peut menacer la vie d\'une personne affaiblie.', c: 'Portez-en un surtout pour les soins où le visage est proche (repas, soins de bouche, changes, soins de plaie). « Seulement quand vous vous sentez mal » ne protège pas assez.' },
@@ -78,16 +78,16 @@ window.OUCHI_CONTENT.fr = {
         {
           id: 'taii2', title: 'Prévenir les escarres : nutrition, temps, endroit',
           steps: [
-            { fig: 'nutrition_cushion', t: 'En vérité, le plus grand socle de la prévention des escarres n\'est pas la technique de repositionnement mais la « nutrition ». Une personne maigre et osseuse développe des escarres plus tôt, dans les mêmes conditions. Prenez soin des repas et de l\'état nutritionnel pour garder le coussin de chair qui amortit.', c: 'Un appétit qui diminue est en soi un signe d\'alerte d\'escarre. Parlez de nutrition à un médecin ou un professionnel de la nutrition.' },
+            { fig: 'nutrition_cushion', t: 'En vérité, le plus grand socle pour éviter les escarres n\'est pas la technique de repositionnement mais la « nutrition ». Une personne maigre et osseuse développe des escarres plus tôt, dans les mêmes conditions. Prenez soin des repas et de l\'état nutritionnel pour garder le coussin de chair qui amortit.', c: 'Un appétit qui diminue est en soi un signe d\'alerte d\'escarre. Parlez de nutrition à un médecin ou un professionnel de la nutrition.' },
             { fig: 'pressure_points', t: 'Les escarres se forment facilement là où les os saillent et appuient sur le lit. L\'arrière de la tête, les épaules, les coudes, le centre des fesses et les talons sont typiques.' },
             { fig: null, t: 'Comme repère, ne la laissez pas plus de 2 à 3 heures dans la même position. Avec un matelas de répartition de pression, ou selon l\'état de la personne, le bon intervalle change.', c: 'Fixez l\'intervalle et la méthode avec un professionnel comme un infirmier ou un coordinateur de soins, pour être tranquille.' },
             { fig: null, t: 'Si vous trouvez une rougeur aux fesses ou aux talons, appuyez doucement avec un doigt. Une rougeur qui ne blanchit pas est le début d\'une escarre. Positionnez de sorte qu\'aucun poids ne repose sur ce point.', c: 'Ne frottez pas et ne massez pas la zone rouge. Cela l\'aggrave.', m: 'Le côté atteint a une sensation émoussée, et la personne ne remarque pas la douleur. Vérifiez surtout souvent la peau du côté atteint.' },
             { fig: 'heel_float', t: 'Pour quelqu\'un dont les talons rougissent facilement, placez un coussin sous les mollets pour soulever légèrement les talons.' },
-            { fig: null, t: 'La capacité d\'un matelas ou d\'un coussin à « prévenir les escarres » varie énormément selon le produit. Si une rougeur apparaît à l\'usage, le matériel ne convient peut-être pas. Il vaut la peine de le revoir ou d\'essayer autre chose.', c: 'Le plus rapide pour trouver les points de prévention adaptés est de demander à un médecin, un infirmier ou un professionnel des aides techniques.' }
+            { fig: null, t: 'La capacité d\'un matelas ou d\'un coussin à « prévenir les escarres » varie énormément selon le produit. Si une rougeur apparaît à l\'usage, le matériel ne convient peut-être pas. Il vaut la peine de le revoir ou d\'essayer autre chose.', c: 'Le plus rapide pour savoir ce qui aide cette personne à éviter les escarres est de demander à un médecin, un infirmier ou un professionnel des aides techniques.' }
           ],
           points: [
             'Même si une escarre se forme, ne vous accusez pas avec « notre soin était mauvais ». La morphologie, la constitution et la maladie créent d\'emblée de grandes différences dans la facilité de leur apparition.',
-            'Ce qui compte n\'est pas le blâme mais de parler tôt à un professionnel et de passer à une prévention adaptée à la personne.'
+            'Ce qui compte n\'est pas le blâme mais de parler tôt à un professionnel et de passer à une façon de faire adaptée à la personne.'
           ]
         }
       ]
@@ -160,7 +160,7 @@ window.OUCHI_CONTENT.fr = {
             { fig: null, t: 'Une chose de plus : rajustez aussi les vêtements en désordre. Il y a en réalité beaucoup de personnes dont le pantalon ou la jupe a glissé, laissant voir sous-vêtement ou protection. Un fauteuil roulant l\'emmène dehors. Ainsi, la personne se sent gênée.', c: 'La personne ne peut souvent pas le rajuster elle-même et n\'ose pas le dire. Le remarquer et le rajuster discrètement est le rôle de l\'aidant. Une expérience gênante peut devenir une raison de « je ne veux plus sortir ». Une tenue soignée est un petit geste en plus qui protège la personne et vous des regards.' }
           ],
           points: [
-            'Le rasseyage revient plusieurs fois par jour. Quand vous pensez « elle a glissé », faites-le, souvent. C\'est en soi une prévention des escarres.',
+            'Le rasseyage revient plusieurs fois par jour. Quand vous pensez « elle a glissé », faites-le, souvent. Cela aide déjà à éviter les escarres.',
             'La posture et les vêtements. Ce n\'est que quand les deux sont en place que le rasseyage est « terminé ».'
           ]
         },
@@ -267,7 +267,7 @@ window.OUCHI_CONTENT.fr = {
         {
           id: 'kou1', title: 'Brossage et soin de la bouche',
           steps: [
-            { fig: null, t: 'Garder la bouche propre est la meilleure prévention de la pneumonie (pneumopathie d\'inhalation) chez les personnes âgées. Faites-en une habitude après les repas.' },
+            { fig: null, t: 'Garder la bouche propre est le meilleur moyen d\'éviter la pneumonie (pneumopathie d\'inhalation) chez les personnes âgées. Faites-en une habitude après les repas.' },
             { fig: null, t: 'Si la personne est disposée, faites-la se brosser elle-même les dents. C\'est en soi une bonne rééducation. Mais elle ne brosse souvent pas assez bien, donc la vérification finale est votre rôle.', c: 'Employez des mots qui ne rendent pas la vérification finale déplaisante. Quelque chose comme « Vous avez bien brossé. Montrez-moi juste le fond à la fin » passe mieux, en reconnaissant l\'effort d\'abord.' },
             { fig: null, t: 'La posture est la même que pour manger. Légèrement penché en avant, le menton rentré. Pour que l\'eau et la saleté ne descendent pas dans la gorge pendant le soin.', link: { cat: 'shokuji', proc: 'shoku1' } },
             { fig: null, t: 'Retirez les prothèses et nettoyez-les avec une brosse à prothèses. N\'utilisez pas de dentifrice ordinaire ; l\'abrasif raye les prothèses. La nuit, retirez-les et faites-les tremper dans l\'eau ou un nettoyant.' },
@@ -361,7 +361,7 @@ window.OUCHI_CONTENT.fr = {
             { fig: 'walk_position', t: 'L\'accompagnant se place légèrement en arrière et sur le côté du côté faible de la personne (le côté paralysé). La position pour la soutenir aussitôt si elle vacille.' },
             { fig: null, t: 'Savoir pourquoi on tombe change la façon de soutenir. La plupart des chutes commencent par « le pied ne se lève pas autant que prévu et on trébuche » ou « la plante ne se pose pas à plat et la cheville se tord ». Puis la chute arrive parce qu\'un pas de rattrapage ne vient pas à temps.', c: 'Autrement dit : si vous pouvez juste soutenir cet instant de vacillement, vous évitez la pire chute. Être prêt à « soutenir ce pas à tout moment », c\'est la première mission de l\'aidant.' },
             { fig: null, t: 'Plutôt que de tenir la main, soutenir légèrement sous l\'aisselle ou aux hanches permet de la rattraper si elle s\'effondre. Faites tenir à la personne une main courante ou une canne.', m: 'Pour quelqu\'un qui porte une orthèse de jambe (un dispositif d\'aide à la marche), ne la posez pas à votre façon ; suivez exactement ce qu\'un professionnel de la rééducation a montré. Tenez la canne dans la main du côté non atteint.' },
-            { fig: null, t: 'Ne la pressez pas. La seule phrase « doucement, ça va » est la meilleure prévention des chutes.' }
+            { fig: null, t: 'Ne la pressez pas. La seule phrase « doucement, ça va » est ce qui aide le plus à éviter les chutes.' }
           ]
         },
         {
@@ -379,7 +379,7 @@ window.OUCHI_CONTENT.fr = {
         {
           id: 'hok3', title: 'Bâtir un corps résistant aux chutes : exercices assis',
           steps: [
-            { fig: null, t: 'La prévention des chutes n\'est pas que la marche. De petits exercices assis, accumulés, développent « la force de lever le pied » et « la force de se poser à plat ». Ne forcez pas ; même devant la télé, c\'est bien.' },
+            { fig: null, t: 'Pour éviter les chutes, il n\'y a pas que la marche. De petits exercices assis, accumulés, développent « la force de lever le pied » et « la force de se poser à plat ». Ne forcez pas ; même devant la télé, c\'est bien.' },
             { fig: null, t: 'Lever de cuisse. Assis sur une chaise, levez lentement une cuisse et abaissez-la. En alternance. Cela garde la force de lever le pied et réduit les faux pas.' },
             { fig: null, t: 'Rotation de cheville. Levez un peu le pied et faites tourner la cheville lentement, dans les deux sens. Une cheville souple encaisse le vacillement à l\'atterrissage.' },
             { fig: null, t: 'Lever des orteils et des talons. Assis, gardez le talon au sol et levez les orteils. Puis gardez les orteils au sol et levez le talon. La force de poser la plante à plat, ce sont ces muscles du tibia et du mollet qui la portent.' },

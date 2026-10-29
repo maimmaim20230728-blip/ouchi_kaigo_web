@@ -147,6 +147,8 @@ const Sound = (() => {
     metroNext = ctx.currentTime + 0.3;
     metroTimer = setInterval(() => {
       if(!metroOn || !ctx) return;
+      /* 裏に回ってタイマーが遅れた・音が止められていた(119番の電話など)あとは、取りこぼした拍をまとめて鳴らさず、今から刻みなおす(2026-10-30) */
+      if(metroNext < ctx.currentTime - 0.05) metroNext = ctx.currentTime + 0.05;
       while(metroNext < ctx.currentTime + 0.35){
         metroBeat++;
         metroClick(metroNext, metroBeat % 30 === 0);   // 30回ごとに高い音（数える目安）
@@ -159,6 +161,27 @@ const Sound = (() => {
     metroOn = false;
     clearInterval(metroTimer);
     if(bgmPausedByMetro){ bgmPausedByMetro = false; maybeStartBgm(); }
+  }
+  /* アプリ・画面に戻ったとき(app.js が visibilitychange / Play版の App の resume で呼ぶ・2026-10-30)。
+     リズムの途中なら、止められていた音(AudioContext)を戻し、今から刻みなおす。
+     done(true=鳴らせる / false=戻せなかった=app.js がボタンを「はじめる」に戻して、1回押せば また始まるようにする) */
+  function metroResume(done){
+    if(!metroOn){ if(done) done(true); return; }
+    if(!ctx){ if(done) done(false); return; }
+    const fin = () => {
+      const ok = !!ctx && ctx.state === 'running';
+      if(ok) metroNext = Math.max(metroNext, ctx.currentTime + 0.05);
+      if(done) done(ok);
+    };
+    if(ctx.state === 'running'){ fin(); return; }
+    let p = null;
+    try{ p = ctx.resume(); }catch(_){ p = null; }
+    if(p && typeof p.then === 'function'){
+      let settled = false;
+      const once = () => { if(settled) return; settled = true; fin(); };
+      p.then(once, once);
+      setTimeout(once, 600);   // resume が返らない端末でも待ちつづけない
+    } else fin();
   }
 
   /* ---- 画面に出ていないあいだは BGM を止める(2026-09-30) ----
@@ -189,7 +212,7 @@ const Sound = (() => {
 
   return {
     tap,
-    metroStart, metroStop,
+    metroStart, metroStop, metroResume,
     pauseForHide, resumeFromHide,
     get metroOn(){ return metroOn; },
     get metroBeat(){ return metroBeat; },

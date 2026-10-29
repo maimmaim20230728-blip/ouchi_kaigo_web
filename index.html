@@ -19,6 +19,8 @@
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="stylesheet" href="style.css">
+<!-- 日本語以外の言語で開くときは、その言語のガイドを読み終えるまで画面を隠す(起動のたびに一瞬 日本語が見えないように・app.js bootWithLang が外す・念のため4秒で外す・2026-10-30) -->
+<script>(function(){try{var p=JSON.parse(localStorage.getItem('ouchikaigo.prefs')||'{}'),l=p.lang||String(navigator.language||'ja').slice(0,2).toLowerCase();if(l!=='ja'&&'en de fr es it pt nl sv ko zh ar'.split(' ').indexOf(l)>=0){var h=document.documentElement;h.classList.add('lang-wait');setTimeout(function(){h.classList.remove('lang-wait');},4000);}}catch(e){}})();</script>
 </head>
 <body class="fs0">
 <header id="hdr">
@@ -144,10 +146,13 @@
 <script src="app.js"></script>
 <!-- Farcaster Mini App SDK: ホスト内なら起動準備完了を通知。通常のWeb/PWA・オフラインでは無害（失敗は握りつぶす）。 -->
 <script type="module">
-  try {
-    const { sdk } = await import("https://esm.sh/@farcaster/miniapp-sdk");
-    await sdk.actions.ready();
-  } catch (e) { /* Farcaster外／オフラインでは何もしない */ }
+  /* Farcaster の中(iframe / アプリの WebView)で開いたときだけ SDK を読む。ふつうのブラウザ・PWA では外へつながない */
+  if ((window.self !== window.top) || window.ReactNativeWebView) {
+    try {
+      const { sdk } = await import("https://esm.sh/@farcaster/miniapp-sdk");
+      await sdk.actions.ready();
+    } catch (e) { /* Farcaster外／オフラインでは何もしない */ }
+  }
 </script>
 </body>
 </html>

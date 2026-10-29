@@ -40,7 +40,7 @@ window.OUCHI_CONTENT.de = {
           steps: [
             { fig: null, t: 'Dies ist die Grundlage aller Pflege. Nicht spektakulär, aber eine erstklassige Technik, die sowohl Sie als auch die Person vor Verletzung und Infektion schützt.' },
             { fig: null, t: 'Halten Sie Ihre eigenen Nägel kurz und die Ecken rund. Lange Nägel kratzen bei der Pflege die Haut der Person und bleiben an Laken oder Kleidung hängen und verletzen Sie.', c: 'Die Haut älterer oder geschwächter Menschen ist dünn, und schon ein kleiner Kratzer kann zu einer Infektion führen.' },
-            { fig: null, t: 'Der Raum unter den Nägeln sammelt Schmutz und Ausscheidungen. Bleiben sie lang, werden sie bei jeder Mahlzeit, jedem Windelwechsel und jeder Wundversorgung zum Nährboden für Infektionen. Kurze Nägel sind selbst Infektionsschutz.' },
+            { fig: null, t: 'Der Raum unter den Nägeln sammelt Schmutz und Ausscheidungen. Bleiben sie lang, werden sie bei jeder Mahlzeit, jedem Windelwechsel und jeder Wundversorgung zum Nährboden für Infektionen. Kurze Nägel helfen schon für sich, Infektionen zu verhindern.' },
             { fig: null, t: 'Waschen Sie die Hände vor und nach der Pflege mit Seife. Zwischen den Fingern, um die Nägel, bis zu den Handgelenken. Besonders „nach dem Windelwechsel" und „vor dem Berühren von Essen", jedes Mal.', c: 'Wenn Sie kein Waschbecken erreichen, ist Händedesinfektionsmittel praktisch. Sichtbarer Schmutz muss aber mit Wasser abgewaschen werden; Desinfektionsmittel entfernt ihn nicht.' },
             { fig: null, t: 'Für Windelwechsel und das Berühren von Wunden tragen Sie Einweghandschuhe. Zum Ausziehen rollen Sie die schmutzige Seite nach innen, werfen sie weg und waschen sich danach ebenfalls die Hände.' },
             { fig: null, t: 'Eine Maske ist kein Werkzeug nur für Krankheitstage, sondern Grundausstattung während der Pflege. Jeder trägt Keime und Viren, ganz ohne Symptome. Was Ihnen als Gesundem nichts ausmacht, kann für einen geschwächten Menschen lebensbedrohlich sein.', c: 'Tragen Sie eine besonders bei Pflege mit Gesichtsnähe (Essen, Mundpflege, Windelwechsel, Wundversorgung). „Nur wenn Sie sich unwohl fühlen" ist kein ausreichender Schutz.' },
@@ -78,16 +78,16 @@ window.OUCHI_CONTENT.de = {
         {
           id: 'taii2', title: 'Druckgeschwüre verhindern: Ernährung, Zeit, Ort',
           steps: [
-            { fig: 'nutrition_cushion', t: 'In Wahrheit ist die größte Grundlage der Dekubitusprophylaxe nicht die Umlagerungstechnik, sondern die „Ernährung". Ein dünner, knochiger Mensch bekommt unter gleichen Bedingungen früher Geschwüre. Achten Sie auf Mahlzeiten und Ernährung, damit das Fettpolster als Puffer erhalten bleibt.', c: 'Ein schwindender Appetit ist selbst ein Warnzeichen für Druckgeschwüre. Sprechen Sie mit einer Ärztin oder einer Ernährungsfachkraft über die Ernährung.' },
+            { fig: 'nutrition_cushion', t: 'In Wahrheit ist die größte Grundlage, um ein Wundliegen zu verhindern, nicht die Umlagerungstechnik, sondern die „Ernährung". Ein dünner, knochiger Mensch bekommt unter gleichen Bedingungen früher Geschwüre. Achten Sie auf Mahlzeiten und Ernährung, damit das Fettpolster als Puffer erhalten bleibt.', c: 'Ein schwindender Appetit ist selbst ein Warnzeichen für Druckgeschwüre. Sprechen Sie mit einer Ärztin oder einer Ernährungsfachkraft über die Ernährung.' },
             { fig: 'pressure_points', t: 'Druckgeschwüre entstehen leicht dort, wo Knochen hervorstehen und auf das Bett drücken. Hinterkopf, Schultern, Ellbogen, Gesäßmitte und Fersen sind typisch.' },
             { fig: null, t: 'Als grober Richtwert: lassen Sie sie nicht länger als 2 bis 3 Stunden in derselben Lage. Bei einer druckverteilenden Matratze oder je nach Zustand der Person ändert sich das richtige Intervall.', c: 'Legen Sie Intervall und Vorgehen zur Sicherheit gemeinsam mit einer Fachkraft wie einer Pflegekraft oder Pflegeberatung fest.' },
             { fig: null, t: 'Finden Sie Rötung an Gesäß oder Fersen, drücken Sie sie sanft mit einem Finger. Rötung, die nicht weiß wird, ist der Beginn eines Druckgeschwürs. Lagern Sie so, dass kein Gewicht auf dieser Stelle ruht.', c: 'Reiben oder massieren Sie die gerötete Stelle nicht. Das macht es schlimmer.', m: 'Die gelähmte Seite hat ein gedämpftes Gefühl, und die Person bemerkt den Schmerz nicht. Prüfen Sie die Haut auf der gelähmten Seite besonders oft.' },
             { fig: 'heel_float', t: 'Bei jemandem, dessen Fersen leicht röten, legen Sie ein Kissen unter die Waden, um die Fersen leicht anzuheben.' },
-            { fig: null, t: 'Wie gut eine Matratze oder ein Kissen „Druckgeschwüre verhindert", ist von Produkt zu Produkt sehr verschieden. Zeigt sich beim Gebrauch Rötung, passt das Hilfsmittel vielleicht nicht. Es lohnt sich, es zu überprüfen oder etwas anderes zu versuchen.', c: 'Der schnellste Weg zu den passenden Prophylaxepunkten ist, eine Ärztin, Pflegekraft oder Hilfsmittel-Fachkraft zu fragen.' }
+            { fig: null, t: 'Wie gut eine Matratze oder ein Kissen „Druckgeschwüre verhindert", ist von Produkt zu Produkt sehr verschieden. Zeigt sich beim Gebrauch Rötung, passt das Hilfsmittel vielleicht nicht. Es lohnt sich, es zu überprüfen oder etwas anderes zu versuchen.', c: 'Der schnellste Weg zu dem, was dieser Person hilft, ein Wundliegen zu verhindern, ist, eine Ärztin, Pflegekraft oder Hilfsmittel-Fachkraft zu fragen.' }
           ],
           points: [
             'Selbst wenn ein Druckgeschwür entsteht, machen Sie sich keine Vorwürfe mit „unsere Pflege war schlecht". Körperbau, Konstitution und Krankheit schaffen von Anfang an große Unterschiede darin, wie leicht sie entstehen.',
-            'Wichtig ist nicht Schuld, sondern früh mit einer Fachkraft zu sprechen und auf eine zur Person passende Vorbeugung umzustellen.'
+            'Wichtig ist nicht Schuld, sondern früh mit einer Fachkraft zu sprechen und auf eine zur Person passende Vorgehensweise umzustellen.'
           ]
         }
       ]
@@ -160,7 +160,7 @@ window.OUCHI_CONTENT.de = {
             { fig: null, t: 'Noch eines: richten Sie auch verrutschte Kleidung. Es gibt tatsächlich sehr viele Menschen, deren Hose oder Rock heruntergerutscht ist und deren Unterwäsche oder Windel sichtbar bleibt. Ein Rollstuhl bringt sie nach draußen. So lässt sich die Person beschämen.', c: 'Die Person kann es oft nicht selbst richten und bringt es nicht über sich, etwas zu sagen. Es zu bemerken und still zu richten ist Aufgabe der Pflegeperson. Eine peinliche Erfahrung kann zum Grund für „ich will nicht mehr raus" werden. Ein gepflegtes Äußeres ist ein kleiner Extraschritt, der Person und Sie vor fremden Blicken schützt.' }
           ],
           points: [
-            'Das Zurücksetzen kommt mehrmals täglich vor. Denken Sie „sie ist heruntergerutscht", tun Sie es, oft. Das ist selbst Dekubitusprophylaxe.',
+            'Das Zurücksetzen kommt mehrmals täglich vor. Denken Sie „sie ist heruntergerutscht", tun Sie es, oft. Schon das hilft, ein Wundliegen zu verhindern.',
             'Haltung und Kleidung. Erst wenn beides sitzt, ist das Zurücksetzen „vollständig".'
           ]
         },
@@ -262,12 +262,12 @@ window.OUCHI_CONTENT.de = {
 
     {
       id: 'koukuu', emoji: '🦷', title: 'Mundpflege',
-      sub: 'Vorbeugung gegen Lungenentzündung beginnt im Mund',
+      sub: 'Lungenentzündung verhindern fängt im Mund an',
       procs: [
         {
           id: 'kou1', title: 'Zähneputzen und Mundpflege',
           steps: [
-            { fig: null, t: 'Den Mund sauber zu halten ist die beste Vorbeugung gegen Lungenentzündung (Aspirationspneumonie) bei älteren Menschen. Machen Sie es nach den Mahlzeiten zur Gewohnheit.' },
+            { fig: null, t: 'Den Mund sauber zu halten ist das Beste, was man gegen eine Lungenentzündung (Aspirationspneumonie) bei älteren Menschen tun kann. Machen Sie es nach den Mahlzeiten zur Gewohnheit.' },
             { fig: null, t: 'Ist die Person bereit, lassen Sie sie selbst die Zähne putzen. Das ist selbst gute Reha. Sie putzt aber oft nicht gründlich genug, daher ist die Endkontrolle Ihre Aufgabe.', c: 'Nutzen Sie Worte, die die Endkontrolle nicht unangenehm machen. Etwas wie „Sie haben gut geputzt. Zeigen Sie mir zum Schluss nur die hinteren" geht leichter hinein, weil es die Mühe zuerst anerkennt.' },
             { fig: null, t: 'Die Haltung ist wie beim Essen. Leicht nach vorn, mit angezogenem Kinn. Damit Wasser und Schmutz während der Pflege nicht die Kehle hinunterlaufen.', link: { cat: 'shokuji', proc: 'shoku1' } },
             { fig: null, t: 'Nehmen Sie Prothesen heraus und reinigen Sie sie mit einer Prothesenbürste. Nutzen Sie keine gewöhnliche Zahnpasta; das Schleifmittel zerkratzt Prothesen. Nachts nehmen Sie sie heraus und legen sie in Wasser oder Reiniger.' },
@@ -361,7 +361,7 @@ window.OUCHI_CONTENT.de = {
             { fig: 'walk_position', t: 'Die begleitende Person steht leicht hinter und seitlich der schwächeren Seite der Person (der Seite mit Lähmung). Die Position, um sie beim Schwanken sofort zu stützen.' },
             { fig: null, t: 'Zu wissen, warum Menschen stürzen, verändert die Art zu stützen. Die meisten Stürze beginnen mit „der Fuß hebt sich weniger als erwartet, und sie stolpern" oder „die Sohle landet nicht flach und der Knöchel knickt um". Dann geschieht der Sturz, weil ein Ausgleichsschritt nicht rechtzeitig kommt.', c: 'Umgekehrt: können Sie diesen schwankenden Moment nur stützen, vermeiden Sie den schlimmsten Sturz. Bereit zu sein, „diesen einen Schritt jederzeit zu stützen", das ist die vorderste Aufgabe der Pflegeperson.' },
             { fig: null, t: 'Statt Händchenhalten lässt leichtes Stützen unter der Achsel oder an der Hüfte Sie sie auffangen, wenn sie zusammensackt. Lassen Sie die Person einen Handlauf oder Stock halten.', m: 'Bei jemandem mit einer Beinorthese (einem Hilfsmittel fürs Gehen) legen Sie sie nicht nach eigenem Gutdünken an; folgen Sie genau dem, was eine Reha-Fachkraft gezeigt hat. Halten Sie den Stock in der Hand auf der nicht betroffenen Seite.' },
-            { fig: null, t: 'Drängen Sie sie nicht. Der eine Satz „langsam ist gut" ist die beste Sturzprophylaxe.' }
+            { fig: null, t: 'Drängen Sie sie nicht. Der eine Satz „langsam ist gut" hilft am meisten, damit sie nicht stürzt.' }
           ]
         },
         {
@@ -379,7 +379,7 @@ window.OUCHI_CONTENT.de = {
         {
           id: 'hok3', title: 'Einen sturzsicheren Körper bauen: Übungen im Sitzen',
           steps: [
-            { fig: null, t: 'Sturzprophylaxe ist nicht nur Gehübung. Kleine Übungen im Sitzen, aufgebaut, wachsen „die Kraft, den Fuß zu heben" und „die Kraft, flach zu landen". Erzwingen Sie nichts; auch beim Fernsehen ist es gut.' },
+            { fig: null, t: 'Damit sie nicht stürzt, hilft nicht nur Gehübung. Kleine Übungen im Sitzen, aufgebaut, wachsen „die Kraft, den Fuß zu heben" und „die Kraft, flach zu landen". Erzwingen Sie nichts; auch beim Fernsehen ist es gut.' },
             { fig: null, t: 'Oberschenkelheben. Im Stuhl sitzend heben Sie einen Oberschenkel langsam und senken ihn. Wechselnd. Das hält die Kraft, den Fuß zu heben, und verringert Stolpern.' },
             { fig: null, t: 'Knöchelkreisen. Heben Sie den Fuß etwas und kreisen Sie den Knöchel langsam, in beide Richtungen. Ein geschmeidiger Knöchel hält das Schwanken beim Landen aus.' },
             { fig: null, t: 'Zehen- und Fersenheben. Sitzend halten Sie die Ferse am Boden und heben die Zehen. Dann halten Sie die Zehen unten und heben die Ferse. Die Kraft, die Sohle flach zu landen, tragen diese Muskeln von Schienbein und Wade.' },

@@ -40,7 +40,7 @@ window.OUCHI_CONTENT.it = {
           steps: [
             { fig: null, t: 'Questa è la base di ogni assistenza. Non è appariscente, ma è una tecnica di primo livello che protegge te e la persona da lesioni e infezioni.' },
             { fig: null, t: 'Tieni le tue unghie corte, con gli angoli arrotondati. Le unghie lunghe graffiano la pelle della persona durante l\'assistenza, e si impigliano in lenzuola o vestiti e feriscono te.', c: 'La pelle delle persone anziane o debilitate è sottile, e anche un piccolo graffio può portare a un\'infezione.' },
-            { fig: null, t: 'Lo spazio sotto le unghie accumula sporco e residui. Se restano lunghe, diventano un focolaio d\'infezione a ogni pasto, cambio e medicazione. Tenere le unghie corte è già prevenzione delle infezioni.' },
+            { fig: null, t: 'Lo spazio sotto le unghie accumula sporco e residui. Se restano lunghe, diventano un focolaio d\'infezione a ogni pasto, cambio e medicazione. Tenere le unghie corte aiuta già a evitare le infezioni.' },
             { fig: null, t: 'Lava le mani con il sapone prima e dopo l\'assistenza. Tra le dita, intorno alle unghie, fino ai polsi. Soprattutto «dopo un cambio» e «prima di toccare il cibo», ogni volta.', c: 'Quando non puoi raggiungere un lavandino, il gel igienizzante è pratico. Ma lo sporco visibile va lavato con acqua; il gel non lo rimuove.' },
             { fig: null, t: 'Per i cambi e il contatto con le ferite, usa guanti monouso. Per toglierli, arrotola il lato sporco all\'interno, gettali, e poi lava comunque le mani.' },
             { fig: null, t: 'Una mascherina non è uno strumento solo per i giorni di malattia; è equipaggiamento di base durante l\'assistenza. Tutti portiamo germi e virus senza alcun sintomo. Ciò che a te sano non fa nulla può essere letale per una persona debilitata.', c: 'Indossala soprattutto per l\'assistenza a viso ravvicinato (pasti, igiene orale, cambi, medicazioni). «Solo quando ti senti male» non protegge abbastanza.' },
@@ -78,16 +78,16 @@ window.OUCHI_CONTENT.it = {
         {
           id: 'taii2', title: 'Prevenire le piaghe: nutrizione, tempo, luogo',
           steps: [
-            { fig: 'nutrition_cushion', t: 'In verità, la base più grande della prevenzione delle piaghe non è la tecnica di cambio posizione ma la «nutrizione». Una persona magra e ossuta sviluppa piaghe prima, nelle stesse condizioni. Cura i pasti e lo stato nutrizionale per conservare il cuscino di carne che ammortizza.', c: 'Un appetito che cala è già un segnale d\'allarme di piaga. Parla di nutrizione con un medico o un professionista della nutrizione.' },
+            { fig: 'nutrition_cushion', t: 'In verità, la base più grande per evitare le piaghe non è la tecnica di cambio posizione ma la «nutrizione». Una persona magra e ossuta sviluppa piaghe prima, nelle stesse condizioni. Cura i pasti e lo stato nutrizionale per conservare il cuscino di carne che ammortizza.', c: 'Un appetito che cala è già un segnale d\'allarme di piaga. Parla di nutrizione con un medico o un professionista della nutrizione.' },
             { fig: 'pressure_points', t: 'Le piaghe si formano facilmente dove le ossa sporgono e premono sul letto. La nuca, le spalle, i gomiti, il centro dei glutei e i talloni sono tipici.' },
             { fig: null, t: 'Come riferimento, non lasciarla più di 2 o 3 ore nella stessa posizione. Con un materasso che distribuisce la pressione, o a seconda delle condizioni, l\'intervallo giusto cambia.', c: 'Stabilisci intervallo e metodo insieme a un professionista come un infermiere o un coordinatore dell\'assistenza, per stare tranquillo.' },
             { fig: null, t: 'Se trovi un rossore su glutei o talloni, premi delicatamente con un dito. Un rossore che non diventa bianco è l\'inizio di una piaga. Posiziona la persona in modo che nessun peso gravi su quel punto.', c: 'Non sfregare né massaggiare la zona rossa. La peggiora.', m: 'Il lato colpito ha la sensibilità ridotta, e la persona non nota il dolore. Controlla la pelle del lato colpito particolarmente spesso.' },
             { fig: 'heel_float', t: 'Per chi ha i talloni che arrossiscono facilmente, metti un cuscino sotto i polpacci per sollevare un po\' i talloni.' },
-            { fig: null, t: 'La capacità di un materasso o cuscino di «prevenire le piaghe» varia enormemente da prodotto a prodotto. Se compare un rossore con l\'uso, l\'attrezzatura forse non è adatta. Vale la pena rivederla o provarne un\'altra.', c: 'Il modo più veloce per trovare i punti di prevenzione adatti è chiedere a un medico, un infermiere o un professionista degli ausili.' }
+            { fig: null, t: 'La capacità di un materasso o cuscino di «prevenire le piaghe» varia enormemente da prodotto a prodotto. Se compare un rossore con l\'uso, l\'attrezzatura forse non è adatta. Vale la pena rivederla o provarne un\'altra.', c: 'Il modo più veloce per sapere cosa aiuta questa persona a evitare le piaghe è chiedere a un medico, un infermiere o un professionista degli ausili.' }
           ],
           points: [
             'Anche se una piaga si forma, non incolpatevi con «la nostra assistenza è stata scadente». Corporatura, costituzione e malattie creano fin dall\'inizio grandi differenze nella facilità con cui si formano.',
-            'Ciò che conta non è la colpa, ma parlare presto con un professionista e passare a una prevenzione adatta alla persona.'
+            'Ciò che conta non è la colpa, ma parlare presto con un professionista e passare a un modo di fare adatto alla persona.'
           ]
         }
       ]
@@ -160,7 +160,7 @@ window.OUCHI_CONTENT.it = {
             { fig: null, t: 'Un\'altra cosa: sistema anche i vestiti in disordine. Ci sono in realtà moltissime persone i cui pantaloni o gonna sono scivolati, lasciando in vista biancheria o pannolone. Una carrozzina la porta fuori casa. Così, la persona prova vergogna.', c: 'La persona spesso non può sistemarlo da sola né osa dirlo. Notarlo e sistemarlo con discrezione è compito dell\'assistente. Un\'esperienza imbarazzante può diventare motivo di «non voglio più uscire». Un aspetto curato è un piccolo passo in più che protegge la persona e te dagli sguardi altrui.' }
           ],
           points: [
-            'Risistemarsi capita più volte al giorno. Quando pensi «è scivolata», fallo, spesso. È già prevenzione delle piaghe.',
+            'Risistemarsi capita più volte al giorno. Quando pensi «è scivolata», fallo, spesso. Aiuta già a evitare le piaghe.',
             'La postura e i vestiti. Solo quando entrambi sono a posto, la risistemazione è «completa».'
           ]
         },
@@ -267,7 +267,7 @@ window.OUCHI_CONTENT.it = {
         {
           id: 'kou1', title: 'Lavaggio dei denti e cura della bocca',
           steps: [
-            { fig: null, t: 'Tenere la bocca pulita è la migliore prevenzione della polmonite (polmonite ab ingestis) nelle persone anziane. Fanne un\'abitudine dopo i pasti.' },
+            { fig: null, t: 'Tenere la bocca pulita è il modo migliore per evitare la polmonite (polmonite ab ingestis) nelle persone anziane. Fanne un\'abitudine dopo i pasti.' },
             { fig: null, t: 'Se la persona è disposta, falle lavare i denti da sola. È già una buona riabilitazione. Ma spesso non li lava abbastanza bene, quindi il controllo finale è compito tuo.', c: 'Usa parole che non rendano sgradevole il controllo finale. Qualcosa come «Ha lavato bene. Mi mostri solo il fondo alla fine» entra meglio, riconoscendo prima lo sforzo.' },
             { fig: null, t: 'La postura è la stessa del mangiare. Un po\' inclinata in avanti, con il mento raccolto. Perché acqua e sporco non scendano in gola durante la cura.', link: { cat: 'shokuji', proc: 'shoku1' } },
             { fig: null, t: 'Togli le protesi e puliscile con uno spazzolino per protesi. Non usare dentifricio normale; l\'abrasivo graffia le protesi. La notte, toglile e mettile in acqua o in un detergente.' },
@@ -361,7 +361,7 @@ window.OUCHI_CONTENT.it = {
             { fig: 'walk_position', t: 'Chi accompagna sta un po\' dietro e di lato al lato debole della persona (il lato con paralisi). La posizione per sostenerla subito se vacilla.' },
             { fig: null, t: 'Sapere perché si cade cambia il modo di sostenere. La maggior parte delle cadute inizia con «il piede non si alza quanto atteso e si inciampa» o «la pianta non appoggia piatta e la caviglia si storce». Poi la caduta avviene perché un passo di recupero non esce in tempo.', c: 'Detto altrimenti: se riesci a sostenere quell\'istante di vacillamento, eviti la caduta peggiore. Essere pronti a «sostenere quel passo in ogni momento» è il primo compito dell\'assistente.' },
             { fig: null, t: 'Più che tenere la mano, sostenere leggermente sotto l\'ascella o ai fianchi permette di prenderla se crolla. Fa\' che la persona tenga un corrimano o un bastone.', m: 'Per chi usa un tutore alla gamba (un dispositivo che aiuta a camminare), non applicarlo a modo tuo; segui esattamente ciò che un professionista della riabilitazione ha mostrato. Tieni il bastone nella mano del lato non colpito.' },
-            { fig: null, t: 'Non metterle fretta. La sola frase «piano va bene» è la migliore prevenzione delle cadute.' }
+            { fig: null, t: 'Non metterle fretta. La sola frase «piano va bene» è ciò che aiuta di più a evitare le cadute.' }
           ]
         },
         {
@@ -379,7 +379,7 @@ window.OUCHI_CONTENT.it = {
         {
           id: 'hok3', title: 'Costruire un corpo saldo: esercizi da seduti',
           steps: [
-            { fig: null, t: 'La prevenzione delle cadute non è solo camminare. Piccoli esercizi da seduti, accumulati, fanno crescere «la forza di alzare il piede» e «la forza di appoggiarsi piatti». Non forzare; anche guardando la TV va bene.' },
+            { fig: null, t: 'Per evitare le cadute non basta camminare. Piccoli esercizi da seduti, accumulati, fanno crescere «la forza di alzare il piede» e «la forza di appoggiarsi piatti». Non forzare; anche guardando la TV va bene.' },
             { fig: null, t: 'Sollevamento della coscia. Seduta su una sedia, alza lentamente una coscia e abbassala. Alternando. Conserva la forza di alzare il piede e riduce gli inciampi.' },
             { fig: null, t: 'Rotazione della caviglia. Alza un po\' il piede e ruota la caviglia lentamente, in entrambi i sensi. Una caviglia flessibile regge il vacillamento all\'appoggio.' },
             { fig: null, t: 'Sollevamento delle punte e dei talloni. Seduta, tieni il tallone a terra e alza le punte. Poi tieni le punte e alza il tallone. La forza di appoggiare la pianta piatta la sostengono questi muscoli di stinco e polpaccio.' },

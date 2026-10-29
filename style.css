@@ -119,6 +119,8 @@ main{padding:16px 14px calc(96px + env(safe-area-inset-bottom));max-width:640px;
 .btn-primary{width:100%;padding:16px;border:none;border-radius:16px;background:var(--brand);color:#fff;font-family:inherit;font-size:1em;font-weight:bold;cursor:pointer}
 
 .pressing{transform:scale(.97);filter:brightness(.96)}
+/* 日本語以外の言語のガイドを読み終えるまで画面を隠す(index.html の head の一行・app.js bootWithLang が外す・2026-10-30) */
+html.lang-wait body{visibility:hidden}
 
 /* はじめての つかいかた(app.js openGuide・2026-09-30)。1ページ目は初回のおしらせ「はじめにお読みください」。
    ヘッダーと下のタブより上に全画面。文は文字の大きさ3段階に合わせて大きくなる(em)。

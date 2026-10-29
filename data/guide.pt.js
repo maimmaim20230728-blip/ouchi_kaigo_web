@@ -40,7 +40,7 @@ window.OUCHI_CONTENT.pt = {
           steps: [
             { fig: null, t: 'Esta é a base de todo cuidado. Não é vistosa, mas é uma técnica de primeira linha que protege você e a pessoa de lesões e infecções.' },
             { fig: null, t: 'Mantenha as suas unhas curtas, com os cantos arredondados. Unhas longas arranham a pele da pessoa durante o cuidado, e enroscam em lençóis ou roupas e machucam você.', c: 'A pele das pessoas idosas ou debilitadas é fina, e até um pequeno arranhão pode levar a uma infecção.' },
-            { fig: null, t: 'O espaço sob as unhas acumula sujeira e resíduos. Se ficarem longas, viram um foco de infecção a cada refeição, troca de fralda e curativo. Manter as unhas curtas já é prevenção de infecções.' },
+            { fig: null, t: 'O espaço sob as unhas acumula sujeira e resíduos. Se ficarem longas, viram um foco de infecção a cada refeição, troca de fralda e curativo. Manter as unhas curtas já ajuda a evitar infecções.' },
             { fig: null, t: 'Lave as mãos com sabão antes e depois do cuidado. Entre os dedos, em volta das unhas, até os punhos. Sobretudo «depois de uma troca de fralda» e «antes de tocar em comida», toda vez.', c: 'Quando não puder chegar a uma pia, o álcool em gel é prático. Mas a sujeira visível precisa ser lavada com água; o gel não a remove.' },
             { fig: null, t: 'Para trocas de fralda e ao tocar feridas, use luvas descartáveis. Para tirá-las, enrole o lado sujo para dentro, jogue fora, e depois lave também as mãos.' },
             { fig: null, t: 'Uma máscara não é ferramenta só para dias de doença; é equipamento básico durante o cuidado. Todos carregamos germes e vírus sem nenhum sintoma. O que a você, saudável, não faz nada pode ser fatal para uma pessoa debilitada.', c: 'Use-a sobretudo em cuidados com o rosto próximo (comida, higiene bucal, trocas de fralda, curativos). «Só quando você se sentir mal» não protege o bastante.' },
@@ -78,16 +78,16 @@ window.OUCHI_CONTENT.pt = {
         {
           id: 'taii2', title: 'Prevenir as úlceras: nutrição, tempo, lugar',
           steps: [
-            { fig: 'nutrition_cushion', t: 'Na verdade, a maior base da prevenção de úlceras não é a técnica de mudança de posição, mas a «nutrição». Uma pessoa magra e ossuda desenvolve úlceras mais cedo, nas mesmas condições. Cuide das refeições e do estado nutricional para conservar o acolchoado de carne que amortece.', c: 'Um apetite que diminui já é um sinal de alerta de úlcera. Fale de nutrição com um médico ou um profissional da nutrição.' },
+            { fig: 'nutrition_cushion', t: 'Na verdade, a maior base para evitar as úlceras não é a técnica de mudança de posição, mas a «nutrição». Uma pessoa magra e ossuda desenvolve úlceras mais cedo, nas mesmas condições. Cuide das refeições e do estado nutricional para conservar o acolchoado de carne que amortece.', c: 'Um apetite que diminui já é um sinal de alerta de úlcera. Fale de nutrição com um médico ou um profissional da nutrição.' },
             { fig: 'pressure_points', t: 'As úlceras se formam facilmente onde os ossos se projetam e pressionam a cama. A nuca, os ombros, os cotovelos, o centro das nádegas e os calcanhares são típicos.' },
             { fig: null, t: 'Como referência, não a deixe mais de 2 a 3 horas na mesma posição. Com um colchão que distribui a pressão, ou conforme o estado da pessoa, o intervalo certo muda.', c: 'Defina o intervalo e o método junto a um profissional como um enfermeiro ou um coordenador de cuidados, para maior tranquilidade.' },
             { fig: null, t: 'Se encontrar vermelhidão nas nádegas ou nos calcanhares, pressione de leve com um dedo. Uma vermelhidão que não fica branca é o começo de uma úlcera. Posicione a pessoa de modo que nenhum peso recaia nesse ponto.', c: 'Não esfregue nem massageie a área vermelha. Piora.', m: 'O lado afetado tem a sensibilidade diminuída, e a pessoa não nota a dor. Confira a pele do lado afetado com especial frequência.' },
             { fig: 'heel_float', t: 'Para quem tem os calcanhares que avermelham fácil, ponha uma almofada sob as panturrilhas para erguer um pouco os calcanhares.' },
-            { fig: null, t: 'A capacidade de um colchão ou almofada de «prevenir úlceras» varia enormemente conforme o produto. Se surgir vermelhidão com o uso, talvez o equipamento não sirva. Vale a pena revê-lo ou tentar outro.', c: 'O mais rápido para achar os pontos de prevenção adequados é perguntar a um médico, um enfermeiro ou um profissional de produtos de apoio.' }
+            { fig: null, t: 'A capacidade de um colchão ou almofada de «prevenir úlceras» varia enormemente conforme o produto. Se surgir vermelhidão com o uso, talvez o equipamento não sirva. Vale a pena revê-lo ou tentar outro.', c: 'O mais rápido para saber o que ajuda esta pessoa a evitar as úlceras é perguntar a um médico, um enfermeiro ou um profissional de produtos de apoio.' }
           ],
           points: [
             'Mesmo que uma úlcera se forme, não se culpem com «nosso cuidado foi ruim». Compleição, constituição e doenças criam desde o início grandes diferenças na facilidade com que surgem.',
-            'O que importa não é a culpa, mas falar cedo com um profissional e mudar para uma prevenção adequada à pessoa.'
+            'O que importa não é a culpa, mas falar cedo com um profissional e mudar para uma forma de cuidar adequada à pessoa.'
           ]
         }
       ]
@@ -160,7 +160,7 @@ window.OUCHI_CONTENT.pt = {
             { fig: null, t: 'Mais uma coisa: ajeite também a roupa em desordem. Há de fato muitíssimas pessoas cuja calça ou saia escorregou, deixando à mostra a roupa de baixo ou a fralda. Uma cadeira de rodas a leva para fora de casa. Assim, a pessoa sente vergonha.', c: 'A pessoa muitas vezes não consegue ajeitar sozinha nem se atreve a dizer. Notar e ajeitar com discrição é tarefa do cuidador. Uma experiência constrangedora pode virar motivo de «não quero mais sair». Uma aparência cuidada é um pequeno passo a mais que protege a pessoa e você dos olhares alheios.' }
           ],
           points: [
-            'Reacomodar surge várias vezes ao dia. Quando pensar «ela escorregou», faça, com frequência. Isso já é prevenção de úlceras.',
+            'Reacomodar surge várias vezes ao dia. Quando pensar «ela escorregou», faça, com frequência. Isso já ajuda a evitar as úlceras.',
             'A postura e a roupa. Só quando as duas estão em ordem a reacomodação está «completa».'
           ]
         },
@@ -267,7 +267,7 @@ window.OUCHI_CONTENT.pt = {
         {
           id: 'kou1', title: 'Escovação e cuidado da boca',
           steps: [
-            { fig: null, t: 'Manter a boca limpa é a melhor prevenção da pneumonia (pneumonia por aspiração) nas pessoas idosas. Faça disso um hábito após as refeições.' },
+            { fig: null, t: 'Manter a boca limpa é a melhor forma de evitar a pneumonia (pneumonia por aspiração) nas pessoas idosas. Faça disso um hábito após as refeições.' },
             { fig: null, t: 'Se a pessoa estiver disposta, faça-a escovar os próprios dentes. Isso já é uma boa reabilitação. Mas muitas vezes não escova bem o bastante, então a conferência final é tarefa sua.', c: 'Use palavras que não tornem a conferência final desagradável. Algo como «Escovou bem. Só me mostre o fundo no final» entra melhor, reconhecendo o esforço primeiro.' },
             { fig: null, t: 'A postura é a mesma de comer. Um pouco inclinada para a frente, com o queixo recolhido. Para que água e sujeira não desçam pela garganta durante o cuidado.', link: { cat: 'shokuji', proc: 'shoku1' } },
             { fig: null, t: 'Tire as próteses e limpe-as com uma escova de prótese. Não use creme dental comum; o abrasivo risca as próteses. À noite, tire-as e deixe-as em água ou em um limpador.' },
@@ -361,7 +361,7 @@ window.OUCHI_CONTENT.pt = {
             { fig: 'walk_position', t: 'Quem acompanha fica um pouco atrás e ao lado do lado fraco da pessoa (o lado com paralisia). A posição para ampará-la de imediato se ela vacila.' },
             { fig: null, t: 'Saber por que se cai muda o jeito de amparar. A maioria das quedas começa com «o pé não sobe o quanto se espera e tropeça» ou «a planta não pousa plana e o tornozelo torce». Depois a queda acontece porque um passo de recuperação não sai a tempo.', c: 'Em outras palavras: se você conseguir amparar esse instante de vacilo, evita a pior queda. Estar pronto para «amparar esse passo a qualquer momento» é a primeira missão do cuidador.' },
             { fig: null, t: 'Mais do que dar a mão, amparar de leve sob a axila ou no quadril permite segurá-la se ela desabar. Faça a pessoa segurar um corrimão ou uma bengala.', m: 'Para quem usa uma órtese na perna (um dispositivo que ajuda a andar), não a coloque do seu jeito; siga exatamente o que um profissional da reabilitação mostrou. Segure a bengala com a mão do lado não afetado.' },
-            { fig: null, t: 'Não a apresse. A simples frase «devagar está bom» é a melhor prevenção de quedas.' }
+            { fig: null, t: 'Não a apresse. A simples frase «devagar está bom» é o que mais ajuda a evitar quedas.' }
           ]
         },
         {
@@ -379,7 +379,7 @@ window.OUCHI_CONTENT.pt = {
         {
           id: 'hok3', title: 'Formar um corpo firme: exercícios sentado',
           steps: [
-            { fig: null, t: 'A prevenção de quedas não é só andar. Pequenos exercícios sentado, acumulados, fazem crescer «a força de levantar o pé» e «a força de pousar plano». Não force; até vendo TV está bom.' },
+            { fig: null, t: 'Evitar quedas não é só questão de andar. Pequenos exercícios sentado, acumulados, fazem crescer «a força de levantar o pé» e «a força de pousar plano». Não force; até vendo TV está bom.' },
             { fig: null, t: 'Elevação de coxa. Sentada numa cadeira, levante devagar uma coxa e abaixe-a. Alternando. Conserva a força de levantar o pé e reduz os tropeços.' },
             { fig: null, t: 'Giro de tornozelo. Levante um pouco o pé e gire o tornozelo devagar, nos dois sentidos. Um tornozelo flexível aguenta o vacilo ao pousar.' },
             { fig: null, t: 'Elevação de pontas e de calcanhares. Sentada, mantenha o calcanhar no chão e levante as pontas. Depois mantenha as pontas e levante o calcanhar. A força de pousar a planta plana é sustentada por esses músculos da canela e da panturrilha.' },

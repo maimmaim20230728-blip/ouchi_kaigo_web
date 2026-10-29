@@ -44,7 +44,7 @@ window.OUCHI_CONTENT.en = {
           steps: [
             { fig: null, t: 'This is the foundation of all care. It is not flashy, but it is a top-tier skill that protects both you and the person from injury and infection.' },
             { fig: null, t: 'Keep your own nails short, with rounded corners. Long nails scratch the person\'s skin during care, and catch on sheets or clothing and injure you.', c: 'The skin of older or weakened people is thin, and even a small scratch can lead to infection.' },
-            { fig: null, t: 'The space under the nails collects dirt and waste. Left long, it becomes a breeding ground for infection at every meal, diaper change, and wound care. Keeping nails short is itself infection prevention.' },
+            { fig: null, t: 'The space under the nails collects dirt and waste. Left long, it becomes a breeding ground for infection at every meal, diaper change, and wound care. Keeping nails short is itself a way to prevent infection.' },
             { fig: null, t: 'Wash your hands with soap before and after care. Between the fingers, around the nails, up to the wrists. Especially "after a diaper change" and "before touching food", every time.', c: 'When you cannot get to a sink, alcohol hand sanitizer is handy. But visible dirt must be washed off with water; sanitizer will not remove it.' },
             { fig: null, t: 'For diaper changes and touching wounds, use disposable gloves. To remove them, roll the dirty side inward, throw them away, and wash your hands afterward too.' },
             { fig: null, t: 'A mask is not a tool for sick days only; it is basic equipment during care. Everyone carries germs and viruses without any symptoms. What is nothing to a healthy you can be life-threatening to a weakened person.', c: 'Wear one especially for face-to-face care (feeding, mouth care, diaper changes, wound care). "Only when you feel unwell" is not enough protection.' },
@@ -82,12 +82,12 @@ window.OUCHI_CONTENT.en = {
         {
           id: 'taii2', title: 'Preventing pressure sores: nutrition, timing, place',
           steps: [
-            { fig: 'nutrition_cushion', t: 'In truth, the biggest foundation of pressure-sore prevention is not repositioning skill but "nutrition." A thin, bony person develops sores sooner, even in the same conditions. Value meals and nutrition so they keep the padding of flesh that acts as a cushion.', c: 'A shrinking appetite is itself a warning sign for pressure sores. Talk to a doctor or a nutrition professional about nutrition.' },
+            { fig: 'nutrition_cushion', t: 'In truth, the biggest foundation for preventing pressure sores is not repositioning skill but "nutrition." A thin, bony person develops sores sooner, even in the same conditions. Value meals and nutrition so they keep the padding of flesh that acts as a cushion.', c: 'A shrinking appetite is itself a warning sign for pressure sores. Talk to a doctor or a nutrition professional about nutrition.' },
             { fig: 'pressure_points', t: 'Pressure sores form easily where bones stick out and press on the bed. The back of the head, shoulders, elbows, the center of the buttocks, and the heels are typical.' },
             { fig: null, t: 'A rough guide is not to leave them in the same position for more than 2 to 3 hours. If you use a pressure-relieving mattress, or depending on the person\'s condition, the right interval changes.', c: 'Decide the interval and method together with a professional such as a nurse or care manager for peace of mind.' },
             { fig: null, t: 'If you find redness on the buttocks or heels, press it gently with a finger. Redness that does not turn white is the start of a pressure sore. Position them so no weight rests on that spot.', c: 'Do not rub or massage the red area. It makes it worse.', m: 'The affected side has dulled sensation, and the person may not notice pain. Check the skin on the affected side especially often.' },
             { fig: 'heel_float', t: 'For someone whose heels redden easily, place a cushion under the calves to lift the heels slightly.' },
-            { fig: null, t: 'How well a mattress or cushion "prevents pressure sores" varies enormously by product. If redness appears while using one, the equipment may not suit them. It is worth reviewing it or trying something different.', c: 'The fastest way to find the prevention points that suit the person is to ask a doctor, nurse, or assistive-equipment professional.' }
+            { fig: null, t: 'How well a mattress or cushion "prevents pressure sores" varies enormously by product. If redness appears while using one, the equipment may not suit them. It is worth reviewing it or trying something different.', c: 'The fastest way to find what helps this particular person avoid pressure sores is to ask a doctor, nurse, or assistive-equipment professional.' }
           ],
           points: [
             'Even if a pressure sore does form, do not blame yourselves with "our care was poor." Body shape, constitution, and illness create big differences in how easily they form, from the very start.',
@@ -164,7 +164,7 @@ window.OUCHI_CONTENT.en = {
             { fig: null, t: 'One more thing: fix any disarranged clothing. There are actually very many people whose trousers or skirt have slipped down, leaving underwear or a diaper showing. A wheelchair takes them outside the home. Left like that, the person feels embarrassed.', c: 'The person often cannot fix it themselves and cannot bring themselves to say so. Noticing and quietly fixing it is the carer\'s job. An embarrassing experience can become a reason for "I do not want to go out anymore." Neat appearance is a small extra step that protects both the person and you from other people\'s eyes.' }
           ],
           points: [
-            'Reseating comes up many times a day. When you think "they have slid down," do it, often. That itself is pressure-sore prevention.',
+            'Reseating comes up many times a day. When you think "they have slid down," do it, often. That in itself helps prevent pressure sores.',
             'Posture and clothing. Only when both are set is the reseating "complete."'
           ]
         },
@@ -271,7 +271,7 @@ window.OUCHI_CONTENT.en = {
         {
           id: 'kou1', title: 'Brushing and caring for the mouth',
           steps: [
-            { fig: null, t: 'Keeping the mouth clean is the single best prevention of pneumonia (aspiration pneumonia) in older people. Make it a habit after meals.' },
+            { fig: null, t: 'Keeping the mouth clean is the single best way to prevent pneumonia (aspiration pneumonia) in older people. Make it a habit after meals.' },
             { fig: null, t: 'If the person is willing, have them brush their own teeth. That itself is good rehab. But they often do not brush well enough, so the finishing check is your job.', c: 'Use wording that does not make them dislike the finishing check. Something like "You brushed well. Just show me the back at the end" goes in more easily, recognizing their effort first.' },
             { fig: null, t: 'The posture is the same as for eating. Slightly forward, with the chin tucked. This is so water and dirt do not run down the throat during care.', link: { cat: 'shokuji', proc: 'shoku1' } },
             { fig: null, t: 'Take dentures out and clean them with a denture brush. Do not use ordinary toothpaste; the abrasive scratches dentures. At night, take them out and soak them in water or denture cleaner.' },
@@ -365,7 +365,7 @@ window.OUCHI_CONTENT.en = {
             { fig: 'walk_position', t: 'The person supporting stands slightly behind and to the side of the person\'s weaker side (the side with paralysis). It is the position to support them at once if they wobble.' },
             { fig: null, t: 'Knowing why people fall changes how you support them. Most falls begin with "the foot does not lift as much as expected, and they trip" or "the sole does not land flat and the ankle twists." Then the fall happens because a recovery step does not come out in time.', c: 'Put the other way: if you can just support that wobbling moment, you can avoid the worst fall. Being ready to "support that one step at any moment", that is the carer\'s foremost job.' },
             { fig: null, t: 'Rather than holding hands, lightly supporting under the armpit or at the hips lets you catch them if they collapse. Have the person hold a handrail or cane.', m: 'For someone using a leg brace (a device that helps walking), do not fit it your own way; follow exactly what a rehabilitation professional taught. Hold the cane in the hand on the non-affected side.' },
-            { fig: null, t: 'Do not rush them. The single phrase "slowly is fine" is the best fall prevention.' }
+            { fig: null, t: 'Do not rush them. The single phrase "slowly is fine" is the best way to keep them from falling.' }
           ]
         },
         {
@@ -383,7 +383,7 @@ window.OUCHI_CONTENT.en = {
         {
           id: 'hok3', title: 'Building a fall-proof body: seated exercises',
           steps: [
-            { fig: null, t: 'Fall prevention is not only walking practice. Small seated exercises, built up, grow "the strength to lift the foot" and "the strength to land flat." Do not force it; even while watching TV is fine.' },
+            { fig: null, t: 'Avoiding falls is not only about walking practice. Small seated exercises, built up, grow "the strength to lift the foot" and "the strength to land flat." Do not force it; even while watching TV is fine.' },
             { fig: null, t: 'Thigh lifts. Sitting in a chair, lift one thigh slowly and lower it. Alternate sides. This keeps the strength to lift the foot and reduces tripping.' },
             { fig: null, t: 'Ankle circles. Lift the foot a little and circle the ankle slowly, both directions. A supple ankle can withstand the wobble of landing.' },
             { fig: null, t: 'Toe raises and heel raises. Sitting, keep the heel on the floor and lift the toes. Then keep the toes down and lift the heel. The strength to land the sole flat is supported by these muscles of the shin and calf.' },

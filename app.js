@@ -337,6 +337,18 @@
       }
     }, 50);
   }
+  /* アプリ・画面に戻ったとき(119番の電話から戻った等・2026-10-30): リズムの途中なら、止められていた音を戻して今から刻みなおす。
+     戻せなかったら(端末が音を止めたまま)ボタンを「はじめる」に戻す=1回押せば すぐ また始まる(押したまま鳴らない「とめる」を残さない) */
+  function resumeMetroUI(){
+    if(!Sound.metroOn) return;
+    Sound.metroResume(ok => {
+      if(ok || !Sound.metroOn) return;
+      stopMetroUI();
+      try{ if(sub && sub.kind === 'cpr') $('metroBtn').focus(); }catch(_){}
+    });
+  }
+  if(document.addEventListener) document.addEventListener('visibilitychange', () => { if(!document.hidden) resumeMetroUI(); });
+  if(window.addEventListener) window.addEventListener('pageshow', () => { if(!document.hidden) resumeMetroUI(); });
 
   /* ---------- せってい ---------- */
   function applyFs(){
@@ -508,7 +520,7 @@
        Play版は WebView が止まらないので、visibilitychange に加えて App の pause / resume でも */
     try{
       ap.addListener('pause', () => { Sound.pauseForHide(); });
-      ap.addListener('resume', () => { Sound.resumeFromHide(); });
+      ap.addListener('resume', () => { Sound.resumeFromHide(); resumeMetroUI(); });   // 胸骨圧迫のリズムも(2026-10-30)
     }catch(_){}
   }
 
@@ -608,7 +620,23 @@
     try{ h.focus({ preventScroll: true }); }catch(_){}
   }
 
-  /* ---------- 起動 ---------- */
+  /* ---------- 起動 ----------
+     保存された言語(はじめては端末の言語)が ja 以外で、まだ読めていなければ、先に data/guide.<code>.js を読んでから描く(2026-10-30)。
+     前は いったん日本語で描いてから切り替えていた=日本語以外の人に、起動のたびに一瞬 日本語が見えていた。
+     読むあいだは index.html の head の一行が html に lang-wait を付けて画面を隠している(style.css)。読めなければ日本語で描く(今までと同じ) */
+  function bootWithLang(){
+    const want = prefs.lang;
+    if(want === LANG){ boot(); return; }   // ja、またはもう読めている
+    loadContent(want, ok => {
+      if(ok && window.OUCHI_I18N[want]){
+        LANG = want;
+        T = window.OUCHI_I18N[want];
+        C = window.OUCHI_CONTENT[want];
+      }
+      boot();
+    });
+  }
+  function boot(){
   guideHold = !prefs.agreed || !guideDone();   // はじめての つかいかた を出す=閉じるまで BGM を始めない(applyMusic)
   applyLangAttrs();
   fillStatic();
@@ -647,10 +675,13 @@
   // はじめての つかいかた(1ページ目=はじめにお読みください)。読み終えるまで毎回・前からの利用者も更新のあと1回(2026-09-30)
   if(guideHold) openGuide(true);
 
-  // 保存された言語がまだ読めていなければ、ここで読み込んで切り替える
+  // 保存された言語が読めなかったとき(Web版の初回オフラインなど)は、ここでもう一度だけ読みにいく(今までと同じ)
   if(prefs.lang !== LANG) setLang(prefs.lang);
+  if(document.documentElement && document.documentElement.classList) document.documentElement.classList.remove('lang-wait');   // 隠していた画面を出す
 
   if(navigator.serviceWorker && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')){
     try{ navigator.serviceWorker.register('sw.js'); }catch(_){}
   }
+  }
+  bootWithLang();
 })();

@@ -40,7 +40,7 @@ window.OUCHI_CONTENT.nl = {
           steps: [
             { fig: null, t: 'Dit is de basis van alle zorg. Niet spectaculair, maar een topklasse techniek die u en de persoon beschermt tegen letsel en infectie.' },
             { fig: null, t: 'Houd uw eigen nagels kort, met afgeronde hoeken. Lange nagels krassen de huid van de persoon tijdens de zorg, en blijven haken achter lakens of kleding en verwonden u.', c: 'De huid van oudere of verzwakte mensen is dun, en zelfs een klein krasje kan tot een infectie leiden.' },
-            { fig: null, t: 'De ruimte onder de nagels verzamelt vuil en resten. Blijven ze lang, dan worden ze een broedplaats voor infectie bij elke maaltijd, verschoning en wondverzorging. Nagels kort houden is op zich infectiepreventie.' },
+            { fig: null, t: 'De ruimte onder de nagels verzamelt vuil en resten. Blijven ze lang, dan worden ze een broedplaats voor infectie bij elke maaltijd, verschoning en wondverzorging. Nagels kort houden helpt al om infecties te voorkomen.' },
             { fig: null, t: 'Was uw handen met zeep voor en na de zorg. Tussen de vingers, rond de nagels, tot de polsen. Vooral „na een verschoning" en „voor het aanraken van eten", elke keer.', c: 'Als u geen wasbak kunt bereiken, is handgel handig. Maar zichtbaar vuil moet met water worden afgewassen; gel verwijdert het niet.' },
             { fig: null, t: 'Gebruik voor verschoningen en het aanraken van wonden wegwerphandschoenen. Om ze uit te trekken, rolt u de vuile kant naar binnen, gooit ze weg, en wast daarna toch uw handen.' },
             { fig: null, t: 'Een mondkapje is geen middel alleen voor ziektedagen; het is basisuitrusting tijdens de zorg. Iedereen draagt kiemen en virussen zonder enig symptoom. Wat u als gezonde niets doet, kan levensbedreigend zijn voor een verzwakte persoon.', c: 'Draag er vooral een bij zorg dichtbij het gezicht (eten, mondzorg, verschoning, wondverzorging). „Alleen als u zich onwel voelt" beschermt niet genoeg.' },
@@ -78,16 +78,16 @@ window.OUCHI_CONTENT.nl = {
         {
           id: 'taii2', title: 'Doorligwonden voorkomen: voeding, tijd, plaats',
           steps: [
-            { fig: 'nutrition_cushion', t: 'Eigenlijk is de grootste basis van preventie van doorligwonden niet de wisselliggingstechniek maar de „voeding". Een magere, benige persoon krijgt eerder wonden, in dezelfde omstandigheden. Zorg voor maaltijden en voedingstoestand om het vleeskussen dat dempt te behouden.', c: 'Een afnemende eetlust is op zich een waarschuwingssignaal voor doorligwonden. Praat over voeding met een arts of een voedingsdeskundige.' },
+            { fig: 'nutrition_cushion', t: 'Eigenlijk is de grootste basis om doorligwonden te voorkomen niet de wisselliggingstechniek maar de „voeding". Een magere, benige persoon krijgt eerder wonden, in dezelfde omstandigheden. Zorg voor maaltijden en voedingstoestand om het vleeskussen dat dempt te behouden.', c: 'Een afnemende eetlust is op zich een waarschuwingssignaal voor doorligwonden. Praat over voeding met een arts of een voedingsdeskundige.' },
             { fig: 'pressure_points', t: 'Doorligwonden ontstaan makkelijk waar botten uitsteken en op het bed drukken. Het achterhoofd, de schouders, de ellebogen, het midden van de billen en de hielen zijn typisch.' },
             { fig: null, t: 'Als richtlijn: laat haar niet langer dan 2 tot 3 uur in dezelfde houding. Met een drukverdelend matras, of afhankelijk van de toestand, verandert het juiste interval.', c: 'Bepaal het interval en de aanpak samen met een professional zoals een verpleegkundige of zorgcoördinator, voor de gerustheid.' },
             { fig: null, t: 'Vindt u roodheid op billen of hielen, druk er dan zacht op met een vinger. Roodheid die niet wit wordt, is het begin van een doorligwond. Leg haar zo dat er geen gewicht op die plek rust.', c: 'Wrijf of masseer de rode plek niet. Het maakt het erger.', m: 'De aangedane zij heeft verminderd gevoel, en de persoon merkt de pijn niet. Controleer de huid van de aangedane zij extra vaak.' },
             { fig: 'heel_float', t: 'Voor wie snel rode hielen krijgt, legt u een kussen onder de kuiten om de hielen iets op te tillen.' },
-            { fig: null, t: 'Hoe goed een matras of kussen „doorligwonden voorkomt" verschilt enorm per product. Verschijnt er roodheid bij gebruik, dan past het hulpmiddel misschien niet. Het loont de moeite het te herzien of iets anders te proberen.', c: 'Het snelst om de passende preventiepunten te vinden is een arts, verpleegkundige of hulpmiddelendeskundige te vragen.' }
+            { fig: null, t: 'Hoe goed een matras of kussen „doorligwonden voorkomt" verschilt enorm per product. Verschijnt er roodheid bij gebruik, dan past het hulpmiddel misschien niet. Het loont de moeite het te herzien of iets anders te proberen.', c: 'Het snelst om te weten wat deze persoon helpt doorligwonden te voorkomen, is een arts, verpleegkundige of hulpmiddelendeskundige te vragen.' }
           ],
           points: [
             'Ook als er een doorligwond ontstaat, verwijt uzelf niet met „onze zorg was slecht". Lichaamsbouw, gestel en ziekten scheppen vanaf het begin grote verschillen in hoe makkelijk ze ontstaan.',
-            'Wat telt is niet schuld, maar tijdig met een professional praten en overstappen op een bij de persoon passende preventie.'
+            'Wat telt is niet schuld, maar tijdig met een professional praten en overstappen op een aanpak die bij de persoon past.'
           ]
         }
       ]
@@ -160,7 +160,7 @@ window.OUCHI_CONTENT.nl = {
             { fig: null, t: 'Nog één ding: breng ook verschoven kleding in orde. Er zijn eigenlijk heel veel mensen bij wie de broek of rok is afgezakt, met ondergoed of luier in het zicht. Een rolstoel brengt haar buitenshuis. Zo schaamt de persoon zich.', c: 'De persoon kan het vaak niet zelf in orde brengen en durft het niet te zeggen. Het opmerken en discreet in orde brengen is de taak van de verzorger. Een gênante ervaring kan een reden worden voor „ik wil niet meer naar buiten". Een verzorgd uiterlijk is een kleine extra stap die de persoon en u beschermt tegen andermans blikken.' }
           ],
           points: [
-            'Herplaatsen komt meerdere keren per dag voor. Denkt u „ze is afgezakt", doe het dan, vaak. Dat is op zich preventie van doorligwonden.',
+            'Herplaatsen komt meerdere keren per dag voor. Denkt u „ze is afgezakt", doe het dan, vaak. Dat helpt al om doorligwonden te voorkomen.',
             'Houding en kleding. Pas als beide in orde zijn, is het herplaatsen „voltooid".'
           ]
         },
@@ -267,7 +267,7 @@ window.OUCHI_CONTENT.nl = {
         {
           id: 'kou1', title: 'Tandenpoetsen en mondverzorging',
           steps: [
-            { fig: null, t: 'De mond schoon houden is de beste preventie van longontsteking (aspiratiepneumonie) bij ouderen. Maak er een gewoonte van na de maaltijden.' },
+            { fig: null, t: 'De mond schoon houden is de beste manier om bij ouderen longontsteking (aspiratiepneumonie) te voorkomen. Maak er een gewoonte van na de maaltijden.' },
             { fig: null, t: 'Is de persoon bereid, laat haar dan zelf poetsen. Dat is op zich goede revalidatie. Maar ze poetst vaak niet goed genoeg, dus de eindcontrole is uw taak.', c: 'Gebruik woorden die de eindcontrole niet vervelend maken. Iets als „U hebt goed gepoetst. Laat me alleen de achterkant nog even zien" gaat er makkelijker in, door eerst de inspanning te erkennen.' },
             { fig: null, t: 'De houding is dezelfde als bij het eten. Iets voorover, met de kin ingetrokken. Zodat water en vuil niet de keel in lopen tijdens de zorg.', link: { cat: 'shokuji', proc: 'shoku1' } },
             { fig: null, t: 'Neem het kunstgebit uit en reinig het met een gebitsborstel. Gebruik geen gewone tandpasta; het schuurmiddel bekrast het gebit. \'s Nachts neemt u het uit en legt u het in water of een reiniger.' },
@@ -361,7 +361,7 @@ window.OUCHI_CONTENT.nl = {
             { fig: 'walk_position', t: 'De begeleider staat iets achter en opzij van de zwakke zij van de persoon (de zij met verlamming). De positie om haar meteen te steunen als ze wankelt.' },
             { fig: null, t: 'Weten waarom men valt verandert de manier van steunen. De meeste vallen beginnen met „de voet komt minder omhoog dan verwacht en men struikelt" of „de zool landt niet plat en de enkel verzwikt". Dan gebeurt de val omdat een herstelstap niet op tijd komt.', c: 'Anders gezegd: kunt u dat wankelmoment maar steunen, dan voorkomt u de ergste val. Klaarstaan om „die ene stap op elk moment te steunen", dat is de voornaamste taak van de verzorger.' },
             { fig: null, t: 'Meer dan de hand vasthouden laat licht steunen onder de oksel of bij de heupen u haar opvangen als ze inzakt. Laat de persoon een leuning of stok vasthouden.', m: 'Voor wie een beenbeugel gebruikt (een hulpmiddel voor het lopen), doe die niet op uw eigen manier om; volg precies wat een revalidatieprofessional heeft voorgedaan. Houd de stok in de hand aan de niet-aangedane zij.' },
-            { fig: null, t: 'Jaag haar niet op. De ene zin „langzaam is goed" is de beste valpreventie.' }
+            { fig: null, t: 'Jaag haar niet op. De ene zin „langzaam is goed" helpt het meest om vallen te voorkomen.' }
           ]
         },
         {
@@ -379,7 +379,7 @@ window.OUCHI_CONTENT.nl = {
         {
           id: 'hok3', title: 'Een valvast lichaam bouwen: oefeningen in zit',
           steps: [
-            { fig: null, t: 'Valpreventie is niet alleen loopoefening. Kleine oefeningen in zit, opgebouwd, laten „de kracht om de voet op te tillen" en „de kracht om plat te landen" groeien. Forceer niet; zelfs tijdens tv-kijken is prima.' },
+            { fig: null, t: 'Vallen voorkomen is niet alleen een kwestie van lopen oefenen. Kleine oefeningen in zit, opgebouwd, laten „de kracht om de voet op te tillen" en „de kracht om plat te landen" groeien. Forceer niet; zelfs tijdens tv-kijken is prima.' },
             { fig: null, t: 'Dij optillen. Zittend op een stoel tilt u een dij langzaam op en laat hem zakken. Afwisselend. Het houdt de kracht om de voet op te tillen en vermindert struikelen.' },
             { fig: null, t: 'Enkel draaien. Til de voet iets op en draai de enkel langzaam, in beide richtingen. Een soepele enkel weerstaat het wankelen bij het landen.' },
             { fig: null, t: 'Tenen en hielen optillen. Zittend houdt u de hiel op de vloer en tilt u de tenen op. Dan houdt u de tenen en tilt u de hiel op. De kracht om de zool plat te landen dragen deze spieren van scheen en kuit.' },
