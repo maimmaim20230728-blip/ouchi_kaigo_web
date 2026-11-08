@@ -19,7 +19,7 @@ body.fs0{font-size:19px}
 body.fs1{font-size:22px}
 body.fs2{font-size:25px}
 
-header{position:sticky;top:0;background:var(--brand);color:#fff;padding:10px 14px;display:flex;align-items:center;gap:10px;z-index:10;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+header{position:sticky;top:0;background:var(--brand);color:#fff;padding:calc(18px + env(safe-area-inset-top)) 14px 10px;display:flex;align-items:center;gap:10px;z-index:10;box-shadow:0 2px 6px rgba(0,0,0,.12)}
 h1{font-size:1.05em}
 .hdr-btn{background:rgba(255,255,255,.18);color:#fff;border:none;border-radius:12px;padding:8px 14px;font-size:.9em;font-weight:bold;font-family:inherit;cursor:pointer;flex-shrink:0}
 
