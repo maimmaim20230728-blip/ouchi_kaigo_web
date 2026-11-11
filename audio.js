@@ -126,6 +126,15 @@ const Sound = (() => {
 
   /* ---- 胸骨圧迫メトロノーム（110回/分・BGMは自動で一時停止） ---- */
   let metroOn = false, metroTimer = 0, metroNext = 0, metroBeat = 0, bgmPausedByMetro = false;
+  let metroQueue = [];   // 予約した拍 {t: 鳴る時刻, n: 何回目}。画面の拍・振動は、音が鳴る時刻になってから出す(2026-11-11)
+  /* いま鳴る時刻になった拍があれば、その番号(いちばん新しいもの)を返して予約から外す。無ければ 0 */
+  function metroDue(){
+    if(!ctx || !metroQueue.length) return 0;
+    const now = ctx.currentTime;
+    let n = 0;
+    while(metroQueue.length && metroQueue[0].t <= now){ n = metroQueue.shift().n; }
+    return n;
+  }
   function metroClick(t, strong){
     try{
       const o = ctx.createOscillator(), g = ctx.createGain();
@@ -143,7 +152,7 @@ const Sound = (() => {
     bpm = bpm || 110;
     bgmPausedByMetro = playing;
     if(playing) stopBgm();
-    metroOn = true; metroBeat = 0;
+    metroOn = true; metroBeat = 0; metroQueue = [];
     metroNext = ctx.currentTime + 0.3;
     metroTimer = setInterval(() => {
       if(!metroOn || !ctx) return;
@@ -152,13 +161,14 @@ const Sound = (() => {
       while(metroNext < ctx.currentTime + 0.35){
         metroBeat++;
         metroClick(metroNext, metroBeat % 30 === 0);   // 30回ごとに高い音（数える目安）
+        metroQueue.push({ t: metroNext, n: metroBeat });
         metroNext += 60 / bpm;
       }
     }, 100);
   }
   function metroStop(){
     if(!metroOn) return;
-    metroOn = false;
+    metroOn = false; metroQueue = [];
     clearInterval(metroTimer);
     if(bgmPausedByMetro){ bgmPausedByMetro = false; maybeStartBgm(); }
   }
@@ -212,7 +222,7 @@ const Sound = (() => {
 
   return {
     tap,
-    metroStart, metroStop, metroResume,
+    metroStart, metroStop, metroResume, metroDue,
     pauseForHide, resumeFromHide,
     get metroOn(){ return metroOn; },
     get metroBeat(){ return metroBeat; },

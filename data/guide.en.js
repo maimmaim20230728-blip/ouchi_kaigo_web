@@ -454,6 +454,7 @@ window.OUCHI_CONTENT.en = {
         'Color worsening rapidly'
       ],
       act: [
+        'If they cannot make a sound, cannot cough, or are going limp, call your local emergency number first and put the phone on speaker. Do the steps below while following the dispatcher\'s instructions',
         'If they can make a sound or cough, first let them cough hard. A cough is the strongest force to expel it',
         'If they cannot cough, lean them forward and strike firmly 4 to 5 times between the shoulder blades with the heel of your hand (back blows)',
         'If it does not come out, wrap your arms around them from behind, make a fist just above the navel, and thrust quickly inward and upward (abdominal thrusts). Alternate with back blows',
@@ -626,7 +627,8 @@ window.OUCHI_CONTENT.en = {
       secs: [
         { h: 'These are signs of your limit', body: [
           'Cannot sleep at night. No appetite. Anger flares over small things. Tears come. You snapped at the person. You wish you could disappear.',
-          'If even one rings true, it is not that "you are weak" but a signal from your body that "you need rest."'
+          'If even one rings true, it is not that "you are weak" but a signal from your body that "you need rest."',
+          'If the pain is so strong that you wish you could disappear, please do not bear it alone. Call a crisis line or your emergency number right away. (In Japan, in Japanese: Yorisoi Hotline, 0120-279-338, free, 24 hours.)'
         ]},
         { h: 'Resting is not escape; it is a skill', body: [
           'To continue care, you need time away from it. Having someone take over the care so you can rest is called "respite care," and it is set up as a matter of course around the world.',

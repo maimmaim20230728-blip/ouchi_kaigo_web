@@ -450,6 +450,7 @@ window.OUCHI_CONTENT.sv = {
         'Färgen försämras snabbt'
       ],
       act: [
+        'Kan hon varken få fram ett ljud eller hosta, eller blir slapp, ring först det lokala nödnumret och sätt på högtalaren. Gör stegen nedan medan du följer larmoperatörens anvisningar',
         'Kan hon få fram ett ljud eller hosta, låt henne först hosta hårt. En hosta är den starkaste kraften att stöta ut',
         'Kan hon inte hosta, luta henne framåt och slå bestämt 4 till 5 gånger mellan skulderbladen med handloven (ryggslag)',
         'Kommer det inte ut, omslut henne bakifrån, knyt en näve strax ovanför naveln och stöt snabbt inåt och uppåt (buktryck). Väx­la med ryggslag',
@@ -619,7 +620,8 @@ window.OUCHI_CONTENT.sv = {
       secs: [
         { h: 'Detta är tecken på din gräns', body: [
           'Kan inte sova på natten. Ingen aptit. Ilska som flammar upp för inget. Tårar som kommer. Du fräste åt personen. Du önskade att du kunde försvinna.',
-          'Stämmer ens ett, är det inte att ”du är svag” utan en signal från din kropp att ”du behöver vila”.'
+          'Stämmer ens ett, är det inte att ”du är svag” utan en signal från din kropp att ”du behöver vila”.',
+          'Om det blir så tungt att du önskar att du kunde försvinna, bär inte det ensam. Ring genast en krislinje eller nödnumret. (I Japan, på japanska: Yorisoi Hotline, 0120-279-338, gratis, dygnet runt.)'
         ]},
         { h: 'Att vila är inte att fly, det är en färdighet', body: [
           'För att orka vidare med vården behöver du tid borta från den. Att bli avlöst för att vila kallas ”avlösning”, och det är ordnat som en självklarhet världen över.',

@@ -450,6 +450,7 @@ window.OUCHI_CONTENT.de = {
         'Die Farbe verschlechtert sich rasch'
       ],
       act: [
+        'Kann er weder sprechen noch husten oder wird schlaff, rufen Sie zuerst den Notruf an und stellen Sie auf Lautsprecher. Führen Sie die folgenden Schritte nach den Anweisungen der Leitstelle aus',
         'Kann er einen Laut oder Husten, lassen Sie ihn zuerst kräftig husten. Ein Husten ist die stärkste Kraft zum Ausstoßen',
         'Kann er nicht husten, beugen Sie ihn vor und schlagen Sie 4 bis 5 Mal fest mit dem Handballen zwischen die Schulterblätter (Rückenschläge)',
         'Kommt es nicht heraus, umfassen Sie ihn von hinten, ballen Sie eine Faust knapp über dem Nabel und stoßen Sie rasch nach innen und oben (Bauchstöße). Wechseln Sie mit Rückenschlägen ab',
@@ -619,7 +620,8 @@ window.OUCHI_CONTENT.de = {
       secs: [
         { h: 'Das sind Zeichen Ihrer Grenze', body: [
           'Nachts nicht schlafen können. Kein Appetit. Zorn flammt bei Kleinigkeiten auf. Tränen kommen. Sie haben die Person angefahren. Sie wünschten, Sie könnten verschwinden.',
-          'Trifft auch nur eines zu, ist es nicht, dass „Sie schwach sind", sondern ein Signal Ihres Körpers, dass „Sie Ruhe brauchen".'
+          'Trifft auch nur eines zu, ist es nicht, dass „Sie schwach sind", sondern ein Signal Ihres Körpers, dass „Sie Ruhe brauchen".',
+          'Wenn es so schwer wird, dass Sie am liebsten verschwinden würden, tragen Sie das nicht allein. Rufen Sie sofort eine Krisenhotline oder den Notruf an. (In Japan, auf Japanisch: Yorisoi Hotline, 0120-279-338, kostenlos, rund um die Uhr.)'
         ]},
         { h: 'Ruhen ist keine Flucht, sondern eine Fähigkeit', body: [
           'Um Pflege fortzusetzen, brauchen Sie Zeit weg von ihr. Sich die Pflege abnehmen zu lassen, um zu ruhen, heißt „Verhinderungspflege (Respite)" und ist weltweit selbstverständlich eingerichtet.',

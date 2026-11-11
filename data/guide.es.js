@@ -450,6 +450,7 @@ window.OUCHI_CONTENT.es = {
         'El color empeora rápidamente'
       ],
       act: [
+        'Si no puede emitir sonido ni toser, o se va quedando sin fuerzas, llame primero al número de emergencias local y ponga el altavoz. Haga los pasos siguientes según las indicaciones del operador',
         'Si puede emitir sonido o toser, hágala toser fuerte primero. La tos es la fuerza más potente para expulsar',
         'Si no puede toser, inclínela hacia delante y golpee con firmeza 4 a 5 veces entre los omóplatos con el talón de la mano (golpes en la espalda)',
         'Si no sale, rodéela con los brazos por detrás, cierre un puño justo encima del ombligo y empuje rápido hacia dentro y arriba (compresiones abdominales). Alterne con los golpes en la espalda',
@@ -619,7 +620,8 @@ window.OUCHI_CONTENT.es = {
       secs: [
         { h: 'Estas son señales de su límite', body: [
           'No dormir de noche. Sin apetito. La ira estalla por nada. Vienen las lágrimas. Le contestó mal a la persona. Desearía desaparecer.',
-          'Si aunque sea una suena cierta, no es que «usted sea débil» sino una señal de su cuerpo de que «necesita descanso».'
+          'Si aunque sea una suena cierta, no es que «usted sea débil» sino una señal de su cuerpo de que «necesita descanso».',
+          'Si el dolor es tan fuerte que desearía desaparecer, no cargue con esto a solas. Llame de inmediato a una línea de ayuda en crisis o al número de emergencias. (En Japón, en japonés: Yorisoi Hotline, 0120-279-338, gratuita, las 24 horas.)'
         ]},
         { h: 'Descansar no es huir, es una destreza', body: [
           'Para continuar el cuidado, hace falta tiempo lejos de él. Que alguien le releve para descansar se llama «cuidado de respiro», y está establecido como algo natural en todo el mundo.',

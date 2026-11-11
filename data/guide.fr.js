@@ -450,6 +450,7 @@ window.OUCHI_CONTENT.fr = {
         'Le teint se dégrade rapidement'
       ],
       act: [
+        'S\'il ne peut ni émettre un son ni tousser, ou devient mou, appelez d\'abord le numéro d\'urgence et mettez le haut-parleur. Faites les gestes ci-dessous en suivant les consignes de l\'opérateur',
         'S\'il peut émettre un son ou tousser, faites-le d\'abord tousser fort. La toux est la force la plus puissante pour expulser',
         'S\'il ne peut pas tousser, penchez-le en avant et frappez fermement 4 à 5 fois entre les omoplates avec le talon de la main (claques dans le dos)',
         'Si cela ne sort pas, entourez-le de vos bras par derrière, faites un poing juste au-dessus du nombril et poussez vite vers l\'intérieur et le haut (compressions abdominales). Alternez avec les claques dans le dos',
@@ -619,7 +620,8 @@ window.OUCHI_CONTENT.fr = {
       secs: [
         { h: 'Ce sont des signes de votre limite', body: [
           'Ne pas dormir la nuit. Pas d\'appétit. La colère éclate pour un rien. Les larmes viennent. Vous avez rudoyé la personne. Vous voudriez disparaître.',
-          'Si un seul sonne juste, ce n\'est pas que « vous êtes faible » mais un signal de votre corps disant « vous avez besoin de repos ».'
+          'Si un seul sonne juste, ce n\'est pas que « vous êtes faible » mais un signal de votre corps disant « vous avez besoin de repos ».',
+          'Si la souffrance devient si forte que vous voudriez disparaître, ne la portez pas seul. Appelez tout de suite une ligne d\'écoute de crise ou le numéro d\'urgence. (Au Japon, en japonais : Yorisoi Hotline, 0120-279-338, gratuit, 24 h sur 24.)'
         ]},
         { h: 'Se reposer n\'est pas fuir, c\'est une compétence', body: [
           'Pour continuer le soin, il faut du temps loin de lui. Se faire relayer pour se reposer s\'appelle « accueil de répit », et c\'est mis en place comme une évidence partout dans le monde.',

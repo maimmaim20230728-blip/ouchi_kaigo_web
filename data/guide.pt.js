@@ -450,6 +450,7 @@ window.OUCHI_CONTENT.pt = {
         'A cor piora rapidamente'
       ],
       act: [
+        'Se não consegue emitir som nem tossir, ou fica mole, ligue primeiro para o número de emergência local e ative o viva-voz. Faça os passos abaixo seguindo as instruções do atendente',
         'Se consegue emitir som ou tossir, faça-o tossir forte primeiro. A tosse é a força mais potente para expelir',
         'Se não consegue tossir, incline-o para a frente e bata com firmeza 4 a 5 vezes entre as omoplatas com a base da mão (tapas nas costas)',
         'Se não sair, envolva-o com os braços por trás, feche um punho logo acima do umbigo e empurre rápido para dentro e para cima (compressões abdominais). Alterne com os tapas nas costas',
@@ -619,7 +620,8 @@ window.OUCHI_CONTENT.pt = {
       secs: [
         { h: 'Estes são sinais do seu limite', body: [
           'Não dormir à noite. Sem apetite. A raiva estoura por nada. Vêm as lágrimas. Você foi ríspido com a pessoa. Queria sumir.',
-          'Se mesmo que só um soar verdadeiro, não é que «você é fraco» mas um sinal do seu corpo de que «você precisa descansar».'
+          'Se mesmo que só um soar verdadeiro, não é que «você é fraco» mas um sinal do seu corpo de que «você precisa descansar».',
+          'Se a dor for tão forte que você queira sumir, não carregue isso sem apoio. Ligue agora para uma linha de apoio em crise ou para o número de emergência. (No Japão, em japonês: Yorisoi Hotline, 0120-279-338, gratuita, 24 horas.)'
         ]},
         { h: 'Descansar não é fugir, é uma habilidade', body: [
           'Para continuar o cuidado, é preciso tempo longe dele. Deixar que alguém o renda para descansar chama-se «descanso do cuidador», e está estabelecido como algo natural no mundo todo.',

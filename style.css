@@ -18,6 +18,7 @@ body{font-family:"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;background:v
 body.fs0{font-size:19px}
 body.fs1{font-size:22px}
 body.fs2{font-size:25px}
+body.fs3{font-size:29px}
 
 header{position:sticky;top:0;background:var(--brand);color:#fff;padding:calc(18px + env(safe-area-inset-top)) 14px 10px;display:flex;align-items:center;gap:10px;z-index:10;box-shadow:0 2px 6px rgba(0,0,0,.12)}
 h1{font-size:1.05em}
@@ -78,8 +79,25 @@ main{padding:16px 14px calc(96px + env(safe-area-inset-bottom));max-width:640px;
 .linkbtn.cprbtn{border-color:var(--danger);color:var(--danger);margin-top:2px}
 
 .metrobox{text-align:center;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:18px 14px;margin-bottom:12px}
-#metroCircle{width:150px;height:150px;border-radius:50%;background:var(--danger-bg);border:6px solid var(--danger);margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:2.1em;font-weight:bold;color:var(--danger);transition:transform .1s}
-#metroCircle.beat{transform:scale(1.13)}
+#metroCircle{width:min(220px,62vw);height:min(220px,62vw);border-radius:50%;background:var(--danger-bg);border:8px solid var(--danger);margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:2.6em;font-weight:bold;color:var(--danger);transition:transform .08s,background-color .08s,color .08s}
+/* 拍の瞬間: 輪が大きくなり、赤くぬりつぶされる=音を止めていても見える(2026-11-11) */
+#metroCircle.beat{transform:scale(1.1);background:var(--danger);color:#fff}
+#fsRow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.speakbtn{text-align:center;margin:0 0 12px}
+#printSheet{display:none}
+@media print{
+  body.printing > *:not(#printSheet){display:none!important}
+  body.printing{background:#fff;font-size:10.5pt;line-height:1.45;color:#000;min-height:0}
+  body.printing #printSheet{display:block;padding:0;max-width:none}
+  #printSheet h1{font-size:15pt;margin:0 0 2pt}
+  #printSheet .ps-app{font-size:9pt;color:#555;margin-bottom:8pt}
+  #printSheet h2{font-size:12pt;margin:9pt 0 4pt;padding-bottom:2pt;border-bottom:1.5pt solid #333}
+  #printSheet h3{font-size:10.5pt;margin:5pt 0 1pt}
+  #printSheet ul{padding-left:1.3em;margin:0}
+  #printSheet li{margin:0 0 1pt;font-size:10pt}
+  #printSheet .ps-note{margin-top:9pt;font-size:9pt;color:#333;border-top:.5pt solid #999;padding-top:4pt}
+  @page{size:A4;margin:11mm}
+}
 #metroBtn.metro{background:var(--danger)}
 #metroHint{margin-top:10px}
 #cprNote{margin-bottom:20px}

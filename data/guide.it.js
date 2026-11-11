@@ -450,6 +450,7 @@ window.OUCHI_CONTENT.it = {
         'Il colorito peggiora rapidamente'
       ],
       act: [
+        'Se non riesce a emettere suono né a tossire, o diventa floscio, chiama prima il numero di emergenza locale e metti il vivavoce. Esegui i passaggi seguenti seguendo le indicazioni dell\'operatore',
         'Se riesce a emettere suono o a tossire, fallo tossire forte per prima cosa. La tosse è la forza più potente per espellere',
         'Se non riesce a tossire, inclinalo in avanti e colpisci con decisione 4-5 volte tra le scapole con il palmo della mano (colpi alla schiena)',
         'Se non esce, cingilo con le braccia da dietro, chiudi un pugno appena sopra l\'ombelico e spingi rapido verso l\'interno e l\'alto (compressioni addominali). Alterna con i colpi alla schiena',
@@ -619,7 +620,8 @@ window.OUCHI_CONTENT.it = {
       secs: [
         { h: 'Questi sono segni del tuo limite', body: [
           'Non dormire di notte. Niente appetito. La rabbia scatta per niente. Vengono le lacrime. Hai sgridato la persona. Vorresti sparire.',
-          'Se anche solo uno suona vero, non è che «sei debole» ma un segnale del tuo corpo che «hai bisogno di riposo».'
+          'Se anche solo uno suona vero, non è che «sei debole» ma un segnale del tuo corpo che «hai bisogno di riposo».',
+          'Se il dolore è così forte che vorresti sparire, non affrontarlo senza aiuto. Chiama subito una linea di aiuto per le crisi o il numero di emergenza. (In Giappone, in giapponese: Yorisoi Hotline, 0120-279-338, gratuita, 24 ore su 24.)'
         ]},
         { h: 'Riposare non è fuggire, è un\'abilità', body: [
           'Per continuare l\'assistenza, serve tempo lontano da essa. Farsi dare il cambio per riposare si chiama «assistenza di sollievo», ed è predisposta come cosa ovvia in tutto il mondo.',

@@ -450,6 +450,7 @@ window.OUCHI_CONTENT.nl = {
         'De kleur verslechtert snel'
       ],
       act: [
+        'Kan hij geen geluid maken en niet hoesten, of wordt hij slap, bel dan eerst het lokale alarmnummer en zet de telefoon op luidspreker. Voer de stappen hieronder uit terwijl u de aanwijzingen van de meldkamer volgt',
         'Kan hij een geluid of hoest maken, laat hem dan eerst hard hoesten. Een hoest is de sterkste kracht om uit te stoten',
         'Kan hij niet hoesten, buig hem dan voorover en sla 4 tot 5 keer stevig tussen de schouderbladen met de muis van de hand (rugslagen)',
         'Komt het er niet uit, omvat hem dan van achteren, maak een vuist net boven de navel en stoot snel naar binnen en omhoog (buikstoten). Wissel af met rugslagen',
@@ -619,7 +620,8 @@ window.OUCHI_CONTENT.nl = {
       secs: [
         { h: 'Dit zijn tekenen van uw grens', body: [
           '\'s Nachts niet slapen. Geen eetlust. Woede die om niets oplaait. Tranen die komen. U snauwde tegen de persoon. U wenste dat u kon verdwijnen.',
-          'Klinkt er ook maar één waar, dan is het niet dat „u zwak bent" maar een signaal van uw lichaam dat „u rust nodig hebt".'
+          'Klinkt er ook maar één waar, dan is het niet dat „u zwak bent" maar een signaal van uw lichaam dat „u rust nodig hebt".',
+          'Als het zo zwaar wordt dat u het liefst zou verdwijnen, draag dat dan niet alleen. Bel meteen een crisislijn of het alarmnummer. (In Japan, in het Japans: Yorisoi Hotline, 0120-279-338, gratis, 24 uur per dag.)'
         ]},
         { h: 'Rusten is geen vluchten, het is een vaardigheid', body: [
           'Om de zorg vol te houden, hebt u tijd weg ervan nodig. Zich laten aflossen om te rusten heet „respijtzorg", en het is wereldwijd als vanzelfsprekend geregeld.',

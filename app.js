@@ -67,6 +67,7 @@
     else if(sub && sub.kind === 'cpr') title = T.tabDanger;
     $('hdrTitle').textContent = title;
     if(!(sub && sub.kind === 'cpr')) stopMetroUI();   // 心肺蘇生ページを離れたらリズム停止
+    if(!(sub && sub.kind === 'proc')) stopSpeak();    // 手順のページを離れたら読み上げ停止
     ['navTech','navDanger','navSelf','navSettings'].forEach(id => {
       const on = (id === 'nav' + tab.charAt(0).toUpperCase() + tab.slice(1));
       $(id).classList.toggle('active', on);
@@ -136,6 +137,7 @@
   function renderStep(){
     const s = sub;
     if(!s || s.kind !== 'proc') return;
+    stopSpeak();   // 次の手順・前の手順へ進んだら、読み上げは止める
     $('procTitle').textContent = s.proc.title;
     const total = s.proc.steps.length;
     const fig = $('stepFig'), text = $('stepText'), caution = $('stepCaution'), summary = $('stepSummary'), link = $('stepLink');
@@ -192,7 +194,124 @@
       $('btnPrev').disabled = false;
       $('btnNext').textContent = T.done;
     }
+    updateSpeakBtn();
     if(typeof window.scrollTo === 'function') window.scrollTo(0, 0);
+  }
+  /* ---------- 手順を声で読む(2026-11-11) ----------
+     介助中は両手がふさがって画面を見られない。いまの1ステップ(本文+注意)だけを読む。次へ進む・戻る・ほかの画面へ行く・アプリが裏に回ると止まる。
+     Play版(WebView)は speechSynthesis が無いので、ネイティブの Capacitor.Plugins.TextToSpeech(@capacitor-community/text-to-speech)を使う
+     (🔴 registerPlugin は WebView に無い=Plugins から取る)。Web版は speechSynthesis。どちらも無ければボタンを出さない */
+  const TTS_LANG = { ja: 'ja-JP', en: 'en-US', de: 'de-DE', fr: 'fr-FR', es: 'es-ES', it: 'it-IT', pt: 'pt-BR', nl: 'nl-NL', sv: 'sv-SE', ko: 'ko-KR', zh: 'zh-CN', ar: 'ar-SA' };
+  let speaking = false, speakToken = 0;
+  function nativeTts(){
+    try{
+      const c = window.Capacitor;
+      if(c && typeof c.isNativePlatform === 'function' && c.isNativePlatform() && typeof c.isPluginAvailable === 'function' && c.isPluginAvailable('TextToSpeech')){
+        const p = c.Plugins && c.Plugins.TextToSpeech;
+        if(p && typeof p.speak === 'function') return p;
+      }
+    }catch(_){}
+    return null;
+  }
+  function webTts(){
+    try{ return (window.speechSynthesis && typeof window.SpeechSynthesisUtterance === 'function') ? window.speechSynthesis : null; }catch(_){ return null; }
+  }
+  function canSpeak(){ return !!(nativeTts() || webTts()); }
+  function updateSpeakBtn(){
+    const b = $('stepSpeak');
+    if(!b) return;
+    const s = sub;
+    const onStep = !!(s && s.kind === 'proc' && s.i < s.proc.steps.length);
+    b.hidden = !(onStep && canSpeak());
+    b.textContent = speaking ? T.ttsStop : T.ttsSpeak;
+    b.setAttribute('aria-pressed', speaking ? 'true' : 'false');
+  }
+  function stopSpeak(){
+    speakToken++;
+    if(!speaking) return;
+    speaking = false;
+    try{
+      const nt = nativeTts();
+      if(nt){ const p = nt.stop(); if(p && p.catch) p.catch(() => {}); }
+      else{ const w = webTts(); if(w) w.cancel(); }
+    }catch(_){}
+    updateSpeakBtn();
+  }
+  function startSpeak(text){
+    const my = ++speakToken;
+    speaking = true;
+    updateSpeakBtn();
+    const done = () => { if(my === speakToken){ speaking = false; updateSpeakBtn(); } };
+    const lang = TTS_LANG[LANG] || 'ja-JP';
+    const nt = nativeTts();
+    if(nt){
+      Promise.resolve().then(() => nt.stop()).catch(() => {})
+        .then(() => (my === speakToken) ? nt.speak({ text, lang, rate: 0.9, pitch: 1.0, volume: 1.0 }) : null)
+        .then(done, done);
+      return;
+    }
+    const w = webTts();
+    if(!w){ done(); return; }
+    try{
+      const u = new window.SpeechSynthesisUtterance(text);
+      u.lang = lang; u.rate = 0.9;
+      u.onend = done; u.onerror = done;
+      w.cancel();
+      w.speak(u);
+    }catch(_){ done(); }
+  }
+  function toggleSpeak(){
+    if(speaking){ stopSpeak(); return; }
+    const s = sub;
+    if(!s || s.kind !== 'proc' || s.i >= s.proc.steps.length) return;
+    const step = s.proc.steps[s.i];
+    startSpeak(step.t + (step.c ? ' ' + step.c : ''));
+  }
+  if(document.addEventListener) document.addEventListener('visibilitychange', () => { if(document.hidden) stopSpeak(); });
+
+  /* ---------- 家族へ渡す1ページ(印刷・PDF・2026-11-11) ----------
+     ケアマネジャーや看護師などの支援者が、家族に渡す紙。「きけん」のカードごとの救急の目安+「こしをまもる」の基本。
+     Web版だけ(Play版の WebView は印刷の画面が出ないので、せっていに出さない)。内容は画面と同じ文(いまの言語)から組む */
+  function canPrint(){ return !isNativeApp() && typeof window.print === 'function'; }
+  function firstSentence(t){
+    const m = /^[\s\S]*?[。.!?！？]/.exec(t);
+    return m ? m[0] : t;
+  }
+  function buildPrintSheet(){
+    const el = mk('div');
+    el.id = 'printSheet';
+    el.appendChild(mk('h1', '', T.printSheetTitle));
+    el.appendChild(mk('p', 'ps-app', T.appName));
+    el.appendChild(mk('h2', '', T.tabDanger));
+    C.danger.forEach(card => {
+      el.appendChild(mk('h3', '', card.emoji + ' ' + card.title));
+      const ul = mk('ul');
+      const items = (card.call && card.call.length) ? card.call : (card.see || []);
+      items.forEach(it => ul.appendChild(mk('li', '', (typeof it === 'string') ? it : it.t)));
+      el.appendChild(ul);
+    });
+    const koshi = C.tech.find(c => c.id === 'koshi');
+    if(koshi){
+      el.appendChild(mk('h2', '', koshi.emoji + ' ' + koshi.title));
+      const ul = mk('ul');
+      koshi.procs.forEach(p => {
+        p.steps.forEach(st => ul.appendChild(mk('li', '', firstSentence(st.t))));
+        (p.points || []).forEach(pt => ul.appendChild(mk('li', '', (typeof pt === 'string') ? pt : pt.t)));
+      });
+      el.appendChild(ul);
+    }
+    el.appendChild(mk('p', 'ps-note', T.printSheetNote));
+    return el;
+  }
+  function doPrint(){
+    if(!canPrint()) return;
+    const old = $('printSheet');
+    if(old && old.parentNode) old.parentNode.removeChild(old);
+    document.body.appendChild(buildPrintSheet());
+    document.body.classList.add('printing');
+    const end = () => { document.body.classList.remove('printing'); if(window.removeEventListener) window.removeEventListener('afterprint', end); };
+    if(window.addEventListener) window.addEventListener('afterprint', end);
+    try{ window.print(); }catch(_){ end(); }
   }
   function stepNext(){
     const s = sub;
@@ -326,16 +445,22 @@
     lastBeat = 0;
     $('metroCount').textContent = '0';
     $('metroBtn').textContent = C.cpr.metroStop;
+    /* 拍の画面表示と振動は、音が鳴る時刻になってから(Sound.metroDue)。音をオフにしていても・電話の声で耳がふさがっていても、見て・手で感じて合わせられる(2026-11-11) */
     metroUiTimer = setInterval(() => {
-      const b = Sound.metroBeat;
-      if(b !== lastBeat){
+      const b = Sound.metroDue();
+      if(b && b !== lastBeat){
         lastBeat = b;
         $('metroCount').textContent = b;
         const c = $('metroCircle');
         c.classList.add('beat');
-        setTimeout(() => c.classList.remove('beat'), 100);
+        setTimeout(() => c.classList.remove('beat'), 170);
+        buzz();
       }
-    }, 50);
+    }, 25);
+  }
+  /* 振動(Web の vibrate)。使えない端末・ブラウザ(iPhone の Safari など)では何もしない。Play版は AndroidManifest の VIBRATE */
+  function buzz(){
+    try{ if(typeof navigator !== 'undefined' && typeof navigator.vibrate === 'function') navigator.vibrate(45); }catch(_){}
   }
   /* アプリ・画面に戻ったとき(119番の電話から戻った等・2026-10-30): リズムの途中なら、止められていた音を戻して今から刻みなおす。
      戻せなかったら(端末が音を止めたまま)ボタンを「はじめる」に戻す=1回押せば すぐ また始まる(押したまま鳴らない「とめる」を残さない) */
@@ -352,9 +477,9 @@
 
   /* ---------- せってい ---------- */
   function applyFs(){
-    document.body.classList.remove('fs0', 'fs1', 'fs2');
+    document.body.classList.remove('fs0', 'fs1', 'fs2', 'fs3');
     document.body.classList.add('fs' + prefs.fs);
-    for(let i = 0; i < 3; i++) $('fsBtn' + i).classList.toggle('sel', prefs.fs === i);
+    for(let i = 0; i < 4; i++) $('fsBtn' + i).classList.toggle('sel', prefs.fs === i);
   }
   function applySound(){
     Sound.setEnabled(prefs.sound);
@@ -443,7 +568,12 @@
     $('btnPrev').textContent = T.prev;
     $('btnNext').textContent = T.next;
     $('setFsTitle').textContent = T.setFs;
-    for(let i = 0; i < 3; i++) $('fsBtn' + i).textContent = T.fsNames[i];
+    for(let i = 0; i < 4; i++) $('fsBtn' + i).textContent = T.fsNames[i];
+    $('setPrintTitle').textContent = T.printSetTitle;
+    $('printHint').textContent = T.printHint;
+    $('printBtn').textContent = T.printBtn;
+    $('printBlock').hidden = !canPrint();
+    updateSpeakBtn();
     $('setThemeTitle').textContent = T.setTheme;
     $('themeBtnG').textContent = T.themeGreen;
     $('themeBtnB').textContent = T.themeBlue;
@@ -519,7 +649,7 @@
     /* 画面に出ていないあいだは BGM を止める(2026-09-30・audio.js の pauseForHide)。
        Play版は WebView が止まらないので、visibilitychange に加えて App の pause / resume でも */
     try{
-      ap.addListener('pause', () => { Sound.pauseForHide(); });
+      ap.addListener('pause', () => { Sound.pauseForHide(); stopSpeak(); });
       ap.addListener('resume', () => { Sound.resumeFromHide(); resumeMetroUI(); });   // 胸骨圧迫のリズムも(2026-10-30)
     }catch(_){}
   }
@@ -658,9 +788,11 @@
   Tap.bind($('btnNext'), stepNext);
   Tap.bind($('stepLink'), followLink);
   Tap.bind($('metroBtn'), toggleMetro);
-  for(let i = 0; i < 3; i++){
+  for(let i = 0; i < 4; i++){
     (function(i){ Tap.bind($('fsBtn' + i), () => { prefs.fs = i; save(); applyFs(); }); })(i);
   }
+  Tap.bind($('stepSpeak'), toggleSpeak);
+  Tap.bind($('printBtn'), doPrint);
   Tap.bind($('soundBtn'), () => { prefs.sound = !prefs.sound; save(); applySound(); });
   Tap.bind($('themeBtnG'), () => { prefs.theme = 'green'; save(); applyTheme(); });
   Tap.bind($('themeBtnB'), () => { prefs.theme = 'blue'; save(); applyTheme(); });

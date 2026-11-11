@@ -47,6 +47,7 @@
         <button class="fsbtn" id="fsBtn0"></button>
         <button class="fsbtn" id="fsBtn1"></button>
         <button class="fsbtn" id="fsBtn2"></button>
+        <button class="fsbtn" id="fsBtn3"></button>
       </div>
     </div>
     <div class="setblock">
@@ -72,6 +73,11 @@
       <h3 id="setLangTitle"></h3>
       <div class="langgrid" id="langGrid"></div>
     </div>
+    <div class="setblock" id="printBlock" hidden>
+      <h3 id="setPrintTitle"></h3>
+      <p id="printHint" class="mutetext"></p>
+      <button id="printBtn" class="togglebtn"></button>
+    </div>
     <div class="setblock">
       <h3 id="setGuideTitle"></h3>
       <button id="guideAgainBtn" class="togglebtn"></button>
@@ -95,6 +101,7 @@
     <p id="stepCount"></p>
     <div id="stepFig" class="figbox"></div>
     <p id="stepText"></p>
+    <button id="stepSpeak" class="linkbtn speakbtn" hidden></button>
     <div id="stepCaution" class="caution" hidden><span class="mark" aria-hidden="true">⚠️</span><p id="stepCautionText"></p></div>
     <div id="stepAdapt" class="adapt" hidden><span class="mark" aria-hidden="true">🖐️</span><div><b id="stepAdaptTitle"></b><p id="stepAdaptText"></p></div></div>
     <button id="stepLink" class="linkbtn" hidden></button>
